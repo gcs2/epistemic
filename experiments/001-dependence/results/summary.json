@@ -1,0 +1,224 @@
+{
+  "experiment_id": "001-dependence",
+  "title": "Dependence-aware synthesis under duplicated evidence",
+  "config_sha256": "e1de74175e3165a4b6d4228d607f771baecf24af6039e6c93f9d6207ceb3c81a",
+  "cells": 150,
+  "trials": 375000,
+  "overall": [
+    {
+      "method": "oracle",
+      "cells": 150,
+      "brier": 0.07509450116683529,
+      "log_loss": 0.23137570707412417,
+      "accuracy": 0.8895786666666667,
+      "ece": 0.011316402853018295,
+      "confidently_wrong": 0.007725333333333334,
+      "sharpness": 0.3894377638464535
+    },
+    {
+      "method": "estimated",
+      "cells": 150,
+      "brier": 0.07625488971505355,
+      "log_loss": 0.2355169043235458,
+      "accuracy": 0.8879493333333333,
+      "ece": 0.01296343593827606,
+      "confidently_wrong": 0.008906666666666667,
+      "sharpness": 0.3899611935587073
+    },
+    {
+      "method": "conservative",
+      "cells": 150,
+      "brier": 0.08017742976323623,
+      "log_loss": 0.25031148595578373,
+      "accuracy": 0.8866586666666666,
+      "ece": 0.030036766491519085,
+      "confidently_wrong": 0.004805333333333333,
+      "sharpness": 0.3619633030170308
+    },
+    {
+      "method": "naive",
+      "cells": 150,
+      "brier": 0.08595736790248318,
+      "log_loss": 0.369730925804453,
+      "accuracy": 0.8845413333333333,
+      "ece": 0.04502033568725811,
+      "confidently_wrong": 0.03516533333333333,
+      "sharpness": 0.4238972650148109
+    },
+    {
+      "method": "one_per_group",
+      "cells": 150,
+      "brier": 0.09147098943194115,
+      "log_loss": 0.2796493694628148,
+      "accuracy": 0.8643253333333333,
+      "ece": 0.012823334412683855,
+      "confidently_wrong": 0.008482666666666666,
+      "sharpness": 0.3638299369772363
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "H1",
+      "supported": true,
+      "effect": 0.01697322927444982,
+      "detail": "naive \u2212 oracle Brier = 0.016973; bootstrap 95% interval [0.012973, 0.021261]"
+    },
+    {
+      "id": "H2",
+      "supported": true,
+      "effect": 0.022144331028777737,
+      "detail": "Averaged naive penalty is nondecreasing across registered rho and duplication grids."
+    },
+    {
+      "id": "H3",
+      "supported": true,
+      "effect": -0.030175362559443714,
+      "detail": "high-dependence conservative \u2212 naive Brier = -0.030175; confidently-wrong difference = -0.076078"
+    },
+    {
+      "id": "H4",
+      "supported": true,
+      "effect": 0.020005514700763498,
+      "detail": "rho=0 conservative \u2212 naive Brier = 0.020006"
+    },
+    {
+      "id": "H5",
+      "supported": true,
+      "effect": -0.01542026819378198,
+      "detail": "estimated \u2212 naive Brier = -0.015420; estimated \u2212 oracle = 0.001553"
+    },
+    {
+      "id": "H6",
+      "supported": true,
+      "effect": 0.0,
+      "detail": "maximum probability spread with one item per group = 0.000e+00"
+    }
+  ],
+  "naive_oracle_grid": [
+    {
+      "rho": 0.0,
+      "max_duplicates": 1,
+      "naive_minus_oracle_brier": 0.0
+    },
+    {
+      "rho": 0.0,
+      "max_duplicates": 2,
+      "naive_minus_oracle_brier": 0.0
+    },
+    {
+      "rho": 0.0,
+      "max_duplicates": 4,
+      "naive_minus_oracle_brier": 0.0
+    },
+    {
+      "rho": 0.0,
+      "max_duplicates": 8,
+      "naive_minus_oracle_brier": 0.0
+    },
+    {
+      "rho": 0.0,
+      "max_duplicates": 16,
+      "naive_minus_oracle_brier": 0.0
+    },
+    {
+      "rho": 0.25,
+      "max_duplicates": 1,
+      "naive_minus_oracle_brier": 0.0
+    },
+    {
+      "rho": 0.25,
+      "max_duplicates": 2,
+      "naive_minus_oracle_brier": 0.0006082616586726288
+    },
+    {
+      "rho": 0.25,
+      "max_duplicates": 4,
+      "naive_minus_oracle_brier": 0.002532128803805166
+    },
+    {
+      "rho": 0.25,
+      "max_duplicates": 8,
+      "naive_minus_oracle_brier": 0.007120819717745843
+    },
+    {
+      "rho": 0.25,
+      "max_duplicates": 16,
+      "naive_minus_oracle_brier": 0.013037518288057192
+    },
+    {
+      "rho": 0.5,
+      "max_duplicates": 1,
+      "naive_minus_oracle_brier": 0.0
+    },
+    {
+      "rho": 0.5,
+      "max_duplicates": 2,
+      "naive_minus_oracle_brier": 0.0028827728360152284
+    },
+    {
+      "rho": 0.5,
+      "max_duplicates": 4,
+      "naive_minus_oracle_brier": 0.007602331760394942
+    },
+    {
+      "rho": 0.5,
+      "max_duplicates": 8,
+      "naive_minus_oracle_brier": 0.016486650633464984
+    },
+    {
+      "rho": 0.5,
+      "max_duplicates": 16,
+      "naive_minus_oracle_brier": 0.02579838944696433
+    },
+    {
+      "rho": 0.75,
+      "max_duplicates": 1,
+      "naive_minus_oracle_brier": 0.0
+    },
+    {
+      "rho": 0.75,
+      "max_duplicates": 2,
+      "naive_minus_oracle_brier": 0.004697286503173054
+    },
+    {
+      "rho": 0.75,
+      "max_duplicates": 4,
+      "naive_minus_oracle_brier": 0.012756714850925416
+    },
+    {
+      "rho": 0.75,
+      "max_duplicates": 8,
+      "naive_minus_oracle_brier": 0.030400033956894654
+    },
+    {
+      "rho": 0.75,
+      "max_duplicates": 16,
+      "naive_minus_oracle_brier": 0.03692710479119497
+    },
+    {
+      "rho": 0.95,
+      "max_duplicates": 1,
+      "naive_minus_oracle_brier": 0.0
+    },
+    {
+      "rho": 0.95,
+      "max_duplicates": 2,
+      "naive_minus_oracle_brier": 0.007389304772496667
+    },
+    {
+      "rho": 0.95,
+      "max_duplicates": 4,
+      "naive_minus_oracle_brier": 0.020867641301851644
+    },
+    {
+      "rho": 0.95,
+      "max_duplicates": 8,
+      "naive_minus_oracle_brier": 0.03536049213333758
+    },
+    {
+      "rho": 0.95,
+      "max_duplicates": 16,
+      "naive_minus_oracle_brier": 0.04710421693620279
+    }
+  ]
+}

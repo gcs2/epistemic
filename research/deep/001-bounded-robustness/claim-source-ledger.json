@@ -1,0 +1,238 @@
+{
+  "research_id": "DR-001-bounded-robustness",
+  "cutoff": "2026-09-04",
+  "labels": {
+    "direct": "The source directly studies the claimed mechanism or method.",
+    "analogy": "The source supplies a transferable design principle but does not validate SES.",
+    "limitation": "The source supplies a boundary, failure mode, or counterargument.",
+    "inference": "The claim is the project's synthesis of multiple sources and must be tested."
+  },
+  "claims": [
+    {
+      "id": "DR1-C01",
+      "claim": "A single scalar confidence value should not be propagated through SES's decision model as if it simultaneously represented consequence magnitude, probability quality, model coverage, and argument strength.",
+      "support": ["S01", "S02", "S03", "S05", "S07", "S08"],
+      "relation": "inference",
+      "boundary": "Some formal decision models legitimately represent confidence or second-order uncertainty. The objection is to unvalidated semantic collapse, not to all quantification."
+    },
+    {
+      "id": "DR1-C02",
+      "claim": "SES should separate the decision-performance case from the assurance case about evidence, inferences, scope, and unresolved defeaters.",
+      "support": ["S02", "S03", "S04"],
+      "relation": "analogy",
+      "boundary": "Safety-assurance structure is not evidence that the same structure improves general decisions."
+    },
+    {
+      "id": "DR1-C03",
+      "claim": "Every SES robustness statement must be explicitly conditional on a declared model, scenario, perturbation, and value set.",
+      "support": ["S09", "S10", "S12", "S14"],
+      "relation": "inference",
+      "boundary": "Conditional robustness can still be valuable; it is not protection against all unknown unknowns."
+    },
+    {
+      "id": "DR1-C04",
+      "claim": "Uncertain consequences and values should be explored as distributions, intervals, or admissible sets rather than shrunk toward zero by an evidence-confidence multiplier.",
+      "support": ["S06", "S07", "S08", "S12"],
+      "relation": "inference",
+      "boundary": "Distribution or interval elicitation can be miscalibrated and must not be treated as objective merely because it is explicit."
+    },
+    {
+      "id": "DR1-C05",
+      "claim": "The next SES action method should recommend sequences—act, monitor, trigger, revise—not only a one-time option ranking.",
+      "support": ["S11", "S18"],
+      "relation": "analogy",
+      "boundary": "Learning actions and monitoring can cost more than their information value; delayed harms can make reversibility illusory."
+    },
+    {
+      "id": "DR1-C06",
+      "claim": "Recursive improvement requires protected validation because adaptive reuse of a benchmark can produce spurious progress.",
+      "support": ["S15", "S16", "S17"],
+      "relation": "analogy",
+      "boundary": "Formal reusable-holdout guarantees do not directly apply to the heterogeneous, partly qualitative SES program."
+    },
+    {
+      "id": "DR1-C07",
+      "claim": "Aggregate welfare, tail loss, worst-group effects, non-compensable constraints, and deferral cost must remain separate reported outcomes.",
+      "support": ["S19", "S20", "S21", "S22"],
+      "relation": "inference",
+      "boundary": "No metric vector resolves moral conflict; accountable decision makers and affected parties still must judge tradeoffs."
+    },
+    {
+      "id": "DR1-C08",
+      "claim": "Evidence-failure trajectories are an important frontier baseline but are not by themselves a novel SES contribution.",
+      "support": ["S23"],
+      "relation": "direct",
+      "boundary": "S23 is a newly posted, unreviewed preprint about tabular prediction rather than general multi-stakeholder decisions."
+    },
+    {
+      "id": "DR1-C09",
+      "claim": "The research currently supports architectural reform of the action layer, not a full overhaul of SES and not mere parameter tuning.",
+      "support": ["S01", "S02", "S06", "S09", "S10", "S11", "S15", "S20"],
+      "relation": "inference",
+      "boundary": "This recommendation must be reversed if the reformed workflow fails to beat transparent baselines after process costs are included."
+    }
+  ],
+  "sources": [
+    {
+      "id": "S01",
+      "citation": "Graydon, P. J., & Holloway, C. M. (2017). An investigation of proposed techniques for quantifying confidence in assurance arguments. Safety Science, 92, 53-65.",
+      "url": "https://doi.org/10.1016/j.ssci.2016.09.014",
+      "verification": "verified-primary",
+      "use": "direct, limitation"
+    },
+    {
+      "id": "S02",
+      "citation": "Hawkins, R., Kelly, T., Knight, J., & Graydon, P. (2011). A New Approach to Creating Clear Safety Arguments.",
+      "url": "https://www-users.york.ac.uk/~rdh2/papers/HawkinsSSS11.pdf",
+      "verification": "verified-primary",
+      "use": "analogy"
+    },
+    {
+      "id": "S03",
+      "citation": "Goodenough, J. B., Weinstock, C., & Klein, A. Z. (2012). Toward a Theory of Assurance Case Confidence. CMU/SEI-2012-TR-002.",
+      "url": "https://sei.cmu.edu/library/toward-a-theory-of-assurance-case-confidence/",
+      "verification": "verified-primary",
+      "use": "analogy"
+    },
+    {
+      "id": "S04",
+      "citation": "Rae, A. J., & Alexander, R. D. (2017). Probative blindness and false assurance about safety. Safety Science, 92, 190-204.",
+      "url": "https://doi.org/10.1016/j.ssci.2016.10.005",
+      "verification": "verified-primary",
+      "use": "limitation"
+    },
+    {
+      "id": "S05",
+      "citation": "How do practitioners gain confidence in assurance cases? (2025). Information and Software Technology, 185, 107767.",
+      "url": "https://doi.org/10.1016/j.infsof.2025.107767",
+      "verification": "verified-primary",
+      "use": "direct, limitation"
+    },
+    {
+      "id": "S06",
+      "citation": "Lahdelma, R., & Salminen, P. (2001). SMAA-2: Stochastic Multicriteria Acceptability Analysis for Group Decision Making. Operations Research, 49(3), 444-454.",
+      "url": "https://doi.org/10.1287/opre.49.3.444.11220",
+      "verification": "verified-primary",
+      "use": "direct"
+    },
+    {
+      "id": "S07",
+      "citation": "Hill, B. (2013). Confidence and decision. Games and Economic Behavior, 82, 675-692.",
+      "url": "https://doi.org/10.1016/j.geb.2013.09.009",
+      "verification": "verified-primary",
+      "use": "direct"
+    },
+    {
+      "id": "S08",
+      "citation": "Nau, R. F. (1989). Decision analysis with indeterminate or incoherent probabilities. Annals of Operations Research, 19, 375-403.",
+      "url": "https://people.duke.edu/~rnau/decision_analysis_with_indeterminate_probabilities.pdf",
+      "verification": "verified-primary",
+      "use": "direct"
+    },
+    {
+      "id": "S09",
+      "citation": "Lempert, R. J., Groves, D. G., Popper, S. W., & Bankes, S. C. (2006). A General, Analytic Method for Generating Robust Strategies and Narrative Scenarios. Management Science, 52(4), 514-528.",
+      "url": "https://doi.org/10.1287/mnsc.1050.0472",
+      "verification": "verified-primary",
+      "use": "direct"
+    },
+    {
+      "id": "S10",
+      "citation": "McPhail, C. et al. (2020). Impact of Scenario Selection on Robustness. Water Resources Research, 56.",
+      "url": "https://doi.org/10.1029/2019WR026515",
+      "verification": "verified-primary",
+      "use": "direct, limitation"
+    },
+    {
+      "id": "S11",
+      "citation": "Haasnoot, M., Kwakkel, J. H., Walker, W. E., & ter Maat, J. (2013). Dynamic Adaptive Policy Pathways: A Method for Crafting Robust Decisions for a Deeply Uncertain World. Global Environmental Change, 23(2), 485-498.",
+      "url": "https://doi.org/10.1016/j.gloenvcha.2012.12.006",
+      "verification": "verified-primary",
+      "use": "direct"
+    },
+    {
+      "id": "S12",
+      "citation": "Cerreia-Vioglio, S., Hansen, L. P., Maccheroni, F., & Marinacci, M. (2022). Making Decisions under Model Misspecification.",
+      "url": "https://arxiv.org/abs/2008.01071",
+      "verification": "verified-primary",
+      "use": "direct"
+    },
+    {
+      "id": "S13",
+      "citation": "Angelopoulos, A. N. et al. Conformal Risk Control.",
+      "url": "https://arxiv.org/abs/2208.02814",
+      "verification": "verified-primary",
+      "use": "analogy"
+    },
+    {
+      "id": "S14",
+      "citation": "Barber, R. F., Candes, E. J., Ramdas, A., & Tibshirani, R. J. (2023). Conformal prediction beyond exchangeability.",
+      "url": "https://arxiv.org/abs/2202.13415",
+      "verification": "verified-primary",
+      "use": "analogy, limitation"
+    },
+    {
+      "id": "S15",
+      "citation": "Dwork, C. et al. (2015). The reusable holdout: Preserving validity in adaptive data analysis. Science, 349(6248), 636-638.",
+      "url": "https://doi.org/10.1126/science.aaa9375",
+      "verification": "verified-primary",
+      "use": "analogy"
+    },
+    {
+      "id": "S16",
+      "citation": "Blum, A., & Hardt, M. (2015). The Ladder: A Reliable Leaderboard for Machine Learning Competitions.",
+      "url": "https://arxiv.org/abs/1502.04585",
+      "verification": "verified-primary",
+      "use": "analogy"
+    },
+    {
+      "id": "S17",
+      "citation": "Dawid, A. P. (1984). Present Position and Potential Developments: Some Personal Views—Statistical Theory, The Prequential Approach. Journal of the Royal Statistical Society A, 147(2), 278-292.",
+      "url": "https://people.csail.mit.edu/jrennie/trg/papers/dawid-prequential-84.pdf",
+      "verification": "verified-primary",
+      "use": "analogy"
+    },
+    {
+      "id": "S18",
+      "citation": "Jackson, C. H. et al. (2021). A guide to value of information methods for prioritising research in health impact modelling.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7612319/",
+      "verification": "verified-primary",
+      "use": "direct"
+    },
+    {
+      "id": "S19",
+      "citation": "Rockafellar, R. T., & Uryasev, S. (2000). Optimization of Conditional Value-at-Risk. Journal of Risk, 2(3), 21-41.",
+      "url": "https://doi.org/10.21314/JOR.2000.038",
+      "verification": "verified-metadata",
+      "use": "direct"
+    },
+    {
+      "id": "S20",
+      "citation": "Keeney, R. L. (1971). Utility Independence and Preferences for Multiattributed Consequences. Operations Research, 19(4), 875-893.",
+      "url": "https://doi.org/10.1287/opre.19.4.875",
+      "verification": "verified-primary",
+      "use": "direct"
+    },
+    {
+      "id": "S21",
+      "citation": "Goddard, K., Roudsari, A., & Wyatt, J. C. (2012). Automation bias: a systematic review of frequency, effect mediators, and mitigators. Journal of the American Medical Informatics Association, 19(1), 121-127.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3240751/",
+      "verification": "verified-primary",
+      "use": "direct, limitation"
+    },
+    {
+      "id": "S22",
+      "citation": "Wahlster, P., Goetghebeur, M., Kriza, C., Niederlander, C., & Kolominsky-Rabas, P. (2015). Balancing costs and benefits at different stages of medical innovation: a systematic review of Multi-criteria decision analysis (MCDA). BMC Health Services Research, 15, 262.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4495941/",
+      "verification": "verified-primary",
+      "use": "limitation"
+    },
+    {
+      "id": "S23",
+      "citation": "Cenacchi, F., Cao, L., & Yang, R. (2026). Counterfactual Fragility Certificates: Exposing High-Confidence Brittleness under Structured Evidence Failure. arXiv:2609.00366v1.",
+      "url": "https://arxiv.org/abs/2609.00366",
+      "verification": "verified-primary-unreviewed",
+      "use": "direct, frontier"
+    }
+  ]
+}

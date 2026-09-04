@@ -1,0 +1,27 @@
+{
+  "experiment_id": "003a-decision-stress",
+  "title": "Decision rules under shared misspecification and hidden tails",
+  "seed": 20260904,
+  "bootstrap_seed": 20260905,
+  "cases_per_cell": 1000,
+  "bootstrap_samples": 5000,
+  "sensitivity_samples": 40,
+  "tail_probability": [0.0, 0.02, 0.08],
+  "tail_visibility": ["included", "omitted"],
+  "probability_error": [0.0, 0.15],
+  "impact_error": [0.0, 15.0],
+  "value_shift": [0.0, 0.5],
+  "negative_impact_confidence": [1.0, 0.4],
+  "robust_choice_threshold": 0.8,
+  "decision_margin": 0.0,
+  "catastrophe_threshold": -50.0,
+  "affected_harm_threshold": -40.0,
+  "methods": [
+    "oracle_expected",
+    "baseline",
+    "declared_raw",
+    "confidence_shrink",
+    "minimax_regret",
+    "robustness_gate"
+  ]
+}

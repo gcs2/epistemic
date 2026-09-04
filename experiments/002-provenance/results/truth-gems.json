@@ -1,0 +1,155 @@
+[
+  {
+    "id": "SES-GEM-006",
+    "claim": "Provenance recovery must optimize a precision-recall tradeoff; recovering more true dependencies can worsen truth estimates if independent sources are falsely merged.",
+    "type": "boundary",
+    "status": "synthetic_confirmed",
+    "scope": "Experiment 002A generated source families and registered recovery algorithms.",
+    "support": [
+      "Hybrid recall was 0.8671 versus citation recall 0.4040.",
+      "Hybrid precision was 0.6123 versus citation precision 1.0000.",
+      "Overall hybrid Brier was 0.08770 versus citation Brier 0.07977."
+    ],
+    "confidence": {
+      "level": "high",
+      "rationale": "The favored hybrid method failed preregistered H5 and H6 despite superior recall; the result is deterministic within the registered grid."
+    },
+    "invariance": [
+      "All 108 registered cells were retained.",
+      "The complete run reproduced byte-identically."
+    ],
+    "boundary": "The relative costs depend on the generator, clustering rule, and downstream loss; other hybrid methods may control false merging.",
+    "disconfirmation": [
+      "A preregistered replication under the same generator shows that hybrid's recall gain improves downstream loss without adequate precision.",
+      "Real-corpus studies show no meaningful downstream cost from false source-family mergers."
+    ],
+    "action_implication": "Evaluate provenance systems on downstream probabilistic loss and both error directions, not F1 or recall alone.",
+    "portability": [
+      "citation deduplication",
+      "news provenance",
+      "multi-agent source clustering",
+      "systematic-review overlap"
+    ],
+    "version": {
+      "number": "1.0",
+      "date": "2026-08-30",
+      "evidence_cutoff": "Experiment 002A confirmatory run",
+      "source_experiment": "002a-provenance"
+    }
+  },
+  {
+    "id": "SES-GEM-007",
+    "claim": "In the registered benchmark, false mergers of independent evidence families were more damaging than false splits of dependent reports.",
+    "type": "decision",
+    "status": "synthetic_confirmed",
+    "scope": "Experiment 002A binary truth synthesis, in which a false merger removes an independent likelihood contribution and a false split repeats a correlated one.",
+    "support": [
+      "Citation-only recovery had zero false-dependence rate, 59.6% false-independence rate, and Brier 0.07977.",
+      "Hybrid recovery had 30.7% false-dependence rate, 13.3% false-independence rate, and Brier 0.08770.",
+      "Hybrid precision below the preregistered 0.90 requirement caused H5 to fail."
+    ],
+    "confidence": {
+      "level": "high",
+      "rationale": "The direction is clear across the registered aggregate, but its magnitude and transfer depend on the decision loss."
+    },
+    "invariance": ["Observed across the equal-cell aggregate."],
+    "boundary": "This is not a universal asymmetry. In other applications, repeated correlated evidence may be more damaging than suppressing an independent source.",
+    "disconfirmation": [
+      "Decision-specific replications with the same asymmetry show false splits create greater expected loss.",
+      "The result disappears under realistic source reliability and multi-parent modeling."
+    ],
+    "action_implication": "High-consequence provenance tools should default to precision-first grouping or uncertainty bounds until false-merge costs are estimated.",
+    "portability": ["evidence graphs", "record linkage", "source deduplication", "agent ensembles"],
+    "version": {
+      "number": "1.0",
+      "date": "2026-08-30",
+      "evidence_cutoff": "Experiment 002A confirmatory run",
+      "source_experiment": "002a-provenance"
+    }
+  },
+  {
+    "id": "SES-GEM-008",
+    "claim": "Unconditional union of citation and similarity edges can amplify error through transitive closure even when it guarantees higher recall.",
+    "type": "mechanism",
+    "status": "synthetic_confirmed",
+    "scope": "Connected-component clustering over the union of registered citation and Jaccard-similarity edges.",
+    "support": [
+      "Hybrid recall exceeded both component methods, but hybrid precision was only 61.2%.",
+      "A false similarity bridge could merge two citation components, causing every cross-component pair to become a predicted dependency.",
+      "Preregistered H5 failed despite hybrid's recall advantage."
+    ],
+    "confidence": {
+      "level": "very_high",
+      "rationale": "The amplification mechanism follows directly from connected-component closure and appears in the registered results."
+    },
+    "invariance": ["Structural property of unconditional transitive closure."],
+    "boundary": "Probabilistic clustering, bridge-edge validation, temporal constraints, or non-transitive relationship types may prevent the failure.",
+    "disconfirmation": [
+      "A formal error shows that false bridge edges cannot induce component-wide mergers.",
+      "A constrained hybrid method eliminates the mechanism while preserving recall."
+    ],
+    "action_implication": "Audit bridge edges and avoid treating all provenance relations as automatically transitive equivalence relations.",
+    "portability": ["knowledge graphs", "entity resolution", "news story clustering", "citation networks"],
+    "version": {
+      "number": "1.0",
+      "date": "2026-08-30",
+      "evidence_cutoff": "Experiment 002A confirmatory run",
+      "source_experiment": "002a-provenance"
+    }
+  },
+  {
+    "id": "SES-GEM-009",
+    "claim": "Hybrid provenance recovery may be highly useful when topical collision is low and harmful when collision is high.",
+    "type": "threshold",
+    "status": "candidate",
+    "scope": "Post-run exploratory contamination stratification in Experiment 002A.",
+    "support": [
+      "At contamination 0.10, hybrid precision was 1.0000, recall 0.8027, and Brier 0.0685 versus 0.0866 for all-independent synthesis.",
+      "At contamination 0.50, hybrid precision was 0.2245, false-dependence rate 0.6142, and Brier 0.1069 versus 0.0886 for all-independent synthesis."
+    ],
+    "confidence": {
+      "level": "moderate",
+      "rationale": "The contrast is large and mechanistically coherent but was identified through post-run stratification rather than a frozen confirmatory contrast."
+    },
+    "invariance": ["Observed across registered root counts, family sizes, citation levels, and paraphrase rates within each contamination stratum."],
+    "boundary": "Topic contamination is a simplified generator parameter, not a directly measured real-world quantity.",
+    "disconfirmation": [
+      "A preregistered replication fails to reproduce the interaction.",
+      "Natural-language benchmarks show similarity precision is unrelated to topical collision."
+    ],
+    "action_implication": "The next method should estimate collision risk and abstain or widen uncertainty when unrelated sources share dense vocabulary.",
+    "portability": ["domain-specific text clustering", "semantic deduplication", "retrieval systems"],
+    "version": {
+      "number": "1.0",
+      "date": "2026-08-30",
+      "evidence_cutoff": "Experiment 002A post-run exploratory analysis",
+      "source_experiment": "002a-provenance"
+    }
+  },
+  {
+    "id": "SES-GEM-010",
+    "claim": "Whether real evidence ancestry can be recovered with adequate precision remains unknown.",
+    "type": "ignorance",
+    "status": "candidate",
+    "scope": "Transfer from generated token documents to natural scholarly, journalistic, historical, intelligence, and agent-produced artifacts.",
+    "support": [
+      "Experiment 002A used disjoint known families, missing but never false citations, and auditable token transformations.",
+      "Two central hybrid-method hypotheses failed, demonstrating that structural inference can backfire even in the simplified setting."
+    ],
+    "confidence": {
+      "level": "very_high",
+      "rationale": "The limitation is entailed by the study design."
+    },
+    "invariance": ["Applies to every Experiment 002A result."],
+    "boundary": "This does not claim real recovery is impossible; it identifies the next empirical question.",
+    "disconfirmation": ["Experiment 002B demonstrates calibrated, generalizable recovery on adjudicated real corpora with downstream gains."],
+    "action_implication": "Do not deploy inferred point dependence weights in high-consequence inquiries before real-corpus validation; use ranges and audit trails.",
+    "portability": ["research agenda", "governance", "uncertainty reporting"],
+    "version": {
+      "number": "1.0",
+      "date": "2026-08-30",
+      "evidence_cutoff": "Experiment 002A confirmatory run",
+      "source_experiment": "002a-provenance"
+    }
+  }
+]

@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this protocol or reference implementation, cite the project and the specific experiment version."
+title: "Syncretic Epistemic Synthesis: Protocol and Reference Harness"
+type: software
+version: 0.6.0
+date-released: 2026-09-04
+repository-code: "https://github.com/gcs2/epistemic"
+authors:
+  - name: "Syncretic Epistemic Synthesis contributors"
+abstract: "An experimental protocol and deterministic reference harness for dependence-aware, multi-model, adversarial epistemic synthesis."
+keywords:
+  - epistemology
+  - evidence synthesis
+  - forecasting
+  - multi-agent systems
+  - provenance
+  - calibration
+license: "NOASSERTION"

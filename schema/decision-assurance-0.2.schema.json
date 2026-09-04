@@ -1,0 +1,291 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ses:schema:decision-assurance:0.2",
+  "title": "SES Bounded Decision Assurance Packet 0.2",
+  "type": "object",
+  "required": [
+    "protocol_version",
+    "decision",
+    "scenarios",
+    "worldviews",
+    "criteria",
+    "stakeholders",
+    "options",
+    "evidence",
+    "consequences",
+    "challenges",
+    "deficits",
+    "constraints",
+    "assurance",
+    "learning",
+    "analysis"
+  ],
+  "properties": {
+    "protocol_version": {"const": "action-0.2"},
+    "decision": {
+      "type": "object",
+      "required": ["title", "question", "owner", "cutoff", "horizon", "baseline_option_id"],
+      "properties": {
+        "title": {"$ref": "#/$defs/nonEmptyString"},
+        "question": {"$ref": "#/$defs/nonEmptyString"},
+        "owner": {"$ref": "#/$defs/nonEmptyString"},
+        "cutoff": {"$ref": "#/$defs/nonEmptyString"},
+        "horizon": {"$ref": "#/$defs/nonEmptyString"},
+        "baseline_option_id": {"$ref": "#/$defs/nonEmptyString"}
+      },
+      "additionalProperties": true
+    },
+    "scenarios": {
+      "type": "array",
+      "minItems": 2,
+      "items": {"$ref": "#/$defs/labeled"}
+    },
+    "worldviews": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "allOf": [
+          {"$ref": "#/$defs/labeledWeighted"},
+          {
+            "type": "object",
+            "required": ["scenario_probabilities"],
+            "properties": {
+              "scenario_probabilities": {
+                "type": "object",
+                "additionalProperties": {"$ref": "#/$defs/probability"}
+              },
+              "probability_concentration": {"type": "number", "exclusiveMinimum": 0}
+            }
+          }
+        ]
+      }
+    },
+    "criteria": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/labeledWeighted"}
+    },
+    "stakeholders": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/labeledWeighted"}
+    },
+    "options": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "reversible", "risk_level"],
+        "properties": {
+          "id": {"$ref": "#/$defs/nonEmptyString"},
+          "label": {"$ref": "#/$defs/nonEmptyString"},
+          "reversible": {"type": "boolean"},
+          "risk_level": {"enum": ["low", "medium", "high"]},
+          "action_type": {"enum": ["fixed", "pilot", "learn", "adaptive"]}
+        },
+        "additionalProperties": true
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "source", "independence_group", "quality", "status"],
+        "properties": {
+          "id": {"$ref": "#/$defs/nonEmptyString"},
+          "label": {"$ref": "#/$defs/nonEmptyString"},
+          "source": {"$ref": "#/$defs/nonEmptyString"},
+          "independence_group": {"$ref": "#/$defs/nonEmptyString"},
+          "quality": {"enum": ["strong", "moderate", "weak", "unknown"]},
+          "status": {"enum": ["supporting", "contested", "refuted"]}
+        },
+        "additionalProperties": true
+      }
+    },
+    "consequences": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "option_id",
+          "scenario_id",
+          "stakeholder_id",
+          "criterion_id",
+          "estimate",
+          "uncertainty_group",
+          "evidence_ids"
+        ],
+        "properties": {
+          "option_id": {"$ref": "#/$defs/nonEmptyString"},
+          "scenario_id": {"$ref": "#/$defs/nonEmptyString"},
+          "stakeholder_id": {"$ref": "#/$defs/nonEmptyString"},
+          "criterion_id": {"$ref": "#/$defs/nonEmptyString"},
+          "estimate": {"$ref": "#/$defs/signedRange"},
+          "uncertainty_group": {"$ref": "#/$defs/nonEmptyString"},
+          "evidence_ids": {
+            "type": "array",
+            "minItems": 1,
+            "items": {"$ref": "#/$defs/nonEmptyString"},
+            "uniqueItems": true
+          },
+          "rationale": {"type": "string"}
+        },
+        "additionalProperties": true
+      }
+    },
+    "challenges": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "type", "status", "method"],
+        "properties": {
+          "id": {"$ref": "#/$defs/nonEmptyString"},
+          "label": {"$ref": "#/$defs/nonEmptyString"},
+          "type": {"$ref": "#/$defs/nonEmptyString"},
+          "status": {"enum": ["tested", "bounded", "open"]},
+          "method": {"$ref": "#/$defs/nonEmptyString"}
+        },
+        "additionalProperties": true
+      }
+    },
+    "deficits": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "description", "type", "severity", "status"],
+        "properties": {
+          "id": {"$ref": "#/$defs/nonEmptyString"},
+          "description": {"$ref": "#/$defs/nonEmptyString"},
+          "type": {"$ref": "#/$defs/nonEmptyString"},
+          "severity": {"enum": ["low", "medium", "high", "blocker"]},
+          "status": {"enum": ["open", "resolved", "accepted"]}
+        },
+        "additionalProperties": true
+      }
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "stakeholder_id", "threshold", "max_violation_probability"],
+        "properties": {
+          "id": {"$ref": "#/$defs/nonEmptyString"},
+          "type": {"const": "minimum_stakeholder_score"},
+          "stakeholder_id": {"$ref": "#/$defs/nonEmptyString"},
+          "threshold": {"type": "number", "minimum": -100, "maximum": 100},
+          "max_violation_probability": {"$ref": "#/$defs/probability"}
+        },
+        "additionalProperties": true
+      }
+    },
+    "assurance": {
+      "type": "object",
+      "required": [
+        "required_challenge_types",
+        "block_on_deficit_severities",
+        "rank_acceptability_threshold",
+        "tail_alpha"
+      ],
+      "properties": {
+        "required_challenge_types": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/nonEmptyString"},
+          "uniqueItems": true
+        },
+        "block_on_deficit_severities": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"enum": ["low", "medium", "high", "blocker"]},
+          "uniqueItems": true
+        },
+        "rank_acceptability_threshold": {"$ref": "#/$defs/probability"},
+        "tail_alpha": {"type": "number", "exclusiveMinimum": 0, "maximum": 0.5}
+      },
+      "additionalProperties": true
+    },
+    "learning": {
+      "type": "object",
+      "required": [
+        "measurement_plan",
+        "review_date",
+        "success_rule",
+        "triggers",
+        "stop_rules",
+        "appeal_process",
+        "affected_party_review"
+      ],
+      "properties": {
+        "measurement_plan": {"$ref": "#/$defs/nonEmptyString"},
+        "review_date": {"$ref": "#/$defs/nonEmptyString"},
+        "success_rule": {"$ref": "#/$defs/nonEmptyString"},
+        "triggers": {"$ref": "#/$defs/nonEmptyStringArray"},
+        "stop_rules": {"$ref": "#/$defs/nonEmptyStringArray"},
+        "appeal_process": {"$ref": "#/$defs/nonEmptyString"},
+        "affected_party_review": {"$ref": "#/$defs/nonEmptyString"}
+      },
+      "additionalProperties": true
+    },
+    "analysis": {
+      "type": "object",
+      "required": ["samples", "seed"],
+      "properties": {
+        "samples": {"type": "integer", "minimum": 1},
+        "seed": {"type": "integer"}
+      },
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "nonEmptyString": {"type": "string", "minLength": 1},
+    "nonEmptyStringArray": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/nonEmptyString"}
+    },
+    "probability": {"type": "number", "minimum": 0, "maximum": 1},
+    "labeled": {
+      "type": "object",
+      "required": ["id", "label"],
+      "properties": {
+        "id": {"$ref": "#/$defs/nonEmptyString"},
+        "label": {"$ref": "#/$defs/nonEmptyString"}
+      },
+      "additionalProperties": true
+    },
+    "labeledWeighted": {
+      "type": "object",
+      "required": ["id", "label", "weight"],
+      "properties": {
+        "id": {"$ref": "#/$defs/nonEmptyString"},
+        "label": {"$ref": "#/$defs/nonEmptyString"},
+        "weight": {"$ref": "#/$defs/nonnegativeRange"}
+      },
+      "additionalProperties": true
+    },
+    "nonnegativeRange": {
+      "type": "object",
+      "required": ["low", "central", "high"],
+      "properties": {
+        "low": {"type": "number", "minimum": 0},
+        "central": {"type": "number", "exclusiveMinimum": 0},
+        "high": {"type": "number", "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "signedRange": {
+      "type": "object",
+      "required": ["low", "central", "high"],
+      "properties": {
+        "low": {"type": "number", "minimum": -100, "maximum": 100},
+        "central": {"type": "number", "minimum": -100, "maximum": 100},
+        "high": {"type": "number", "minimum": -100, "maximum": 100}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,26 @@
+{
+  "experiment_id": "002a-provenance",
+  "title": "Recovering hidden evidence families",
+  "seed": 20260830,
+  "bootstrap_seed": 20260831,
+  "cases_per_cell": 160,
+  "roots": [4, 10],
+  "max_family_size": [2, 5, 10],
+  "citation_completeness": [0.0, 0.5, 0.9],
+  "paraphrase_rate": [0.0, 0.4, 0.8],
+  "topic_contamination": [0.1, 0.5],
+  "signal_strength": 0.55,
+  "report_noise_sd": 0.12,
+  "lineage_tokens": 14,
+  "topic_vocabulary_size": 24,
+  "text_jaccard_threshold": 0.2,
+  "bootstrap_samples": 10000,
+  "methods": [
+    "oracle",
+    "all_independent",
+    "all_one",
+    "citation",
+    "text",
+    "hybrid"
+  ]
+}

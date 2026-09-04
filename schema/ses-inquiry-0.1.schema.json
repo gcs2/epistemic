@@ -1,0 +1,168 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ses:schema:inquiry:0.1",
+  "title": "Syncretic Epistemic Synthesis Inquiry 0.1",
+  "type": "object",
+  "required": [
+    "protocol_version",
+    "inquiry",
+    "hypotheses",
+    "models",
+    "evidence"
+  ],
+  "properties": {
+    "protocol_version": {
+      "const": "0.1"
+    },
+    "inquiry": {
+      "type": "object",
+      "required": [
+        "title",
+        "question",
+        "claim_type",
+        "cutoff",
+        "horizon",
+        "resolution_criteria"
+      ],
+      "properties": {
+        "title": {"$ref": "#/$defs/nonEmptyString"},
+        "question": {"$ref": "#/$defs/nonEmptyString"},
+        "claim_type": {"$ref": "#/$defs/nonEmptyString"},
+        "cutoff": {"$ref": "#/$defs/nonEmptyString"},
+        "horizon": {"$ref": "#/$defs/nonEmptyString"},
+        "resolution_criteria": {"$ref": "#/$defs/nonEmptyString"},
+        "scope": {"type": "string"},
+        "ethical_note": {"type": "string"},
+        "limitations": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      },
+      "additionalProperties": true
+    },
+    "hypotheses": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["id", "label"],
+        "properties": {
+          "id": {"$ref": "#/$defs/identifier"},
+          "label": {"$ref": "#/$defs/nonEmptyString"},
+          "description": {"type": "string"}
+        },
+        "additionalProperties": true
+      }
+    },
+    "models": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "weight", "priors"],
+        "properties": {
+          "id": {"$ref": "#/$defs/identifier"},
+          "label": {"$ref": "#/$defs/nonEmptyString"},
+          "weight": {"type": "number", "exclusiveMinimum": 0},
+          "priors": {
+            "type": "object",
+            "additionalProperties": {"$ref": "#/$defs/openProbability"}
+          },
+          "assumptions": {
+            "type": "array",
+            "items": {"type": "string"}
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "description",
+          "independence_group",
+          "reliability",
+          "likelihoods"
+        ],
+        "properties": {
+          "id": {"$ref": "#/$defs/identifier"},
+          "description": {"$ref": "#/$defs/nonEmptyString"},
+          "independence_group": {"$ref": "#/$defs/identifier"},
+          "reliability": {"$ref": "#/$defs/probability"},
+          "likelihoods": {
+            "type": "object",
+            "additionalProperties": {"$ref": "#/$defs/openProbability"}
+          },
+          "source": {"type": "string"},
+          "directness": {"type": "string"},
+          "available_at_cutoff": {"type": "boolean"},
+          "distortions": {
+            "type": "array",
+            "items": {"type": "string"}
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "challenges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["description"],
+        "properties": {
+          "target": {"type": "string"},
+          "description": {"$ref": "#/$defs/nonEmptyString"}
+        },
+        "additionalProperties": true
+      }
+    },
+    "translations": {
+      "type": "array",
+      "items": {"type": "object"}
+    },
+    "constraints": {
+      "type": "array",
+      "items": {"type": "object"}
+    },
+    "values": {
+      "type": "array",
+      "items": {"type": "object"}
+    },
+    "robustness": {
+      "type": "object",
+      "properties": {
+        "samples": {"type": "integer", "minimum": 0},
+        "seed": {"type": "integer"},
+        "reliability_jitter": {"$ref": "#/$defs/probability"},
+        "prior_concentration": {"type": "number", "exclusiveMinimum": 0},
+        "model_weight_jitter": {"$ref": "#/$defs/probability"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "identifier": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+    },
+    "probability": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "openProbability": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "exclusiveMaximum": 1
+    }
+  },
+  "additionalProperties": true
+}

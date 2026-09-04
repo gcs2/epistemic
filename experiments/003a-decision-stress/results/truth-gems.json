@@ -1,0 +1,96 @@
+[
+  {
+    "id": "SES-GEM-011",
+    "claim": "Agreement among declared worldviews does not protect a decision rule when every worldview shares the same omitted state.",
+    "type": "boundary",
+    "status": "synthetic_confirmed",
+    "scope": "Experiment 003A robustness gate with a generated rare-tail state that was either represented in or omitted from every declared worldview.",
+    "support": [
+      "Certified-non-oracle rate was 0.070125 with the tail included.",
+      "Certified-non-oracle rate was 0.08290625 with the tail omitted.",
+      "All 96 registered cells and 96,000 cases were retained."
+    ],
+    "confidence": {"level": "high", "rationale": "The direction matched preregistered H3 and is deterministic within the frozen generator."},
+    "invariance": ["Observed in the equal-cell positive-tail aggregate."],
+    "boundary": "The magnitude is specific to the registered generator, view construction, and gate; it does not estimate real omitted-scenario prevalence.",
+    "disconfirmation": ["A preregistered replication under the same mechanism shows omission does not increase false certification.", "A gate with explicit open-world coverage tests eliminates the difference."],
+    "action_implication": "Label robustness as conditional on the represented scenario and model set, and require an explicit omitted-state challenge before pilot certification.",
+    "portability": ["scenario planning", "robust decision making", "model ensembles", "risk registers"],
+    "version": {"number": "1.0", "date": "2026-09-04", "evidence_cutoff": "Experiment 003A confirmatory run", "source_experiment": "003a-decision-stress"}
+  },
+  {
+    "id": "SES-GEM-012",
+    "claim": "Multiplying uncertain negative impacts by confidence can move them toward zero and thereby increase exposure to severe downside.",
+    "type": "mechanism",
+    "status": "synthetic_confirmed",
+    "scope": "Experiment 003A cells with positive tail probability and confidence 0.4 assigned to negative declared impacts.",
+    "support": [
+      "Confidence-shrink minus declared-raw catastrophe exposure was 0.006889375.",
+      "The paired case-level bootstrap 95% interval was [0.006659375, 0.007126875].",
+      "Overall confidence shrink had lower mean regret but a higher harmful-choice rate, showing a multi-metric tradeoff."
+    ],
+    "confidence": {"level": "high", "rationale": "Preregistered H4 was supported with a narrow paired interval and a direct algebraic mechanism."},
+    "invariance": ["Aggregated across registered visibility, probability-error, impact-error, value-shift, and positive-tail conditions."],
+    "boundary": "The generator assigned lower confidence selectively to negative impacts; symmetric uncertainty sets or conservative bounds can behave differently.",
+    "disconfirmation": ["A faithful replication finds no increase in downside exposure.", "A formal demonstration shows the scoring rule cannot favor an option by attenuating its uncertain harms."],
+    "action_implication": "Do not use confidence as a direct multiplier on signed consequences; represent uncertain impacts with intervals or distributions and test downside explicitly.",
+    "portability": ["risk scoring", "cost-benefit analysis", "AI decision support", "impact assessment"],
+    "version": {"number": "1.0", "date": "2026-09-04", "evidence_cutoff": "Experiment 003A confirmatory run", "source_experiment": "003a-decision-stress"}
+  },
+  {
+    "id": "SES-GEM-013",
+    "claim": "A robustness gate can reduce tail exposure while imposing an excessive opportunity cost through deferral to baseline.",
+    "type": "decision",
+    "status": "synthetic_confirmed",
+    "scope": "Experiment 003A positive-tail, tail-included cells comparing the registered robustness gate with confidence-shrink selection.",
+    "support": [
+      "Catastrophe exposure fell from 0.04038 to 0.03282625.",
+      "Mean regret increased from 0.768318 to 2.647503.",
+      "The regret increase 1.879184 exceeded the preregistered allowance 1.331028; H5 was not supported."
+    ],
+    "confidence": {"level": "high", "rationale": "The registered joint criterion failed after correction of a documented result-classification bug."},
+    "invariance": ["All included-tail grid cells contributed equally."],
+    "boundary": "Baseline quality and the relative social loss of catastrophes versus forgone gains determine whether this tradeoff is acceptable.",
+    "disconfirmation": ["A replication meeting the frozen joint-protection criterion shows the gate reduces one risk without excessive increase in the other."],
+    "action_implication": "Evaluate abstention and safety gates on opportunity cost as well as avoided harm; never count deferral alone as success.",
+    "portability": ["abstaining classifiers", "safety gates", "human review queues", "precautionary policy"],
+    "version": {"number": "1.0", "date": "2026-09-04", "evidence_cutoff": "Experiment 003A corrected confirmatory run", "source_experiment": "003a-decision-stress"}
+  },
+  {
+    "id": "SES-GEM-014",
+    "claim": "Minimax regret does not provide downside protection merely by name; its performance depends on whether the declared uncertainty set contains the consequential errors.",
+    "type": "boundary",
+    "status": "synthetic_confirmed",
+    "scope": "Experiment 003A registered alternative probability and stakeholder-weight views in included-tail cells with estimation error.",
+    "support": [
+      "Minimax P90 regret was 3.648929 versus 3.643432 for declared raw.",
+      "The paired mean-regret difference was -0.001315 with bootstrap interval [-0.008142, 0.006058].",
+      "Preregistered H6 was not supported."
+    ],
+    "confidence": {"level": "high", "rationale": "The null result is stable for the registered view set; its external scope is deliberately narrow."},
+    "invariance": ["Computed over all registered included-tail cells with at least one active error factor."],
+    "boundary": "Richer uncertainty sets, different regret definitions, or adversarially generated views can produce benefit.",
+    "disconfirmation": ["A faithful replication shows lower P90 regret under the same registered view set."],
+    "action_implication": "Audit the coverage and construction of an uncertainty set before treating minimax output as robust.",
+    "portability": ["robust optimization", "scenario analysis", "policy stress testing"],
+    "version": {"number": "1.0", "date": "2026-09-04", "evidence_cutoff": "Experiment 003A confirmatory run", "source_experiment": "003a-decision-stress"}
+  },
+  {
+    "id": "SES-GEM-015",
+    "claim": "A registered fairness or harm metric that never activates cannot support a conclusion of distributional safety.",
+    "type": "ignorance",
+    "status": "candidate",
+    "scope": "Experiment 003A affected-party expected-harm threshold of -40 under the registered impact ranges and tail probabilities.",
+    "support": [
+      "Affected-party harm rate was zero for every method and value-shift condition.",
+      "Preregistered H7 was not supported because the outcome contained no variation."
+    ],
+    "confidence": {"level": "very_high", "rationale": "The benchmark output directly establishes that this metric was dormant, not that real distributional harm is absent."},
+    "invariance": ["Zero across all 96 registered cells and six methods."],
+    "boundary": "This is a diagnostic about the benchmark, not a substantive distributional finding.",
+    "disconfirmation": ["Recalculation reveals threshold crossings that were missed by the implementation."],
+    "action_implication": "Redesign the next generator around stakeholder conflict and continuous inequality-sensitive losses before evaluating distributional robustness.",
+    "portability": ["simulation design", "fairness evaluation", "distributional impact assessment"],
+    "version": {"number": "1.0", "date": "2026-09-04", "evidence_cutoff": "Experiment 003A confirmatory run", "source_experiment": "003a-decision-stress"}
+  }
+]

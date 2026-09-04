@@ -1,0 +1,14 @@
+[project]
+name = "syncretic-epistemic-synthesis"
+version = "0.6.0"
+description = "A transparent reference harness for multi-model, dependence-aware epistemic synthesis"
+requires-python = ">=3.11"
+
+[project.urls]
+Repository = "https://github.com/gcs2/epistemic"
+
+[project.scripts]
+syntruth = "syntruth.cli:main"
+
+[tool.setuptools]
+packages = ["syntruth"]

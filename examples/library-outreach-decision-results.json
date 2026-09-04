@@ -1,0 +1,93 @@
+{
+  "protocol_version": "action-0.1",
+  "decision": {
+    "title": "Library outreach pilot",
+    "question": "Which reversible outreach format should a library pilot for six weeks?",
+    "owner": "Example public-library program team",
+    "cutoff": "Illustrative inputs frozen before pilot; not real field data",
+    "review_date": "Six weeks after launch",
+    "baseline_option_id": "current_flyers"
+  },
+  "ensemble_scores": {
+    "current_flyers": 0.0,
+    "digital_messages": 5.761875,
+    "partner_popups": 20.112499999999997
+  },
+  "per_worldview_scores": {
+    "survey_view": {
+      "current_flyers": 0.0,
+      "digital_messages": 10.616249999999999,
+      "partner_popups": 19.062499999999996
+    },
+    "frontline_view": {
+      "current_flyers": 0.0,
+      "digital_messages": 0.9075000000000013,
+      "partner_popups": 21.1625
+    }
+  },
+  "worldview_winners": {
+    "survey_view": "partner_popups",
+    "frontline_view": "partner_popups"
+  },
+  "max_regret": {
+    "current_flyers": 21.1625,
+    "digital_messages": 20.255,
+    "partner_popups": 0.0
+  },
+  "intervals": {
+    "current_flyers": {
+      "q05": -1.2761676447487298,
+      "q50": -0.02801236308388675,
+      "q95": 1.3119901516361445
+    },
+    "digital_messages": {
+      "q05": 2.11931377656871,
+      "q50": 5.786295138152545,
+      "q95": 9.468046178787226
+    },
+    "partner_popups": {
+      "q05": 17.239753710626108,
+      "q50": 19.972089328501085,
+      "q95": 23.02399695686593
+    }
+  },
+  "rank_probability": {
+    "current_flyers": 0.0,
+    "digital_messages": 0.0,
+    "partner_popups": 1.0
+  },
+  "ranking": [
+    "partner_popups",
+    "digital_messages",
+    "current_flyers"
+  ],
+  "robust_choice": false,
+  "safety_flags": [],
+  "uncertainty_laundering_cells": [
+    {
+      "option_id": "digital_messages",
+      "scenario_id": "digital_access_low",
+      "stakeholder_id": "underserved_residents",
+      "criterion_id": "reach"
+    },
+    {
+      "option_id": "digital_messages",
+      "scenario_id": "digital_access_low",
+      "stakeholder_id": "underserved_residents",
+      "criterion_id": "access"
+    },
+    {
+      "option_id": "digital_messages",
+      "scenario_id": "digital_access_low",
+      "stakeholder_id": "staff",
+      "criterion_id": "access"
+    },
+    {
+      "option_id": "partner_popups",
+      "scenario_id": "digital_access_low",
+      "stakeholder_id": "staff",
+      "criterion_id": "reach"
+    }
+  ],
+  "baseline_improvement": 20.112499999999997
+}

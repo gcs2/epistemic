@@ -1,0 +1,174 @@
+{
+  "protocol_version": "0.1",
+  "inquiry": {
+    "title": "Illustrative Anschluss Consolidation Inquiry",
+    "question": "Conditional on Nazi Germany permanently ending external expansion after the March 1938 Anschluss, what is the political-territorial outcome by March 1948?",
+    "claim_type": "historical counterfactual and probabilistic",
+    "cutoff": "March 31, 1938",
+    "horizon": "10 years",
+    "resolution_criteria": "Classify the status of Hitler's regime and German control of Austria in March 1948.",
+    "scope": "European political-territorial outcome; not a welfare evaluation or an endorsement of Nazi objectives.",
+    "ethical_note": "Strategic success is analytically distinct from human welfare. Every modeled branch retains severe Nazi persecution unless separately changed.",
+    "limitations": [
+      "All numerical priors and likelihoods are illustrative elicitation values, not a completed scholarly estimate.",
+      "The antecedent changes a central feature of Hitler's ideology and therefore has substantial actor-coherence uncertainty.",
+      "The three hypotheses compress many possible successions, coups, negotiated settlements, and conflicts.",
+      "No source-provenance graph or independently calibrated expert panel has yet populated this example."
+    ]
+  },
+  "hypotheses": [
+    {
+      "id": "hitler_regime_retains",
+      "label": "Hitler's regime retains Germany and Austria",
+      "description": "Hitler remains the effective head of the Nazi regime and Austria remains incorporated through March 1948."
+    },
+    {
+      "id": "successor_state_retains",
+      "label": "A successor regime retains Austria",
+      "description": "Hitler's personal regime ends, but a German successor state continues to control Austria."
+    },
+    {
+      "id": "germany_loses_austria",
+      "label": "Germany loses control of Austria",
+      "description": "War, negotiated reversal, internal collapse, or foreign intervention restores Austrian separation by March 1948."
+    }
+  ],
+  "models": [
+    {
+      "id": "diplomatic_security",
+      "label": "Diplomatic-security model",
+      "weight": 1.0,
+      "priors": {
+        "hitler_regime_retains": 0.68,
+        "successor_state_retains": 0.22,
+        "germany_loses_austria": 0.10
+      },
+      "assumptions": [
+        "Britain and France prefer avoiding war if expansion genuinely stops.",
+        "No external coalition forms solely to reverse the Anschluss."
+      ]
+    },
+    {
+      "id": "political_economy",
+      "label": "Political-economy model",
+      "weight": 1.0,
+      "priors": {
+        "hitler_regime_retains": 0.52,
+        "successor_state_retains": 0.31,
+        "germany_loses_austria": 0.17
+      },
+      "assumptions": [
+        "Rearmament and foreign-exchange constraints force material policy changes.",
+        "Economic stress threatens leadership durability more than the border settlement itself."
+      ]
+    },
+    {
+      "id": "institutional_succession",
+      "label": "Institutional-succession model",
+      "weight": 0.8,
+      "priors": {
+        "hitler_regime_retains": 0.48,
+        "successor_state_retains": 0.37,
+        "germany_loses_austria": 0.15
+      },
+      "assumptions": [
+        "The personalized polycratic regime contains material succession risk.",
+        "German and Austrian integration can outlast Hitler personally."
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "foreign_nonintervention",
+      "description": "The European powers did not use military force to reverse the Anschluss at the time.",
+      "independence_group": "international_response_1938",
+      "reliability": 0.95,
+      "directness": "high",
+      "likelihoods": {
+        "hitler_regime_retains": 0.82,
+        "successor_state_retains": 0.77,
+        "germany_loses_austria": 0.32
+      },
+      "distortions": [
+        "Short-run nonintervention does not guarantee ten-year acceptance."
+      ]
+    },
+    {
+      "id": "administrative_integration",
+      "description": "The regime rapidly incorporated Austrian political, monetary, and administrative institutions.",
+      "independence_group": "integration_capacity",
+      "reliability": 0.90,
+      "directness": "medium-high",
+      "likelihoods": {
+        "hitler_regime_retains": 0.78,
+        "successor_state_retains": 0.82,
+        "germany_loses_austria": 0.38
+      },
+      "distortions": [
+        "Administrative control is not equivalent to durable legitimacy."
+      ]
+    },
+    {
+      "id": "foreign_exchange_pressure",
+      "description": "German rearmament had produced serious import and foreign-exchange constraints by 1938.",
+      "independence_group": "political_economy_constraints",
+      "reliability": 0.82,
+      "directness": "medium",
+      "likelihoods": {
+        "hitler_regime_retains": 0.43,
+        "successor_state_retains": 0.62,
+        "germany_loses_austria": 0.66
+      },
+      "distortions": [
+        "Authoritarian regimes can redirect, conceal, or survive severe economic imbalances."
+      ]
+    },
+    {
+      "id": "personalized_rule",
+      "description": "The Nazi state concentrated authority around Hitler while maintaining rival and overlapping institutions.",
+      "independence_group": "regime_structure",
+      "reliability": 0.78,
+      "directness": "medium",
+      "likelihoods": {
+        "hitler_regime_retains": 0.48,
+        "successor_state_retains": 0.71,
+        "germany_loses_austria": 0.59
+      },
+      "distortions": [
+        "Institutional rivalry can strengthen a dictator before it destabilizes succession."
+      ]
+    }
+  ],
+  "challenges": [
+    {
+      "target": "inquiry antecedent",
+      "description": "A permanent end to expansion conflicts with Hitler's repeatedly stated ideological objectives; an illness, restraint mechanism, or different leader may be a more coherent intervention."
+    },
+    {
+      "target": "hitler_regime_retains",
+      "description": "Economic consolidation requires reducing or redirecting the mobilization system on which Nazi legitimacy and elite competition increasingly depended."
+    },
+    {
+      "target": "all hypotheses",
+      "description": "The inquiry has not yet modeled Soviet, Italian, Japanese, Polish, Czechoslovak, or colonial dynamics as endogenous responses."
+    }
+  ],
+  "translations": [
+    {
+      "terms": [
+        "foreign-exchange capacity",
+        "logistical sustainability",
+        "mobilizable state power"
+      ],
+      "latent_construct": "sustainable coercive capacity",
+      "warning": "The terms overlap but are not interchangeable."
+    }
+  ],
+  "robustness": {
+    "samples": 600,
+    "seed": 1938,
+    "reliability_jitter": 0.12,
+    "prior_concentration": 70,
+    "model_weight_jitter": 0.20
+  }
+}

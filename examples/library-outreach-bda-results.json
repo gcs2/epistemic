@@ -1,0 +1,167 @@
+{
+  "protocol_version": "action-0.2",
+  "decision": {
+    "title": "Illustrative library outreach bounded-assurance case",
+    "question": "Which reversible outreach path, if any, is eligible for a six-week pilot?",
+    "owner": "Example public-library program team",
+    "cutoff": "Illustrative inputs; no real field data",
+    "horizon": "Six-week pilot with review before continuation",
+    "baseline_option_id": "current_flyers"
+  },
+  "analysis_contract": {
+    "samples": 2000,
+    "seed": 52021,
+    "tail_alpha": 0.1,
+    "uncertainty_groups": [
+      "baseline",
+      "digital_high",
+      "digital_low",
+      "popups_high",
+      "popups_low"
+    ],
+    "consequence_sampling": "triangular bounds with shared quantiles inside each declared uncertainty group",
+    "evidence_in_arithmetic": false
+  },
+  "central_per_worldview_scores": {
+    "survey_view": {
+      "current_flyers": 0.0,
+      "digital_messages": 20.124999999999996,
+      "partner_popups": 33.625
+    },
+    "frontline_view": {
+      "current_flyers": 0.0,
+      "digital_messages": 1.750000000000004,
+      "partner_popups": 36.24999999999999
+    }
+  },
+  "central_stakeholder_scores": {
+    "current_flyers": {
+      "underserved_residents": 0.0,
+      "staff": 0.0
+    },
+    "digital_messages": {
+      "underserved_residents": 10.149999999999999,
+      "staff": 13.299999999999999
+    },
+    "partner_popups": {
+      "underserved_residents": 46.65,
+      "staff": -0.19999999999999973
+    }
+  },
+  "option_results": {
+    "current_flyers": {
+      "central_score": 0.0,
+      "mean_score": 0.0,
+      "q05": 0.0,
+      "q50": 0.0,
+      "q95": 0.0,
+      "lower_tail_mean": 0.0,
+      "rank_acceptability": 0.0,
+      "mean_regret": 33.28519603530088,
+      "stakeholder_mean_scores": {
+        "underserved_residents": 0.0,
+        "staff": 0.0
+      },
+      "worst_stakeholder_mean": 0.0,
+      "constraint_violation_probability": {
+        "underserved_floor": 0.0
+      },
+      "probability_above_baseline": 0.0
+    },
+    "digital_messages": {
+      "central_score": 10.9375,
+      "mean_score": 9.09392254860079,
+      "q05": -5.082482176755016,
+      "q50": 8.954740865714996,
+      "q95": 23.453720186975087,
+      "lower_tail_mean": -5.9306489575858246,
+      "rank_acceptability": 0.0205,
+      "mean_regret": 24.191273486700087,
+      "stakeholder_mean_scores": {
+        "underserved_residents": 7.983288209149883,
+        "staff": 12.084835634083817
+      },
+      "worst_stakeholder_mean": 7.983288209149883,
+      "constraint_violation_probability": {
+        "underserved_floor": 0.001
+      },
+      "probability_above_baseline": 0.8485
+    },
+    "partner_popups": {
+      "central_score": 34.9375,
+      "mean_score": 33.21527177117953,
+      "q05": 20.441000038130085,
+      "q50": 33.34545247148449,
+      "q95": 45.30523313726107,
+      "lower_tail_mean": 19.882482221500243,
+      "rank_acceptability": 0.9795,
+      "mean_regret": 0.06992426412134684,
+      "stakeholder_mean_scores": {
+        "underserved_residents": 45.953232792562865,
+        "staff": -1.2242014272789377
+      },
+      "worst_stakeholder_mean": -1.2242014272789377,
+      "constraint_violation_probability": {
+        "underserved_floor": 0.0
+      },
+      "probability_above_baseline": 1.0
+    }
+  },
+  "ranking": [
+    "partner_popups",
+    "digital_messages",
+    "current_flyers"
+  ],
+  "assurance_case": {
+    "candidate_option_id": "partner_popups",
+    "status": "pilot-eligible",
+    "scope": {
+      "scenario_ids": [
+        "digital_access_high",
+        "digital_access_low"
+      ],
+      "worldview_ids": [
+        "frontline_view",
+        "survey_view"
+      ],
+      "challenge_ids": [
+        "c_coverage",
+        "c_parameter",
+        "c_stakeholder",
+        "c_temporal"
+      ],
+      "required_challenge_types": [
+        "parameter",
+        "model_coverage",
+        "stakeholder",
+        "temporal"
+      ]
+    },
+    "blockers": [],
+    "warnings": [
+      "Candidate relies on weak or contested evidence: e_residents."
+    ],
+    "unresolved_deficit_ids": [
+      "d_nonresponse"
+    ],
+    "missing_challenge_types": [],
+    "universal_guarantee": false,
+    "authorization": false
+  },
+  "learning_contract": {
+    "measurement_plan": "Compare the six-week pilot with the prior six-week baseline and report intended and adverse outcomes by outreach channel and available stakeholder group.",
+    "review_date": "Six weeks after launch",
+    "success_rule": "At least 15% improvement in first-time attendance per staff hour without a stop-rule event or observed participation decline for underserved residents.",
+    "triggers": [
+      "Review weekly if staff overtime exceeds 80% of the approved cap.",
+      "Re-estimate the access scenario if digital response is below half the expected rate after two weeks."
+    ],
+    "stop_rules": [
+      "Stop if a reported privacy incident occurs.",
+      "Stop if staff overtime exceeds the approved cap.",
+      "Stop if observed underserved-resident participation declines for two consecutive measurement periods."
+    ],
+    "appeal_process": "Participants and staff can request review through the program manager; reasons and disposition are logged.",
+    "affected_party_review": "A resident advisory group reviews language, location, privacy, burden, and the consequence ranges before launch."
+  }
+}

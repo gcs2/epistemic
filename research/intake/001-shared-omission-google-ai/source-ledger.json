@@ -1,0 +1,90 @@
+[
+  {
+    "id": "krogh-vedelsby-1994",
+    "title": "Neural Network Ensembles, Cross Validation, and Active Learning",
+    "authors": ["Anders Krogh", "Jesper Vedelsby"],
+    "year": 1994,
+    "venue": "Advances in Neural Information Processing Systems 7",
+    "url": "https://papers.nips.cc/paper_files/paper/1994/hash/b8c37e33defde51cf91e1e03e51657da-Abstract.html",
+    "verification": "verified-primary",
+    "supports": ["squared-error ensemble ambiguity decomposition", "value of predictive diversity"],
+    "does_not_establish": ["all shared omissions imply zero ambiguity", "transfer to expert consensus or arbitrary decision utilities"]
+  },
+  {
+    "id": "fleming-1975-common-cause",
+    "title": "A Reliability Model for Common Mode Failures in Redundant Safety Systems",
+    "authors": ["K. N. Fleming"],
+    "year": 1975,
+    "venue": "General Atomic Report",
+    "url": "https://www.nrc.gov/reading-rm/doc-collections/nuregs/staff/sr2225/index",
+    "verification": "verified-metadata",
+    "supports": ["common-cause failures can defeat redundancy", "beta-factor family is used in reliability analysis"],
+    "does_not_establish": ["direct numerical transfer from component failure rates to correlated model errors"]
+  },
+  {
+    "id": "karni-viero-2013",
+    "title": "Reverse Bayesianism: A Choice-Based Theory of Growing Awareness",
+    "authors": ["Edi Karni", "Marie-Louise Vierø"],
+    "year": 2013,
+    "venue": "American Economic Review 103(7)",
+    "url": "https://www.aeaweb.org/articles?id=10.1257%2Faer.103.7.2790",
+    "verification": "verified-primary",
+    "supports": ["axiomatic belief updating over expanding awareness and state spaces"],
+    "does_not_establish": ["mandatory catch-all architecture for decision-support systems", "automatic discovery of unknown states"]
+  },
+  {
+    "id": "kleinberg-raghavan-2021",
+    "title": "Algorithmic Monoculture and Social Welfare",
+    "authors": ["Jon Kleinberg", "Manish Raghavan"],
+    "year": 2021,
+    "venue": "Proceedings of the National Academy of Sciences 118(22)",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8179131/",
+    "verification": "verified-primary",
+    "supports": ["conditional systemic welfare harm from shared algorithmic rankings"],
+    "does_not_establish": ["same-base LLM critics necessarily validate the same hallucinations", "algorithmic monoculture always causes harm"]
+  },
+  {
+    "id": "fischhoff-slovic-lichtenstein-1978",
+    "title": "Fault Trees: Sensitivity of Estimated Failure Probabilities to Problem Representation",
+    "authors": ["Baruch Fischhoff", "Paul Slovic", "Sarah Lichtenstein"],
+    "year": 1978,
+    "venue": "Journal of Experimental Psychology: Human Perception and Performance 4(2)",
+    "url": "https://gwern.net/doc/statistics/prediction/1978-fischhoff.pdf",
+    "verification": "verified-primary",
+    "supports": ["omitted branches reduce judged total failure probability", "generic other branches incompletely compensate for omissions"],
+    "does_not_establish": ["magnitude of omission bias in AI-generated risk dashboards"]
+  },
+  {
+    "id": "rand-dmdu-2019",
+    "title": "Decisionmaking Under Deep Uncertainty: From Theory to Practice",
+    "authors": ["RAND Corporation contributors"],
+    "year": 2019,
+    "venue": "RAND research report",
+    "url": "https://www.rand.org/content/dam/rand/pubs/research_reports/RR2700/RR2735/RAND_RR2735.pdf",
+    "verification": "secondary-only",
+    "supports": ["deep uncertainty includes disputed probabilities and causal models", "scenario and exploratory approaches predate SES"],
+    "does_not_establish": ["one universally superior method under open-world uncertainty"]
+  },
+  {
+    "id": "maier-2016-false-robustness",
+    "title": "Unverified conference item cited in AI Mode result",
+    "authors": ["Maier et al."],
+    "year": 2016,
+    "venue": "iEMSs conference",
+    "url": "https://scholarsarchive.byu.edu/cgi/viewcontent.cgi?article=4727&context=iemssconference",
+    "verification": "unverified",
+    "supports": [],
+    "does_not_establish": ["that false robustness is a standardized formal term until the paper is inspected"]
+  },
+  {
+    "id": "moallemi-2020",
+    "title": "Unverified ScienceDirect item cited in AI Mode result",
+    "authors": ["Moallemi et al."],
+    "year": 2020,
+    "venue": "Environmental Innovation and Societal Transitions",
+    "url": "https://www.sciencedirect.com/science/article/pii/S2212041618303218",
+    "verification": "unverified",
+    "supports": [],
+    "does_not_establish": ["the displayed false-robustness equation until primary-text verification"]
+  }
+]

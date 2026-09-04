@@ -1,0 +1,149 @@
+{
+  "experiment_id": "002a-provenance",
+  "title": "Recovering hidden evidence families",
+  "config_sha256": "b0ed7fbad790f3f91a45174a102eac3956ebc408e56be03645d8acc5040eb2d8",
+  "cells": 108,
+  "cases": 17280,
+  "overall": [
+    {
+      "method": "oracle",
+      "cells": 108,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_independence": 0.0,
+      "false_dependence": 0.0,
+      "source_count_error": 0.0,
+      "brier": 0.06257329720023537,
+      "log_loss": 0.2056887770381129,
+      "accuracy": 0.9139467592592593,
+      "confidently_wrong": 0.012673611111111113,
+      "sharpness": 0.4106314609736173
+    },
+    {
+      "method": "citation",
+      "cells": 108,
+      "precision": 1.0,
+      "recall": 0.4039857920678748,
+      "f1": 0.4817745168672169,
+      "false_independence": 0.5960142079321252,
+      "false_dependence": 0.0,
+      "source_count_error": 1.2419126157407407,
+      "brier": 0.07977122837126807,
+      "log_loss": 0.36496263297525794,
+      "accuracy": 0.8989004629629629,
+      "confidently_wrong": 0.04288194444444444,
+      "sharpness": 0.4454635645405908
+    },
+    {
+      "method": "all_independent",
+      "cells": 108,
+      "precision": 1.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "false_independence": 1.0,
+      "false_dependence": 0.0,
+      "source_count_error": 2.3296354166666666,
+      "brier": 0.08759451199568756,
+      "log_loss": 0.5233857424562406,
+      "accuracy": 0.8946180555555556,
+      "confidently_wrong": 0.059953703703703703,
+      "sharpness": 0.4624509847673555
+    },
+    {
+      "method": "hybrid",
+      "cells": 108,
+      "precision": 0.6122665515174028,
+      "recall": 0.8671048717339936,
+      "f1": 0.5913090551504069,
+      "false_independence": 0.13289512826600627,
+      "false_dependence": 0.3070903934797167,
+      "source_count_error": 0.45132812499999997,
+      "brier": 0.08770033094645424,
+      "log_loss": 0.3025469623248427,
+      "accuracy": 0.8920717592592593,
+      "confidently_wrong": 0.016377314814814817,
+      "sharpness": 0.361088538030254
+    },
+    {
+      "method": "text",
+      "cells": 108,
+      "precision": 0.6106633463227988,
+      "recall": 0.7633170377471852,
+      "f1": 0.5095988614953425,
+      "false_independence": 0.23668296225281477,
+      "false_dependence": 0.28841734415468095,
+      "source_count_error": 0.6210474537037037,
+      "brier": 0.0887229096497592,
+      "log_loss": 0.3251496027458239,
+      "accuracy": 0.8909143518518519,
+      "confidently_wrong": 0.0224537037037037,
+      "sharpness": 0.37363209227467453
+    },
+    {
+      "method": "all_one",
+      "cells": 108,
+      "precision": 0.14482930414680378,
+      "recall": 1.0,
+      "f1": 0.24519443471820632,
+      "false_independence": 0.0,
+      "false_dependence": 1.0,
+      "source_count_error": 0.825,
+      "brier": 0.14193909359571005,
+      "log_loss": 0.4635234897805948,
+      "accuracy": 0.8946180555555556,
+      "confidently_wrong": 0.0,
+      "sharpness": 0.15296983753712065
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "H1",
+      "supported": true,
+      "effect": 1.0,
+      "detail": "citation aggregate precision = 1.0000"
+    },
+    {
+      "id": "H2",
+      "supported": true,
+      "effect": 0.8425403159682835,
+      "detail": "citation recall at completeness 0/0.5/0.9 = 0.0000/0.3694/0.8425"
+    },
+    {
+      "id": "H3",
+      "supported": true,
+      "effect": 0.6770468430173207,
+      "detail": "text recall at paraphrase 0/0.4/0.8 = 1.0000/0.9670/0.3230"
+    },
+    {
+      "id": "H4",
+      "supported": true,
+      "effect": 0.5768346883093619,
+      "detail": "text false-dependence at contamination 0.1/0.5 = 0.0000/0.5768"
+    },
+    {
+      "id": "H5",
+      "supported": false,
+      "effect": 0.10378783398680846,
+      "detail": "recall hybrid/citation/text = 0.8671/0.4040/0.7633; hybrid precision = 0.6123"
+    },
+    {
+      "id": "H6",
+      "supported": false,
+      "effect": -0.003512140457423362,
+      "detail": "recoverable hybrid \u2212 all-independent Brier = -0.003512; 95% interval [-0.013027, 0.006741]"
+    },
+    {
+      "id": "H7",
+      "supported": true,
+      "effect": 0.02512703374621886,
+      "detail": "nontrivial hybrid \u2212 oracle Brier = 0.025127; 95% interval [0.019773, 0.030825]"
+    },
+    {
+      "id": "H8",
+      "supported": true,
+      "effect": 0.07936579639547467,
+      "detail": "all-one \u2212 oracle Brier = 0.079366; 95% interval [0.074089, 0.084529]"
+    }
+  ]
+}

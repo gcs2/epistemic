@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ses:schema:benchmark-case:0.1",
+  "title": "SES Blinded Benchmark Case 0.1",
+  "type": "object",
+  "required": [
+    "case_id",
+    "domain",
+    "question",
+    "claim_type",
+    "cutoff",
+    "horizon",
+    "resolution_criteria",
+    "hypotheses",
+    "source_packet",
+    "sealed_outcome",
+    "ethics"
+  ],
+  "properties": {
+    "case_id": {"type": "string", "minLength": 1},
+    "domain": {"type": "string", "minLength": 1},
+    "question": {"type": "string", "minLength": 1},
+    "claim_type": {"type": "string", "minLength": 1},
+    "cutoff": {"type": "string", "minLength": 1},
+    "horizon": {"type": "string", "minLength": 1},
+    "resolution_criteria": {"type": "string", "minLength": 1},
+    "hypotheses": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["id", "label"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "label": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "source_packet": {
+      "type": "object",
+      "required": ["manifest", "archive_hash", "post_cutoff_screened"],
+      "properties": {
+        "manifest": {"type": "string", "minLength": 1},
+        "archive_hash": {"type": "string", "minLength": 1},
+        "post_cutoff_screened": {"type": "boolean"},
+        "provenance_graph": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "sealed_outcome": {
+      "type": "object",
+      "required": ["commitment_hash", "adjudicator_count", "unseal_condition"],
+      "properties": {
+        "commitment_hash": {"type": "string", "minLength": 1},
+        "adjudicator_count": {"type": "integer", "minimum": 2},
+        "unseal_condition": {"type": "string", "minLength": 1}
+      }
+    },
+    "ethics": {
+      "type": "object",
+      "required": ["risk_level", "review_status"],
+      "properties": {
+        "risk_level": {"enum": ["minimal", "moderate", "high", "prohibited"]},
+        "review_status": {"enum": ["not_required", "pending", "approved", "rejected"]},
+        "notes": {"type": "string"}
+      }
+    },
+    "exclusion_rules": {"type": "array", "items": {"type": "string"}},
+    "adjudication_notes": {"type": "string"}
+  },
+  "additionalProperties": false
+}

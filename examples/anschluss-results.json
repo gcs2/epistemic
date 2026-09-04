@@ -1,0 +1,108 @@
+{
+  "protocol_version": "0.1",
+  "inquiry": {
+    "title": "Illustrative Anschluss Consolidation Inquiry",
+    "question": "Conditional on Nazi Germany permanently ending external expansion after the March 1938 Anschluss, what is the political-territorial outcome by March 1948?",
+    "claim_type": "historical counterfactual and probabilistic",
+    "cutoff": "March 31, 1938",
+    "horizon": "10 years",
+    "resolution_criteria": "Classify the status of Hitler's regime and German control of Austria in March 1948.",
+    "scope": "European political-territorial outcome; not a welfare evaluation or an endorsement of Nazi objectives.",
+    "ethical_note": "Strategic success is analytically distinct from human welfare. Every modeled branch retains severe Nazi persecution unless separately changed.",
+    "limitations": [
+      "All numerical priors and likelihoods are illustrative elicitation values, not a completed scholarly estimate.",
+      "The antecedent changes a central feature of Hitler's ideology and therefore has substantial actor-coherence uncertainty.",
+      "The three hypotheses compress many possible successions, coups, negotiated settlements, and conflicts.",
+      "No source-provenance graph or independently calibrated expert panel has yet populated this example."
+    ]
+  },
+  "ensemble": {
+    "hitler_regime_retains": 0.49521914854407745,
+    "successor_state_retains": 0.4615335526137234,
+    "germany_loses_austria": 0.04324729884219911
+  },
+  "per_model": {
+    "diplomatic_security": {
+      "hitler_regime_retains": 0.6110267493106836,
+      "successor_state_retains": 0.3568574301822135,
+      "germany_loses_austria": 0.03211582050710299
+    },
+    "political_economy": {
+      "hitler_regime_retains": 0.4559939728261336,
+      "successor_state_retains": 0.49072502416809477,
+      "germany_loses_austria": 0.05328100300577157
+    },
+    "institutional_succession": {
+      "hitler_regime_retains": 0.3994911172332496,
+      "successor_state_retains": 0.5558893662101467,
+      "germany_loses_austria": 0.04461951655660369
+    }
+  },
+  "model_winners": {
+    "diplomatic_security": "hitler_regime_retains",
+    "political_economy": "successor_state_retains",
+    "institutional_succession": "successor_state_retains"
+  },
+  "disagreement": 0.014896676153188964,
+  "robustness": {
+    "hitler_regime_retains": {
+      "q05": 0.43283148682037037,
+      "q50": 0.49777738941489,
+      "q95": 0.5540974848645629
+    },
+    "successor_state_retains": {
+      "q05": 0.4008577355164519,
+      "q50": 0.4598497723317866,
+      "q95": 0.5224585666595003
+    },
+    "germany_loses_austria": {
+      "q05": 0.03048797664554695,
+      "q50": 0.043314998777537,
+      "q95": 0.06111639328618818
+    }
+  },
+  "leverage": [
+    {
+      "group": "political_economy_constraints",
+      "max_absolute_change": 0.07327566778221695,
+      "changes": {
+        "hitler_regime_retains": 0.07327566778221695,
+        "successor_state_retains": -0.06529013369689668,
+        "germany_loses_austria": -0.007985534085320226
+      }
+    },
+    {
+      "group": "regime_structure",
+      "max_absolute_change": 0.07035818835938057,
+      "changes": {
+        "hitler_regime_retains": 0.07035818835938057,
+        "successor_state_retains": -0.06953006641593817,
+        "germany_loses_austria": -0.0008281219434423046
+      }
+    },
+    {
+      "group": "international_response_1938",
+      "max_absolute_change": 0.053381977518938716,
+      "changes": {
+        "hitler_regime_retains": -0.039988114950072706,
+        "successor_state_retains": -0.013393862568865933,
+        "germany_loses_austria": 0.053381977518938716
+      }
+    },
+    {
+      "group": "integration_capacity",
+      "max_absolute_change": 0.0377323710824437,
+      "changes": {
+        "hitler_regime_retains": -0.00899201456384141,
+        "successor_state_retains": -0.028740356518602184,
+        "germany_loses_austria": 0.0377323710824437
+      }
+    }
+  ],
+  "ranking": [
+    "hitler_regime_retains",
+    "successor_state_retains",
+    "germany_loses_austria"
+  ],
+  "robust_core": false
+}

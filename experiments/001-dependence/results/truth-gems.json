@@ -1,0 +1,190 @@
+[
+  {
+    "id": "SES-GEM-001",
+    "claim": "When evidence items share a correlated origin, their effective evidential count is smaller than their nominal count; repeated derivatives cannot be treated as independent confirmations.",
+    "type": "mechanism",
+    "status": "synthetic_confirmed",
+    "scope": "Binary Bayesian synthesis with independent evidence groups, equicorrelated Gaussian observations within groups, and correctly specified signal distributions.",
+    "support": [
+      "Analytical group likelihood uses the design-effect denominator 1 + (m - 1) rho.",
+      "Across positive-correlation duplicated cells, naive-independent Brier exceeded oracle Brier by 0.016973 with a preregistered bootstrap 95% interval of 0.012973 to 0.021261.",
+      "The naive penalty increased from zero without duplication to 0.04710 at rho 0.95 and maximum duplication 16, averaged over registered group counts and signal strengths."
+    ],
+    "confidence": {
+      "level": "very_high",
+      "rationale": "The relationship follows analytically from the registered generating model and was recovered in 375,000 deterministic Monte Carlo trials. Confidence applies to the mathematical scope, not automatic transfer to real evidence ecosystems."
+    },
+    "invariance": [
+      "Supported across 3, 8, and 20 independent evidence groups.",
+      "Supported at signal strengths 0.25 and 0.75.",
+      "The penalty surface was nondecreasing across the registered correlation and duplication grid."
+    ],
+    "boundary": "The result does not identify which real sources are dependent or the correct correlation. Negative dependence, unequal covariance, strategic deception, and model misspecification were not simulated.",
+    "disconfirmation": [
+      "A reproducible implementation of the registered generating model in which the analytical oracle does not minimize expected proper scoring loss.",
+      "Real-world benchmarks showing that dependence corrections systematically worsen forecasts despite accurate provenance and correlation estimates."
+    ],
+    "action_implication": "Truth-synthesis systems should represent source ancestry and effective evidence diversity rather than use citation or agent count as evidence weight.",
+    "portability": [
+      "systematic reviews with overlapping studies",
+      "news ecosystems sharing wire reports",
+      "multi-agent systems sharing a base model or context",
+      "intelligence reports with common upstream sources",
+      "historical works using the same archive"
+    ],
+    "version": {
+      "number": "1.0",
+      "date": "2026-08-11",
+      "evidence_cutoff": "Experiment 001 confirmatory run",
+      "source_experiment": "001-dependence"
+    }
+  },
+  {
+    "id": "SES-GEM-002",
+    "claim": "Dependence correction must be conditional: conservative deduplication protects against highly correlated repetition but discards real information when grouped observations are independent.",
+    "type": "boundary",
+    "status": "synthetic_confirmed",
+    "scope": "The registered Experiment 001 grid and conservative rule that assigns each group the weight of one effective item.",
+    "support": [
+      "At rho at least 0.75 and maximum duplication at least 4, conservative-minus-naive Brier was -0.030175 and the confidently-wrong rate difference was -0.076078.",
+      "At rho zero with duplication, conservative-minus-naive Brier was +0.020006.",
+      "All six preregistered mechanism hypotheses, including both protection and opportunity-cost predictions, were supported."
+    ],
+    "confidence": {
+      "level": "very_high",
+      "rationale": "The opposing effects were preregistered and observed under conditions specifically capable of falsifying one-sided discounting."
+    },
+    "invariance": [
+      "High-dependence protection held across registered group counts and signal strengths in aggregate.",
+      "Independence cost was positive across the registered rho-zero duplicated stratum in aggregate."
+    ],
+    "boundary": "The crossover location depends on signal strength, group size, covariance, and estimation accuracy; no universal correlation threshold is established.",
+    "disconfirmation": [
+      "Independent reproduction under the registered model fails to recover either the high-dependence protection or the rho-zero cost.",
+      "A method that ignores dependence matches the oracle across correlated duplicated evidence without compensating information."
+    ],
+    "action_implication": "SES should replace binary independent/dependent labels with estimated correlations, dependence intervals, or sensitivity analyses over plausible effective source counts.",
+    "portability": [
+      "meta-analysis",
+      "ensemble forecasting",
+      "agent orchestration",
+      "evidence grading",
+      "citation network analysis"
+    ],
+    "version": {
+      "number": "1.0",
+      "date": "2026-08-11",
+      "evidence_cutoff": "Experiment 001 confirmatory run",
+      "source_experiment": "001-dependence"
+    }
+  },
+  {
+    "id": "SES-GEM-003",
+    "claim": "A noisy but directionally informative estimate of evidence correlation can recover most of the attainable calibration benefit without requiring perfect dependence knowledge.",
+    "type": "decision",
+    "status": "synthetic_confirmed",
+    "scope": "Experiment 001 estimated-correlation method with independent group-specific Gaussian rho error of standard deviation 0.15, clipped to 0 through 0.999.",
+    "support": [
+      "Overall Brier was 0.07625 for estimated correlation, 0.07509 for the oracle, and 0.08596 for naive independence.",
+      "The estimated method recovered 89.3% of the overall Brier gap between naive and oracle methods.",
+      "Across positive-correlation duplicated cells, estimated-minus-naive Brier was -0.015420 while estimated-minus-oracle was +0.001553."
+    ],
+    "confidence": {
+      "level": "high",
+      "rationale": "The effect was preregistered and stable over the grid, but the estimator's error was favorable, unbiased, and independent of evidence values. Real provenance errors may be biased and strategic."
+    },
+    "invariance": [
+      "Evaluated across the full registered grid of group counts, duplication, correlations, and signal strengths."
+    ],
+    "boundary": "This does not establish that real dependence can be estimated with comparable error or without bias.",
+    "disconfirmation": [
+      "Experiment 002 shows that real provenance methods have errors large or biased enough to erase downstream scoring gains.",
+      "Alternative realistic error models cause estimated adjustment to underperform both conservative and naive rules."
+    ],
+    "action_implication": "Invest in calibrated provenance and correlation estimation rather than waiting for perfect source graphs or defaulting to either extreme.",
+    "portability": [
+      "provenance graph tooling",
+      "robust Bayesian aggregation",
+      "multi-model ensembles",
+      "source diversity audits"
+    ],
+    "version": {
+      "number": "1.0",
+      "date": "2026-08-11",
+      "evidence_cutoff": "Experiment 001 confirmatory run",
+      "source_experiment": "001-dependence"
+    }
+  },
+  {
+    "id": "SES-GEM-004",
+    "claim": "Binary accuracy can conceal severe epistemic damage from duplicated evidence; proper scoring and confidently-wrong rates reveal failures that winner-take-all correctness barely registers.",
+    "type": "bridge",
+    "status": "synthetic_confirmed",
+    "scope": "The registered binary forecasting simulation and its aggregate comparison of naive-independent with oracle synthesis.",
+    "support": [
+      "Oracle accuracy exceeded naive accuracy by only 0.50 percentage points: 89.0% versus 88.5%.",
+      "Naive log loss was 1.60 times oracle log loss: 0.36973 versus 0.23138.",
+      "Naive synthesis was confidently wrong 4.55 times as often as the oracle: 3.52% versus 0.77%."
+    ],
+    "confidence": {
+      "level": "high",
+      "rationale": "The metric divergence is directly observed over all registered cells and follows the distinction between classification and probability quality."
+    },
+    "invariance": [
+      "Observed in equal-weight aggregation across all 150 registered cells."
+    ],
+    "boundary": "The numerical ratios depend on the registered grid. Some decisions require threshold accuracy, so proper scoring does not eliminate decision-specific evaluation.",
+    "disconfirmation": [
+      "A corrected rerun shows that the reported metric divergence resulted from implementation error.",
+      "Decision studies demonstrate that probability calibration has no value beyond classification for the actual loss functions in scope."
+    ],
+    "action_implication": "Evaluate truth systems with proper scoring, calibration, and high-confidence error—not accuracy or majority correctness alone.",
+    "portability": [
+      "forecasting tournaments",
+      "medical risk models",
+      "AI factuality evaluations",
+      "intelligence estimates",
+      "public risk communication"
+    ],
+    "version": {
+      "number": "1.0",
+      "date": "2026-08-11",
+      "evidence_cutoff": "Experiment 001 confirmatory run",
+      "source_experiment": "001-dependence"
+    }
+  },
+  {
+    "id": "SES-GEM-005",
+    "claim": "The unresolved bottleneck is not whether dependence matters, but whether real evidence ancestry and effective correlation can be recovered well enough to improve decisions.",
+    "type": "ignorance",
+    "status": "candidate",
+    "scope": "Transfer from the synthetic Experiment 001 environment to real scholarly, journalistic, intelligence, and multi-agent evidence ecosystems.",
+    "support": [
+      "Experiment 001 assumes perfect independence-group membership and an analytically specified covariance structure.",
+      "The difference between estimated, conservative, and naive methods shows that dependence misclassification has material costs in both directions."
+    ],
+    "confidence": {
+      "level": "very_high",
+      "rationale": "The limitation is entailed by the experimental design. No real-world provenance-recovery evidence was generated."
+    },
+    "invariance": [
+      "Applies to every result in Experiment 001 because group labels and covariance parameters were supplied by the generator."
+    ],
+    "boundary": "This is a statement about what Experiment 001 cannot establish, not a claim that reliable recovery is impossible.",
+    "disconfirmation": [
+      "Experiment 002 or independent research demonstrates accurate, generalizable provenance and dependence recovery with downstream forecasting gains."
+    ],
+    "action_implication": "Experiment 002 should test provenance recovery before SES dependence weighting is used in high-consequence real inquiries.",
+    "portability": [
+      "research program prioritization",
+      "epistemic audit design",
+      "uncertainty communication"
+    ],
+    "version": {
+      "number": "1.0",
+      "date": "2026-08-11",
+      "evidence_cutoff": "Experiment 001 confirmatory run",
+      "source_experiment": "001-dependence"
+    }
+  }
+]

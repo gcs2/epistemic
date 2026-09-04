@@ -1,0 +1,70 @@
+{
+  "protocol_version": "action-0.1",
+  "decision": {
+    "title": "Library outreach pilot",
+    "question": "Which reversible outreach format should a library pilot for six weeks?",
+    "owner": "Example public-library program team",
+    "cutoff": "Illustrative inputs frozen before pilot; not real field data",
+    "review_date": "Six weeks after launch",
+    "baseline_option_id": "current_flyers"
+  },
+  "scenarios": [
+    {"id": "digital_access_high", "label": "Target community has reliable digital access"},
+    {"id": "digital_access_low", "label": "Target community has limited digital access"}
+  ],
+  "worldviews": [
+    {"id": "survey_view", "label": "Recent survey interpretation", "weight": 1, "scenario_probabilities": {"digital_access_high": 0.7, "digital_access_low": 0.3}},
+    {"id": "frontline_view", "label": "Frontline staff interpretation", "weight": 1, "scenario_probabilities": {"digital_access_high": 0.4, "digital_access_low": 0.6}}
+  ],
+  "criteria": [
+    {"id": "reach", "label": "New participant reach", "weight": 3},
+    {"id": "access", "label": "Equitable access", "weight": 2}
+  ],
+  "stakeholders": [
+    {"id": "underserved_residents", "label": "Underserved residents", "weight": 3},
+    {"id": "staff", "label": "Library staff", "weight": 1}
+  ],
+  "options": [
+    {"id": "current_flyers", "label": "Continue current flyers", "reversible": true, "risk_level": "low"},
+    {"id": "digital_messages", "label": "Pilot targeted digital messages", "reversible": true, "risk_level": "low"},
+    {"id": "partner_popups", "label": "Pilot partner-site pop-ups", "reversible": true, "risk_level": "low"}
+  ],
+  "impacts": [
+    {"option_id":"current_flyers","scenario_id":"digital_access_high","stakeholder_id":"underserved_residents","criterion_id":"reach","score":0,"confidence":0.8},
+    {"option_id":"current_flyers","scenario_id":"digital_access_high","stakeholder_id":"underserved_residents","criterion_id":"access","score":0,"confidence":0.8},
+    {"option_id":"current_flyers","scenario_id":"digital_access_high","stakeholder_id":"staff","criterion_id":"reach","score":0,"confidence":0.8},
+    {"option_id":"current_flyers","scenario_id":"digital_access_high","stakeholder_id":"staff","criterion_id":"access","score":0,"confidence":0.8},
+    {"option_id":"current_flyers","scenario_id":"digital_access_low","stakeholder_id":"underserved_residents","criterion_id":"reach","score":0,"confidence":0.8},
+    {"option_id":"current_flyers","scenario_id":"digital_access_low","stakeholder_id":"underserved_residents","criterion_id":"access","score":0,"confidence":0.8},
+    {"option_id":"current_flyers","scenario_id":"digital_access_low","stakeholder_id":"staff","criterion_id":"reach","score":0,"confidence":0.8},
+    {"option_id":"current_flyers","scenario_id":"digital_access_low","stakeholder_id":"staff","criterion_id":"access","score":0,"confidence":0.8},
+    {"option_id":"digital_messages","scenario_id":"digital_access_high","stakeholder_id":"underserved_residents","criterion_id":"reach","score":55,"confidence":0.55},
+    {"option_id":"digital_messages","scenario_id":"digital_access_high","stakeholder_id":"underserved_residents","criterion_id":"access","score":25,"confidence":0.45},
+    {"option_id":"digital_messages","scenario_id":"digital_access_high","stakeholder_id":"staff","criterion_id":"reach","score":35,"confidence":0.55},
+    {"option_id":"digital_messages","scenario_id":"digital_access_high","stakeholder_id":"staff","criterion_id":"access","score":10,"confidence":0.45},
+    {"option_id":"digital_messages","scenario_id":"digital_access_low","stakeholder_id":"underserved_residents","criterion_id":"reach","score":-20,"confidence":0.5},
+    {"option_id":"digital_messages","scenario_id":"digital_access_low","stakeholder_id":"underserved_residents","criterion_id":"access","score":-45,"confidence":0.55},
+    {"option_id":"digital_messages","scenario_id":"digital_access_low","stakeholder_id":"staff","criterion_id":"reach","score":5,"confidence":0.45},
+    {"option_id":"digital_messages","scenario_id":"digital_access_low","stakeholder_id":"staff","criterion_id":"access","score":-10,"confidence":0.45},
+    {"option_id":"partner_popups","scenario_id":"digital_access_high","stakeholder_id":"underserved_residents","criterion_id":"reach","score":35,"confidence":0.55},
+    {"option_id":"partner_popups","scenario_id":"digital_access_high","stakeholder_id":"underserved_residents","criterion_id":"access","score":45,"confidence":0.55},
+    {"option_id":"partner_popups","scenario_id":"digital_access_high","stakeholder_id":"staff","criterion_id":"reach","score":5,"confidence":0.5},
+    {"option_id":"partner_popups","scenario_id":"digital_access_high","stakeholder_id":"staff","criterion_id":"access","score":10,"confidence":0.5},
+    {"option_id":"partner_popups","scenario_id":"digital_access_low","stakeholder_id":"underserved_residents","criterion_id":"reach","score":50,"confidence":0.6},
+    {"option_id":"partner_popups","scenario_id":"digital_access_low","stakeholder_id":"underserved_residents","criterion_id":"access","score":65,"confidence":0.6},
+    {"option_id":"partner_popups","scenario_id":"digital_access_low","stakeholder_id":"staff","criterion_id":"reach","score":-15,"confidence":0.55},
+    {"option_id":"partner_popups","scenario_id":"digital_access_low","stakeholder_id":"staff","criterion_id":"access","score":0,"confidence":0.5}
+  ],
+  "safeguards": {
+    "stop_rules": ["Stop if a reported privacy incident occurs.", "Stop if staff overtime exceeds the approved cap."],
+    "appeal_process": "Participants and staff can request review through the program manager; reasons and disposition are logged.",
+    "affected_party_review": "A resident advisory group reviews language, location, privacy, and burden before launch."
+  },
+  "pilot": {
+    "primary_metric": "First-time program attendance per staff hour",
+    "measurement_plan": "Compare the six-week pilot with the prior six-week baseline and report results by outreach channel and available demographic groups.",
+    "duration": "Six weeks",
+    "success_rule": "At least 15% improvement over baseline without a privacy incident, excessive overtime, or reduced participation from an observed underserved group."
+  },
+  "robustness": {"samples": 1000, "seed": 4021, "weight_jitter": 0.3, "impact_jitter": 20, "probability_concentration": 40, "robust_choice_threshold": 0.8}
+}

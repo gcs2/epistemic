@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ses:schema:decision-pilot:0.1",
+  "title": "SES Decision Pilot Packet 0.1",
+  "type": "object",
+  "required": ["protocol_version", "decision", "scenarios", "worldviews", "criteria", "stakeholders", "options", "impacts", "safeguards", "pilot"],
+  "properties": {
+    "protocol_version": {"const": "action-0.1"},
+    "decision": {
+      "type": "object",
+      "required": ["title", "question", "owner", "cutoff", "review_date", "baseline_option_id"],
+      "properties": {
+        "title": {"$ref": "#/$defs/nonEmptyString"},
+        "question": {"$ref": "#/$defs/nonEmptyString"},
+        "owner": {"$ref": "#/$defs/nonEmptyString"},
+        "cutoff": {"$ref": "#/$defs/nonEmptyString"},
+        "review_date": {"$ref": "#/$defs/nonEmptyString"},
+        "baseline_option_id": {"$ref": "#/$defs/nonEmptyString"}
+      },
+      "additionalProperties": true
+    },
+    "scenarios": {"$ref": "#/$defs/labeledWeightedOptional"},
+    "worldviews": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "required": ["id", "label", "weight", "scenario_probabilities"],
+        "properties": {
+          "id": {"$ref": "#/$defs/nonEmptyString"}, "label": {"$ref": "#/$defs/nonEmptyString"},
+          "weight": {"type": "number", "exclusiveMinimum": 0},
+          "scenario_probabilities": {"type": "object", "additionalProperties": {"$ref": "#/$defs/probability"}}
+        }
+      }
+    },
+    "criteria": {"$ref": "#/$defs/labeledWeighted"},
+    "stakeholders": {"$ref": "#/$defs/labeledWeighted"},
+    "options": {
+      "type": "array", "minItems": 2,
+      "items": {
+        "type": "object", "required": ["id", "label", "reversible", "risk_level"],
+        "properties": {
+          "id": {"$ref": "#/$defs/nonEmptyString"}, "label": {"$ref": "#/$defs/nonEmptyString"},
+          "reversible": {"type": "boolean"}, "risk_level": {"enum": ["low", "medium", "high"]}
+        }
+      }
+    },
+    "impacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["option_id", "scenario_id", "stakeholder_id", "criterion_id", "score", "confidence"],
+        "properties": {
+          "option_id": {"$ref": "#/$defs/nonEmptyString"}, "scenario_id": {"$ref": "#/$defs/nonEmptyString"},
+          "stakeholder_id": {"$ref": "#/$defs/nonEmptyString"}, "criterion_id": {"$ref": "#/$defs/nonEmptyString"},
+          "score": {"type": "number", "minimum": -100, "maximum": 100},
+          "confidence": {"$ref": "#/$defs/probability"}, "rationale": {"type": "string"}
+        }
+      }
+    },
+    "safeguards": {
+      "type": "object", "required": ["stop_rules", "appeal_process", "affected_party_review"],
+      "properties": {
+        "stop_rules": {"oneOf": [{"$ref": "#/$defs/nonEmptyString"}, {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/nonEmptyString"}}]},
+        "appeal_process": {"$ref": "#/$defs/nonEmptyString"},
+        "affected_party_review": {"$ref": "#/$defs/nonEmptyString"}
+      }
+    },
+    "pilot": {
+      "type": "object", "required": ["primary_metric", "measurement_plan", "duration", "success_rule"],
+      "properties": {
+        "primary_metric": {"$ref": "#/$defs/nonEmptyString"}, "measurement_plan": {"$ref": "#/$defs/nonEmptyString"},
+        "duration": {"$ref": "#/$defs/nonEmptyString"}, "success_rule": {"$ref": "#/$defs/nonEmptyString"}
+      }
+    },
+    "robustness": {
+      "type": "object",
+      "properties": {
+        "samples": {"type": "integer", "minimum": 1}, "seed": {"type": "integer"},
+        "weight_jitter": {"type": "number", "minimum": 0},
+        "impact_jitter": {"type": "number", "minimum": 0},
+        "probability_concentration": {"type": "number", "exclusiveMinimum": 0},
+        "robust_choice_threshold": {"$ref": "#/$defs/probability"}
+      }
+    }
+  },
+  "$defs": {
+    "nonEmptyString": {"type": "string", "minLength": 1},
+    "probability": {"type": "number", "minimum": 0, "maximum": 1},
+    "labeledWeighted": {
+      "type": "array", "minItems": 1,
+      "items": {"type": "object", "required": ["id", "label", "weight"], "properties": {
+        "id": {"$ref": "#/$defs/nonEmptyString"}, "label": {"$ref": "#/$defs/nonEmptyString"},
+        "weight": {"type": "number", "exclusiveMinimum": 0}
+      }}
+    },
+    "labeledWeightedOptional": {
+      "type": "array", "minItems": 2,
+      "items": {"type": "object", "required": ["id", "label"], "properties": {
+        "id": {"$ref": "#/$defs/nonEmptyString"}, "label": {"$ref": "#/$defs/nonEmptyString"}
+      }}
+    }
+  }
+}

@@ -1,0 +1,410 @@
+{
+  "aggregate": {
+    "baseline": {
+      "affected_harm_rate": 0.0,
+      "baseline_selection_rate": 1.0,
+      "catastrophe_exposure": 0.0,
+      "certification_rate": 0.0,
+      "certified_harmful_rate": 0.0,
+      "certified_nonoracle_rate": 0.0,
+      "harmful_choice_rate": 0.0,
+      "mean_regret": 15.616950358466987,
+      "mean_true_value": 0.0,
+      "p90_regret": 23.84139793069092
+    },
+    "confidence_shrink": {
+      "affected_harm_rate": 0.0,
+      "baseline_selection_rate": 0.017781250000000002,
+      "catastrophe_exposure": 0.028100625,
+      "certification_rate": 0.0,
+      "certified_harmful_rate": 0.0,
+      "certified_nonoracle_rate": 0.0,
+      "harmful_choice_rate": 0.006895833333333334,
+      "mean_regret": 0.6684531955298256,
+      "mean_true_value": 14.94849716293716,
+      "p90_regret": 2.3403470687554684
+    },
+    "declared_raw": {
+      "affected_harm_rate": 0.0,
+      "baseline_selection_rate": 0.027656249999999997,
+      "catastrophe_exposure": 0.025804166666666666,
+      "certification_rate": 0.0,
+      "certified_harmful_rate": 0.0,
+      "certified_nonoracle_rate": 0.0,
+      "harmful_choice_rate": 0.0032916666666666667,
+      "mean_regret": 0.8167916969955518,
+      "mean_true_value": 14.800158661471436,
+      "p90_regret": 3.0555045586817773
+    },
+    "minimax_regret": {
+      "affected_harm_rate": 0.0,
+      "baseline_selection_rate": 0.026427083333333334,
+      "catastrophe_exposure": 0.025830625,
+      "certification_rate": 0.0,
+      "certified_harmful_rate": 0.0,
+      "certified_nonoracle_rate": 0.0,
+      "harmful_choice_rate": 0.003416666666666667,
+      "mean_regret": 0.816990534006817,
+      "mean_true_value": 14.799959824460169,
+      "p90_regret": 3.0714882291381165
+    },
+    "oracle_expected": {
+      "affected_harm_rate": 0.0,
+      "baseline_selection_rate": 0.00015625,
+      "catastrophe_exposure": 0.027093125,
+      "certification_rate": 0.0,
+      "certified_harmful_rate": 0.0,
+      "certified_nonoracle_rate": 0.0,
+      "harmful_choice_rate": 0.0,
+      "mean_regret": 0.0,
+      "mean_true_value": 15.616950358466987,
+      "p90_regret": 0.0
+    },
+    "robustness_gate": {
+      "affected_harm_rate": 0.0,
+      "baseline_selection_rate": 0.1934375,
+      "catastrophe_exposure": 0.023906458333333335,
+      "certification_rate": 0.8065625,
+      "certified_harmful_rate": 0.0032291666666666666,
+      "certified_nonoracle_rate": 0.06795833333333333,
+      "harmful_choice_rate": 0.0032291666666666666,
+      "mean_regret": 2.3759569413626065,
+      "mean_true_value": 13.240993417104379,
+      "p90_regret": 9.0942460015966
+    }
+  },
+  "cases": 96000,
+  "cells": 96,
+  "config_sha256": "E404B89B5879E4F9E4058DECD21B92EBA679700AEF68F04BBF59AE69435428C3",
+  "experiment_id": "003a-decision-stress",
+  "hypotheses": {
+    "H1": {
+      "oracle_mean_regret": 0.0,
+      "supported": true
+    },
+    "H2": {
+      "contrasts": {
+        "impact_error": {
+          "active": 1.3615518786408058,
+          "zero": 0.27397993001000104
+        },
+        "probability_error": {
+          "active": 0.8533846683815808,
+          "zero": 0.782147140269226
+        },
+        "value_shift": {
+          "active": 1.08856993367886,
+          "zero": 0.546961874971947
+        }
+      },
+      "supported": true
+    },
+    "H3": {
+      "included": 0.07012499999999999,
+      "omitted": 0.08290625,
+      "supported": true
+    },
+    "H4": {
+      "bootstrap_95": [
+        0.0066593749999999995,
+        0.007126875
+      ],
+      "mean_difference": 0.0068893750000000005,
+      "meaningfully_worse": true,
+      "supported": true
+    },
+    "H5": {
+      "catastrophe_allowance": 0.004038,
+      "catastrophe_change": -0.007553749999999998,
+      "confidence_shrink": {
+        "affected_harm_rate": 0.0,
+        "baseline_selection_rate": 0.02815625,
+        "catastrophe_exposure": 0.04038,
+        "certification_rate": 0.0,
+        "certified_harmful_rate": 0.0,
+        "certified_nonoracle_rate": 0.0,
+        "harmful_choice_rate": 0.008843750000000001,
+        "mean_regret": 0.7683184695841284,
+        "mean_true_value": 13.310276740921148,
+        "p90_regret": 2.8710419172589927
+      },
+      "gate": {
+        "affected_harm_rate": 0.0,
+        "baseline_selection_rate": 0.24190625,
+        "catastrophe_exposure": 0.03282625,
+        "certification_rate": 0.75809375,
+        "certified_harmful_rate": 0.0038125,
+        "certified_nonoracle_rate": 0.07012499999999999,
+        "harmful_choice_rate": 0.0038125,
+        "mean_regret": 2.6475025323498667,
+        "mean_true_value": 11.43109267815541,
+        "p90_regret": 9.331009211106872
+      },
+      "regret_allowance": 1.331027674092115,
+      "regret_increase": 1.8791840627657384,
+      "supported": false
+    },
+    "H6": {
+      "minimax_p90": 3.6489286152211573,
+      "paired_mean_bootstrap_95": [
+        -0.008142132452099646,
+        0.0060584070477248736
+      ],
+      "paired_mean_regret_difference": -0.0013146210934279873,
+      "raw_p90": 3.6434315356824185,
+      "supported": false
+    },
+    "H7": {
+      "by_method": {
+        "confidence_shrink": {
+          "active": 0.0,
+          "zero": 0.0
+        },
+        "declared_raw": {
+          "active": 0.0,
+          "zero": 0.0
+        },
+        "minimax_regret": {
+          "active": 0.0,
+          "zero": 0.0
+        },
+        "robustness_gate": {
+          "active": 0.0,
+          "zero": 0.0
+        }
+      },
+      "supported": false
+    }
+  },
+  "included_tail": {
+    "baseline": {
+      "affected_harm_rate": 0.0,
+      "baseline_selection_rate": 1.0,
+      "catastrophe_exposure": 0.0,
+      "certification_rate": 0.0,
+      "certified_harmful_rate": 0.0,
+      "certified_nonoracle_rate": 0.0,
+      "harmful_choice_rate": 0.0,
+      "mean_regret": 14.078595210505277,
+      "mean_true_value": 0.0,
+      "p90_regret": 22.088884602731916
+    },
+    "confidence_shrink": {
+      "affected_harm_rate": 0.0,
+      "baseline_selection_rate": 0.02815625,
+      "catastrophe_exposure": 0.04038,
+      "certification_rate": 0.0,
+      "certified_harmful_rate": 0.0,
+      "certified_nonoracle_rate": 0.0,
+      "harmful_choice_rate": 0.008843750000000001,
+      "mean_regret": 0.7683184695841284,
+      "mean_true_value": 13.310276740921148,
+      "p90_regret": 2.8710419172589927
+    },
+    "declared_raw": {
+      "affected_harm_rate": 0.0,
+      "baseline_selection_rate": 0.04553125,
+      "catastrophe_exposure": 0.035794375,
+      "certification_rate": 0.0,
+      "certified_harmful_rate": 0.0,
+      "certified_nonoracle_rate": 0.0,
+      "harmful_choice_rate": 0.003125,
+      "mean_regret": 0.9520729170121337,
+      "mean_true_value": 13.126522293493144,
+      "p90_regret": 3.6434315356824185
+    },
+    "minimax_regret": {
+      "affected_harm_rate": 0.0,
+      "baseline_selection_rate": 0.043062500000000004,
+      "catastrophe_exposure": 0.035814375,
+      "certification_rate": 0.0,
+      "certified_harmful_rate": 0.0,
+      "certified_nonoracle_rate": 0.0,
+      "harmful_choice_rate": 0.00334375,
+      "mean_regret": 0.9509772388614681,
+      "mean_true_value": 13.12761797164381,
+      "p90_regret": 3.6489286152211573
+    },
+    "oracle_expected": {
+      "affected_harm_rate": 0.0,
+      "baseline_selection_rate": 0.00028125000000000003,
+      "catastrophe_exposure": 0.040560625,
+      "certification_rate": 0.0,
+      "certified_harmful_rate": 0.0,
+      "certified_nonoracle_rate": 0.0,
+      "harmful_choice_rate": 0.0,
+      "mean_regret": 0.0,
+      "mean_true_value": 14.078595210505277,
+      "p90_regret": 0.0
+    },
+    "robustness_gate": {
+      "affected_harm_rate": 0.0,
+      "baseline_selection_rate": 0.24190625,
+      "catastrophe_exposure": 0.03282625,
+      "certification_rate": 0.75809375,
+      "certified_harmful_rate": 0.0038125,
+      "certified_nonoracle_rate": 0.07012499999999999,
+      "harmful_choice_rate": 0.0038125,
+      "mean_regret": 2.6475025323498667,
+      "mean_true_value": 11.43109267815541,
+      "p90_regret": 9.331009211106872
+    }
+  },
+  "methods": [
+    "oracle_expected",
+    "baseline",
+    "declared_raw",
+    "confidence_shrink",
+    "minimax_regret",
+    "robustness_gate"
+  ],
+  "omitted_tail": {
+    "baseline": {
+      "affected_harm_rate": 0.0,
+      "baseline_selection_rate": 1.0,
+      "catastrophe_exposure": 0.0,
+      "certification_rate": 0.0,
+      "certified_harmful_rate": 0.0,
+      "certified_nonoracle_rate": 0.0,
+      "harmful_choice_rate": 0.0,
+      "mean_regret": 14.085737583656678,
+      "mean_true_value": 0.0,
+      "p90_regret": 22.08151587921034
+    },
+    "confidence_shrink": {
+      "affected_harm_rate": 0.0,
+      "baseline_selection_rate": 0.0125,
+      "catastrophe_exposure": 0.043921875,
+      "certification_rate": 0.0,
+      "certified_harmful_rate": 0.0,
+      "certified_nonoracle_rate": 0.0,
+      "harmful_choice_rate": 0.01153125,
+      "mean_regret": 0.6089916496837056,
+      "mean_true_value": 13.476745933972973,
+      "p90_regret": 2.156097350365784
+    },
+    "declared_raw": {
+      "affected_harm_rate": 0.0,
+      "baseline_selection_rate": 0.01865625,
+      "catastrophe_exposure": 0.041618125,
+      "certification_rate": 0.0,
+      "certified_harmful_rate": 0.0,
+      "certified_nonoracle_rate": 0.0,
+      "harmful_choice_rate": 0.00659375,
+      "mean_regret": 0.6834588916386731,
+      "mean_true_value": 13.402278692018005,
+      "p90_regret": 2.5051424596790324
+    },
+    "minimax_regret": {
+      "affected_harm_rate": 0.0,
+      "baseline_selection_rate": 0.0178125,
+      "catastrophe_exposure": 0.0416775,
+      "certification_rate": 0.0,
+      "certified_harmful_rate": 0.0,
+      "certified_nonoracle_rate": 0.0,
+      "harmful_choice_rate": 0.00675,
+      "mean_regret": 0.6827533447917289,
+      "mean_true_value": 13.40298423886495,
+      "p90_regret": 2.520069249029816
+    },
+    "oracle_expected": {
+      "affected_harm_rate": 0.0,
+      "baseline_selection_rate": 0.0001875,
+      "catastrophe_exposure": 0.04071875,
+      "certification_rate": 0.0,
+      "certified_harmful_rate": 0.0,
+      "certified_nonoracle_rate": 0.0,
+      "harmful_choice_rate": 0.0,
+      "mean_regret": 0.0,
+      "mean_true_value": 14.085737583656678,
+      "p90_regret": 0.0
+    },
+    "robustness_gate": {
+      "affected_harm_rate": 0.0,
+      "baseline_selection_rate": 0.17009375,
+      "catastrophe_exposure": 0.038893125,
+      "certification_rate": 0.82990625,
+      "certified_harmful_rate": 0.00571875,
+      "certified_nonoracle_rate": 0.08290625,
+      "harmful_choice_rate": 0.00571875,
+      "mean_regret": 1.9431167467720412,
+      "mean_true_value": 12.142620836884637,
+      "p90_regret": 7.722816074283075
+    }
+  },
+  "positive_tail": {
+    "baseline": {
+      "affected_harm_rate": 0.0,
+      "baseline_selection_rate": 1.0,
+      "catastrophe_exposure": 0.0,
+      "certification_rate": 0.0,
+      "certified_harmful_rate": 0.0,
+      "certified_nonoracle_rate": 0.0,
+      "harmful_choice_rate": 0.0,
+      "mean_regret": 14.082166397080977,
+      "mean_true_value": 0.0,
+      "p90_regret": 22.085200240971126
+    },
+    "confidence_shrink": {
+      "affected_harm_rate": 0.0,
+      "baseline_selection_rate": 0.020328125,
+      "catastrophe_exposure": 0.0421509375,
+      "certification_rate": 0.0,
+      "certified_harmful_rate": 0.0,
+      "certified_nonoracle_rate": 0.0,
+      "harmful_choice_rate": 0.0101875,
+      "mean_regret": 0.6886550596339169,
+      "mean_true_value": 13.39351133744706,
+      "p90_regret": 2.5135696338123883
+    },
+    "declared_raw": {
+      "affected_harm_rate": 0.0,
+      "baseline_selection_rate": 0.03209375,
+      "catastrophe_exposure": 0.03870625,
+      "certification_rate": 0.0,
+      "certified_harmful_rate": 0.0,
+      "certified_nonoracle_rate": 0.0,
+      "harmful_choice_rate": 0.004859375,
+      "mean_regret": 0.8177659043254034,
+      "mean_true_value": 13.264400492755573,
+      "p90_regret": 3.0742869976807254
+    },
+    "minimax_regret": {
+      "affected_harm_rate": 0.0,
+      "baseline_selection_rate": 0.0304375,
+      "catastrophe_exposure": 0.0387459375,
+      "certification_rate": 0.0,
+      "certified_harmful_rate": 0.0,
+      "certified_nonoracle_rate": 0.0,
+      "harmful_choice_rate": 0.005046875,
+      "mean_regret": 0.8168652918265985,
+      "mean_true_value": 13.265301105254379,
+      "p90_regret": 3.084498932125487
+    },
+    "oracle_expected": {
+      "affected_harm_rate": 0.0,
+      "baseline_selection_rate": 0.000234375,
+      "catastrophe_exposure": 0.0406396875,
+      "certification_rate": 0.0,
+      "certified_harmful_rate": 0.0,
+      "certified_nonoracle_rate": 0.0,
+      "harmful_choice_rate": 0.0,
+      "mean_regret": 0.0,
+      "mean_true_value": 14.082166397080977,
+      "p90_regret": 0.0
+    },
+    "robustness_gate": {
+      "affected_harm_rate": 0.0,
+      "baseline_selection_rate": 0.206,
+      "catastrophe_exposure": 0.0358596875,
+      "certification_rate": 0.794,
+      "certified_harmful_rate": 0.004765625,
+      "certified_nonoracle_rate": 0.076515625,
+      "harmful_choice_rate": 0.004765625,
+      "mean_regret": 2.295309639560954,
+      "mean_true_value": 11.786856757520024,
+      "p90_regret": 8.526912642694974
+    }
+  },
+  "title": "Decision rules under shared misspecification and hidden tails"
+}
