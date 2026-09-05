@@ -1,0 +1,24 @@
+{
+  "evaluation": "development",
+  "seed": 73021,
+  "cases_per_regime": 120,
+  "budget": 3,
+  "bootstrap_samples": 1000,
+  "bootstrap_seed": 73022,
+  "regimes": [
+    "matched",
+    "disclosed_no_signal",
+    "hidden_no_signal",
+    "reversed",
+    "omitted"
+  ],
+  "methods": [
+    "stop",
+    "fixed",
+    "random",
+    "entropy",
+    "myopic",
+    "sequential"
+  ]
+}
+

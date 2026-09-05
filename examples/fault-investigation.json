@@ -1,0 +1,285 @@
+{
+  "protocol_version": "investigation-0.1",
+  "title": "Illustrative finite fault inquiry",
+  "hypotheses": [
+    {
+      "id": "ordinary"
+    },
+    {
+      "id": "source_fault"
+    },
+    {
+      "id": "mechanism_fault"
+    }
+  ],
+  "prior": {
+    "ordinary": 0.21263090325110542,
+    "source_fault": 0.24498823047666926,
+    "mechanism_fault": 0.5423808662722254
+  },
+  "stakeholder_weights": {
+    "public": 0.7,
+    "staff": 0.3
+  },
+  "actions": [
+    {
+      "id": "baseline",
+      "outcomes": {
+        "ordinary": [
+          {
+            "p": 1,
+            "scores": {
+              "public": 0.0,
+              "staff": 0.0
+            }
+          },
+          {
+            "p": 0,
+            "scores": {
+              "public": -76.46201409630635,
+              "staff": -15.292402819261268
+            }
+          }
+        ],
+        "source_fault": [
+          {
+            "p": 1,
+            "scores": {
+              "public": 0.0,
+              "staff": 0.0
+            }
+          },
+          {
+            "p": 0,
+            "scores": {
+              "public": -76.46201409630635,
+              "staff": -15.292402819261268
+            }
+          }
+        ],
+        "mechanism_fault": [
+          {
+            "p": 1,
+            "scores": {
+              "public": 0.0,
+              "staff": 0.0
+            }
+          },
+          {
+            "p": 0,
+            "scores": {
+              "public": -76.46201409630635,
+              "staff": -15.292402819261268
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "general",
+      "outcomes": {
+        "ordinary": [
+          {
+            "p": 0.99,
+            "scores": {
+              "public": 15.292402819261268,
+              "staff": 3.0584805638522536
+            }
+          },
+          {
+            "p": 0.01,
+            "scores": {
+              "public": -76.46201409630635,
+              "staff": -15.292402819261268
+            }
+          }
+        ],
+        "source_fault": [
+          {
+            "p": 0.7,
+            "scores": {
+              "public": 9.175441691556761,
+              "staff": 3.823100704815317
+            }
+          },
+          {
+            "p": 0.3,
+            "scores": {
+              "public": -76.46201409630635,
+              "staff": -15.292402819261268
+            }
+          }
+        ],
+        "mechanism_fault": [
+          {
+            "p": 0.8,
+            "scores": {
+              "public": 6.116961127704507,
+              "staff": 3.0584805638522536
+            }
+          },
+          {
+            "p": 0.2,
+            "scores": {
+              "public": -76.46201409630635,
+              "staff": -15.292402819261268
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "source_repair",
+      "outcomes": {
+        "ordinary": [
+          {
+            "p": 0.99,
+            "scores": {
+              "public": 3.0584805638522536,
+              "staff": -3.0584805638522536
+            }
+          },
+          {
+            "p": 0.01,
+            "scores": {
+              "public": -76.46201409630635,
+              "staff": -15.292402819261268
+            }
+          }
+        ],
+        "source_fault": [
+          {
+            "p": 0.99,
+            "scores": {
+              "public": 17.58626324215046,
+              "staff": 1.5292402819261268
+            }
+          },
+          {
+            "p": 0.01,
+            "scores": {
+              "public": -76.46201409630635,
+              "staff": -15.292402819261268
+            }
+          }
+        ],
+        "mechanism_fault": [
+          {
+            "p": 0.92,
+            "scores": {
+              "public": 0.7646201409630634,
+              "staff": -6.116961127704507
+            }
+          },
+          {
+            "p": 0.08,
+            "scores": {
+              "public": -76.46201409630635,
+              "staff": -15.292402819261268
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "mechanism_repair",
+      "outcomes": {
+        "ordinary": [
+          {
+            "p": 0.99,
+            "scores": {
+              "public": 2.2938604228891903,
+              "staff": -3.823100704815317
+            }
+          },
+          {
+            "p": 0.01,
+            "scores": {
+              "public": -76.46201409630635,
+              "staff": -15.292402819261268
+            }
+          }
+        ],
+        "source_fault": [
+          {
+            "p": 0.92,
+            "scores": {
+              "public": 1.5292402819261268,
+              "staff": -5.352340986741444
+            }
+          },
+          {
+            "p": 0.08,
+            "scores": {
+              "public": -76.46201409630635,
+              "staff": -15.292402819261268
+            }
+          }
+        ],
+        "mechanism_fault": [
+          {
+            "p": 0.99,
+            "scores": {
+              "public": 19.115503524076587,
+              "staff": 0.7646201409630634
+            }
+          },
+          {
+            "p": 0.01,
+            "scores": {
+              "public": -76.46201409630635,
+              "staff": -15.292402819261268
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "tests": [
+    {
+      "id": "measurement",
+      "family": "measurement",
+      "source": "synthetic independently sampled observation",
+      "units": 1,
+      "cost": 0.30683026508650274,
+      "positive_probability": {
+        "ordinary": 0.9203596633855083,
+        "source_fault": 0.07964033661449166,
+        "mechanism_fault": 0.07964033661449166
+      }
+    },
+    {
+      "id": "source_audit",
+      "family": "source_audit",
+      "source": "synthetic independently sampled observation",
+      "units": 1,
+      "cost": 1.1301535558271034,
+      "positive_probability": {
+        "ordinary": 0.189139387989822,
+        "source_fault": 0.810860612010178,
+        "mechanism_fault": 0.189139387989822
+      }
+    },
+    {
+      "id": "mechanism_test",
+      "family": "mechanism_test",
+      "source": "synthetic independently sampled observation",
+      "units": 1,
+      "cost": 0.6470547108215157,
+      "positive_probability": {
+        "ordinary": 0.09437401432118941,
+        "source_fault": 0.09437401432118941,
+        "mechanism_fault": 0.9056259856788106
+      }
+    }
+  ],
+  "baseline_action_id": "baseline",
+  "budget": 3,
+  "constraints": [
+    {
+      "stakeholder_id": "public",
+      "floor": -20,
+      "max_probability": 0.15
+    }
+  ]
+}

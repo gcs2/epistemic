@@ -35,12 +35,16 @@ jobs:
       - name: Run behavioral tests
         run: python -m unittest discover -s tests -v
 
+      - name: Check documentation, JSON, versions and artifact integrity
+        run: python scripts/check_repository.py
+
       - name: Validate canonical examples and manifests
         shell: bash
         run: |
           python -m syntruth validate examples/anschluss.json
           python -m syntruth decision-validate examples/library-outreach-decision.json
           python -m syntruth decision-validate examples/library-outreach-bda.json
+          python -m syntruth investigation-validate examples/fault-investigation.json
           python -m syntruth verify experiments/001-dependence/results/MANIFEST.sha256
           python -m syntruth verify experiments/002-provenance/results/MANIFEST.sha256
           python -m syntruth verify experiments/003a-decision-stress/FROZEN.sha256

@@ -1,6 +1,6 @@
 # SES Research Status
 
-**Version:** 0.6.0  
+**Version:** 0.7.0
 **As of:** 2026-09-04
 
 ## What is established within synthetic scope
@@ -40,6 +40,19 @@ Action Protocol 0.1 is a legacy reproduction path. Experiment 003A exposed its s
 Action Protocol 0.2, Bounded Decision Assurance, is now executable. It uses explicit consequence bounds, uncertain value weights, simple declared dependence groups, separate evidence quality, stakeholder constraints, challenge coverage, assurance deficits, lower-tail outcomes, and an adaptive learning contract. Its invariance tests establish that changing an evidence-quality label does not numerically shrink signed consequences. This is implementation evidence only; it does not establish better real decisions.
 
 ## Next decisive experiment
+
+The 003B investigation slice has completed two public development runs, each
+120 cases x five regimes x six policies. The second reuses cases at budget two
+after the first exposed a full-menu comparison limitation. This is development,
+not protected confirmation. See [interpretation](experiments/003b-bounded-decision-assurance/DEVELOPMENT_INTERPRETATION.md).
+One-step planning remains the default. More lookahead has not established an
+advantage over it; misleading likelihoods and absent hypotheses remain major failures.
+
+Audit correction: Action 0.2's tail/constraint statistics refer to expected-score
+sensitivity, not realized-outcome risk. Its learning contract remains declarative.
+Investigation 0.1 separately computes exact discrete outcome tails and updates
+beliefs through explicitly costed observations. It assumes supplied hypotheses
+and likelihoods; it does not discover omitted mechanisms.
 
 Experiment 002B will use an adjudicated real corpus, beginning with published systematic-review citation matrices. It will compare citation, text, metadata, semantic, human, and constrained-hybrid methods, with false-merger rate and downstream proper scoring as primary outcomes.
 

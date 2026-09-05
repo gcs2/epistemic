@@ -20,6 +20,7 @@ This is the canonical navigation page for Syncretic Epistemic Synthesis (SES). S
 | Legacy decision protocol (reproduction only) | [`ACTION_EPISTEMOLOGY.md`](ACTION_EPISTEMOLOGY.md) | [`../schema/decision-pilot-0.1.schema.json`](../schema/decision-pilot-0.1.schema.json) | [`../syntruth/decision.py`](../syntruth/decision.py) |
 | Bounded decision assurance | [`BOUNDED_DECISION_ASSURANCE.md`](BOUNDED_DECISION_ASSURANCE.md) | [`../schema/decision-assurance-0.2.schema.json`](../schema/decision-assurance-0.2.schema.json) | [`../syntruth/decision_v2.py`](../syntruth/decision_v2.py) |
 | Question selection | [`QUESTION_FOUNDRY.md`](QUESTION_FOUNDRY.md) | — | — |
+| Finite investigation | [`INVESTIGATION_PROTOCOL.md`](INVESTIGATION_PROTOCOL.md) | [`../schema/investigation-0.1.schema.json`](../schema/investigation-0.1.schema.json) | [`../syntruth/investigation.py`](../syntruth/investigation.py) |
 | Agent roles | [`AGENTIC_HARNESS.md`](AGENTIC_HARNESS.md) | [`../schema/agent-artifact-0.1.schema.json`](../schema/agent-artifact-0.1.schema.json) | — |
 | Architecture alternatives | [`OPTIONS.md`](OPTIONS.md) | — | — |
 | Architecture decisions | [`decisions/README.md`](decisions/README.md) | — | — |
@@ -49,6 +50,9 @@ This is the canonical navigation page for Syncretic Epistemic Synthesis (SES). S
 
 ## Examples and templates
 
+- [003B development interpretation](../experiments/003b-bounded-decision-assurance/DEVELOPMENT_INTERPRETATION.md): two exposed runs; broad comparative study still pending.
+- [Finite fault investigation](../examples/fault-investigation.json) and [replay trace](../examples/fault-investigation-results.json): illustrative observations and costs.
+
 - [`../examples/anschluss.json`](../examples/anschluss.json): worked counterfactual inquiry; illustrative judgments, not a historical finding.
 - [`../examples/library-outreach-decision.json`](../examples/library-outreach-decision.json): worked low-risk action packet; illustrative judgments, not field data.
 - [`../examples/library-outreach-bda.json`](../examples/library-outreach-bda.json): Action 0.2 bounded-assurance packet; illustrative ranges, evidence, challenges, and deficits.
@@ -68,6 +72,7 @@ This is the canonical navigation page for Syncretic Epistemic Synthesis (SES). S
 - `schema/` contains interoperable machine contracts.
 - `syntruth/` contains dependency-free deterministic reference code.
 - `tests/` mirrors implementation modules.
+- `scripts/` contains portable repository validation utilities.
 - `examples/` contains non-authoritative worked inputs and generated outputs.
 - `experiments/NNN-name/` contains preregistration, frozen config, execution log, results, truth gems, and integrity manifest for one study.
 - `templates/` contains blank operational forms.

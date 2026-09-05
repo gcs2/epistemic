@@ -5,6 +5,11 @@
 
 ## Primary question
 
+Checkpoint update: a narrow investigation-selection slice has now been executed
+as public development. See [DEVELOPMENT_PROTOCOL.md](DEVELOPMENT_PROTOCOL.md) and
+[DEVELOPMENT_INTERPRETATION.md](DEVELOPMENT_INTERPRETATION.md). The broad design
+below is still unexecuted and is not represented by those development results.
+
 Does typed uncertainty plus a bounded assurance-and-learning case reduce harmful false assurance under signed consequence uncertainty, shared structural omission, source dependence, stakeholder conflict, and distribution shift without excessive deferral or oracle information?
 
 ## Contributions this experiment must distinguish

@@ -1,6 +1,6 @@
 [project]
 name = "syncretic-epistemic-synthesis"
-version = "0.6.0"
+version = "0.7.0"
 description = "A transparent reference harness for multi-model, dependence-aware epistemic synthesis"
 requires-python = ">=3.11"
 

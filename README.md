@@ -4,7 +4,7 @@ SES is an experimental protocol and reference program for transparent, multi-mod
 
 This repository contains the founding document, versioned epistemic and action protocols, completed synthetic experiments, source-backed research, and a deterministic Python reference harness. New readers should begin with the [project index](docs/INDEX.md). Contributors and future models must follow the [maintenance contract](MAINTAINING.md); continuation context is in [HANDOFF.md](HANDOFF.md).
 
-Current checkpoint: **0.6.0**. Bounded Decision Assurance 0.2 is executable and tested, but its superiority, field utility, and novelty have not been established.
+Current checkpoint: **0.7.0**. A finite investigation loop and two public development runs now exist. The runs support keeping one-step planning as the default and expose failure with misleading observations and absent hypotheses. Superiority, field utility and novelty remain unestablished.
 
 ## Quick start
 
@@ -13,15 +13,17 @@ Requires Python 3.11 or newer and has no runtime dependencies.
 ```powershell
 python -m syntruth validate examples/anschluss.json
 python -m syntruth run examples/anschluss.json --output examples/anschluss-report.md
-python -m syntruth benchmark experiments/001-dependence/config.json --output-dir experiments/001-dependence/results
-python -m syntruth provenance-benchmark experiments/002-provenance/config.json --output-dir experiments/002-provenance/results
-python -m syntruth decision-benchmark experiments/003a-decision-stress/config.json --output-dir experiments/003a-decision-stress/results
+python -m syntruth benchmark experiments/001-dependence/config.json --output-dir work/001-replay
+python -m syntruth provenance-benchmark experiments/002-provenance/config.json --output-dir work/002-replay
+python -m syntruth decision-benchmark experiments/003a-decision-stress/config.json --output-dir work/003a-replay
 python -m syntruth decision-validate examples/library-outreach-decision.json
 python -m syntruth decide examples/library-outreach-decision.json --output examples/library-outreach-decision-report.md
 python -m syntruth decision-validate examples/library-outreach-bda.json
 python -m syntruth decide examples/library-outreach-bda.json --output examples/library-outreach-bda-report.md --json examples/library-outreach-bda-results.json
 python -m syntruth verify experiments/001-dependence/results/MANIFEST.sha256
 python -m unittest discover -s tests -v
+python -m syntruth investigation-validate examples/fault-investigation.json
+python -m syntruth investigate examples/fault-investigation.json
 ```
 
 The generated report includes:
@@ -48,6 +50,7 @@ The generated report includes:
 - `docs/QUESTION_FOUNDRY.md` — question selection, ten flagship topics, and truth-gem extraction.
 - `docs/ACTION_EPISTEMOLOGY.md` — decision, field-learning, and ethics boundary.
 - `docs/BOUNDED_DECISION_ASSURANCE.md` — executable Action Protocol 0.2 semantics and limitations.
+- `docs/INVESTIGATION_PROTOCOL.md` — choosing, performing and scoring finite investigations.
 - `docs/decisions/` — architecture decision records and reversal conditions.
 - `schema/` — JSON Schema for interoperable inquiry packets.
 - `syntruth/` — reference CLI and synthesis engine.
@@ -110,6 +113,11 @@ See the [Experiment 003A report](experiments/003a-decision-stress/results/report
 
 ## Status
 
-Version 0.6 is a research prototype with three completed synthetic experiments, a legacy action protocol with a demonstrated defect, and the first executable Bounded Decision Assurance 0.2 vertical slice. Experiments 002A and 003A retain negative results against favored methods. Experiment 003B, real-corpus transfer, human and agent evaluation, field outcomes, and governance remain unvalidated.
+The [003B development interpretation](experiments/003b-bounded-decision-assurance/DEVELOPMENT_INTERPRETATION.md)
+explains the first investigation results. The [implementation audit](experiments/003b-bounded-decision-assurance/IMPLEMENTATION_AUDIT.md)
+distinguishes promised capabilities from implemented behavior. The current engine
+can distinguish supplied hypotheses; it cannot discover one outside its model.
+
+Version 0.7 is a research prototype with three completed synthetic experiments and two exposed 003B development runs. BDA 0.2 remains a sensitivity-analysis prototype. Investigation 0.1 adds explicit outcome distributions and an executable finite learning loop. The full BDA comparative study, real-corpus transfer and field validation remain outstanding.
 
 Repository: [github.com/gcs2/epistemic](https://github.com/gcs2/epistemic)

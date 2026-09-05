@@ -4,3 +4,16 @@
 *.py text eol=lf
 *.toml text eol=lf
 *.csv text eol=lf
+*.sha256 text eol=lf
+*.yml text eol=lf
+*.cff text eol=lf
+# Historical manifested artifacts require their original exact bytes.
+experiments/001-dependence/results/report.md -text
+experiments/001-dependence/results/summary.json -text
+experiments/001-dependence/results/cells.csv -text
+experiments/002-provenance/results/report.md -text
+experiments/002-provenance/results/summary.json -text
+experiments/002-provenance/results/cells.csv -text
+experiments/003a-decision-stress/results/report.md -text
+experiments/003a-decision-stress/results/summary.json -text
+experiments/003a-decision-stress/results/cells.csv -text

@@ -1,0 +1,737 @@
+{
+  "evaluation": "development",
+  "config": {
+    "evaluation": "development",
+    "seed": 73021,
+    "cases_per_regime": 120,
+    "budget": 2,
+    "bootstrap_samples": 1000,
+    "bootstrap_seed": 73022,
+    "regimes": [
+      "matched",
+      "disclosed_no_signal",
+      "hidden_no_signal",
+      "reversed",
+      "omitted"
+    ],
+    "methods": [
+      "stop",
+      "fixed",
+      "random",
+      "entropy",
+      "myopic",
+      "sequential"
+    ]
+  },
+  "groups": [
+    {
+      "regime": "matched",
+      "method": "stop",
+      "net_utility": 5.225130523961633,
+      "regret": 10.39202747582879,
+      "outcome_lower_tail_mean": -23.455478360304138,
+      "severe_loss_probability": 0.026333333333333334,
+      "worst_group_expected_score": -3.081326036031528,
+      "predicted_net_utility": 5.211295558900079,
+      "latent_brier": 0.638387006518979,
+      "false_low_risk": 0.0,
+      "baseline": 0.0,
+      "cost": 0.0,
+      "steps": 0.0,
+      "planner_nodes": 0.0
+    },
+    {
+      "regime": "matched",
+      "method": "fixed",
+      "net_utility": 6.118597802341548,
+      "regret": 9.498560197448874,
+      "outcome_lower_tail_mean": -15.838753284078528,
+      "severe_loss_probability": 0.030166666666666668,
+      "worst_group_expected_score": -1.2688019806432942,
+      "predicted_net_utility": 6.95448505308663,
+      "latent_brier": 0.4049183940627966,
+      "false_low_risk": 0.03333333333333333,
+      "baseline": 0.0,
+      "cost": 3.193311103309948,
+      "steps": 2.0,
+      "planner_nodes": 0.0
+    },
+    {
+      "regime": "matched",
+      "method": "random",
+      "net_utility": 6.2782860448563405,
+      "regret": 9.338871954934083,
+      "outcome_lower_tail_mean": -14.031812418338427,
+      "severe_loss_probability": 0.03291666666666667,
+      "worst_group_expected_score": -1.3566499454849001,
+      "predicted_net_utility": 6.523532250635994,
+      "latent_brier": 0.4164560972650731,
+      "false_low_risk": 0.008333333333333333,
+      "baseline": 0.0,
+      "cost": 3.3414725100670766,
+      "steps": 2.0,
+      "planner_nodes": 0.0
+    },
+    {
+      "regime": "matched",
+      "method": "entropy",
+      "net_utility": 7.508135525300497,
+      "regret": 8.109022474489926,
+      "outcome_lower_tail_mean": -12.775906298819567,
+      "severe_loss_probability": 0.029083333333333336,
+      "worst_group_expected_score": -0.8360664956108043,
+      "predicted_net_utility": 7.644114212976798,
+      "latent_brier": 0.36720546394122855,
+      "false_low_risk": 0.03333333333333333,
+      "baseline": 0.0,
+      "cost": 2.8920916645532992,
+      "steps": 2.0,
+      "planner_nodes": 0.0
+    },
+    {
+      "regime": "matched",
+      "method": "myopic",
+      "net_utility": 8.022842807161156,
+      "regret": 7.594315192629265,
+      "outcome_lower_tail_mean": -13.503695859292504,
+      "severe_loss_probability": 0.026833333333333334,
+      "worst_group_expected_score": -1.0229883627972123,
+      "predicted_net_utility": 8.724820989448396,
+      "latent_brier": 0.41112403347890353,
+      "false_low_risk": 0.025,
+      "baseline": 0.0,
+      "cost": 1.8463151406014175,
+      "steps": 1.3083333333333333,
+      "planner_nodes": 1.925
+    },
+    {
+      "regime": "matched",
+      "method": "sequential",
+      "net_utility": 8.267198118821872,
+      "regret": 7.34995988096855,
+      "outcome_lower_tail_mean": -12.81390777118433,
+      "severe_loss_probability": 0.024416666666666666,
+      "worst_group_expected_score": -0.8022092328804379,
+      "predicted_net_utility": 8.749932869688374,
+      "latent_brier": 0.40436372816696076,
+      "false_low_risk": 0.025,
+      "baseline": 0.0,
+      "cost": 1.9149118885113825,
+      "steps": 1.3833333333333333,
+      "planner_nodes": 7.966666666666667
+    },
+    {
+      "regime": "disclosed_no_signal",
+      "method": "stop",
+      "net_utility": 5.225130523961633,
+      "regret": 10.39202747582879,
+      "outcome_lower_tail_mean": -23.455478360304138,
+      "severe_loss_probability": 0.026333333333333334,
+      "worst_group_expected_score": -3.081326036031528,
+      "predicted_net_utility": 5.211295558900079,
+      "latent_brier": 0.638387006518979,
+      "false_low_risk": 0.0,
+      "baseline": 0.0,
+      "cost": 0.0,
+      "steps": 0.0,
+      "planner_nodes": 0.0
+    },
+    {
+      "regime": "disclosed_no_signal",
+      "method": "fixed",
+      "net_utility": 2.031819420651684,
+      "regret": 13.585338579138739,
+      "outcome_lower_tail_mean": -23.455478360304138,
+      "severe_loss_probability": 0.026333333333333334,
+      "worst_group_expected_score": -3.081326036031528,
+      "predicted_net_utility": 2.0179844555901307,
+      "latent_brier": 0.638387006518979,
+      "false_low_risk": 0.0,
+      "baseline": 0.0,
+      "cost": 3.193311103309948,
+      "steps": 2.0,
+      "planner_nodes": 0.0
+    },
+    {
+      "regime": "disclosed_no_signal",
+      "method": "random",
+      "net_utility": 1.883658013894556,
+      "regret": 13.733499985895866,
+      "outcome_lower_tail_mean": -23.455478360304138,
+      "severe_loss_probability": 0.026333333333333334,
+      "worst_group_expected_score": -3.081326036031528,
+      "predicted_net_utility": 1.8698230488330025,
+      "latent_brier": 0.638387006518979,
+      "false_low_risk": 0.0,
+      "baseline": 0.0,
+      "cost": 3.3414725100670766,
+      "steps": 2.0,
+      "planner_nodes": 0.0
+    },
+    {
+      "regime": "disclosed_no_signal",
+      "method": "entropy",
+      "net_utility": 5.225130523961633,
+      "regret": 10.39202747582879,
+      "outcome_lower_tail_mean": -23.455478360304138,
+      "severe_loss_probability": 0.026333333333333334,
+      "worst_group_expected_score": -3.081326036031528,
+      "predicted_net_utility": 5.211295558900079,
+      "latent_brier": 0.638387006518979,
+      "false_low_risk": 0.0,
+      "baseline": 0.0,
+      "cost": 0.0,
+      "steps": 0.0,
+      "planner_nodes": 0.0
+    },
+    {
+      "regime": "disclosed_no_signal",
+      "method": "myopic",
+      "net_utility": 5.225130523961633,
+      "regret": 10.39202747582879,
+      "outcome_lower_tail_mean": -23.455478360304138,
+      "severe_loss_probability": 0.026333333333333334,
+      "worst_group_expected_score": -3.081326036031528,
+      "predicted_net_utility": 5.211295558900079,
+      "latent_brier": 0.638387006518979,
+      "false_low_risk": 0.0,
+      "baseline": 0.0,
+      "cost": 0.0,
+      "steps": 0.0,
+      "planner_nodes": 1.0
+    },
+    {
+      "regime": "disclosed_no_signal",
+      "method": "sequential",
+      "net_utility": 5.225130523961633,
+      "regret": 10.39202747582879,
+      "outcome_lower_tail_mean": -23.455478360304138,
+      "severe_loss_probability": 0.026333333333333334,
+      "worst_group_expected_score": -3.081326036031528,
+      "predicted_net_utility": 5.211295558900079,
+      "latent_brier": 0.638387006518979,
+      "false_low_risk": 0.0,
+      "baseline": 0.0,
+      "cost": 0.0,
+      "steps": 0.0,
+      "planner_nodes": 7.0
+    },
+    {
+      "regime": "hidden_no_signal",
+      "method": "stop",
+      "net_utility": 5.225130523961633,
+      "regret": 10.39202747582879,
+      "outcome_lower_tail_mean": -23.455478360304138,
+      "severe_loss_probability": 0.026333333333333334,
+      "worst_group_expected_score": -3.081326036031528,
+      "predicted_net_utility": 5.211295558900079,
+      "latent_brier": 0.638387006518979,
+      "false_low_risk": 0.0,
+      "baseline": 0.0,
+      "cost": 0.0,
+      "steps": 0.0,
+      "planner_nodes": 0.0
+    },
+    {
+      "regime": "hidden_no_signal",
+      "method": "fixed",
+      "net_utility": -1.195501093201294,
+      "regret": 16.812659092991716,
+      "outcome_lower_tail_mean": -33.83542691482914,
+      "severe_loss_probability": 0.057666666666666665,
+      "worst_group_expected_score": -5.132191249791972,
+      "predicted_net_utility": 6.670864283770769,
+      "latent_brier": 0.8934712809401322,
+      "false_low_risk": 0.08333333333333333,
+      "baseline": 0.0,
+      "cost": 3.193311103309948,
+      "steps": 2.0,
+      "planner_nodes": 0.0
+    },
+    {
+      "regime": "hidden_no_signal",
+      "method": "random",
+      "net_utility": -1.1719124348474783,
+      "regret": 16.7890704346379,
+      "outcome_lower_tail_mean": -32.73633902729384,
+      "severe_loss_probability": 0.059333333333333335,
+      "worst_group_expected_score": -5.146692766242712,
+      "predicted_net_utility": 6.9291470470452206,
+      "latent_brier": 0.9006239875140277,
+      "false_low_risk": 0.05,
+      "baseline": 0.0,
+      "cost": 3.3414725100670766,
+      "steps": 2.0,
+      "planner_nodes": 0.0
+    },
+    {
+      "regime": "hidden_no_signal",
+      "method": "entropy",
+      "net_utility": -1.1308557684491751,
+      "regret": 16.7480137682396,
+      "outcome_lower_tail_mean": -33.96398910069431,
+      "severe_loss_probability": 0.06091666666666667,
+      "worst_group_expected_score": -5.369410219590704,
+      "predicted_net_utility": 7.525008212428613,
+      "latent_brier": 0.9530265024491602,
+      "false_low_risk": 0.1,
+      "baseline": 0.0,
+      "cost": 2.9128349961720654,
+      "steps": 2.0,
+      "planner_nodes": 0.0
+    },
+    {
+      "regime": "hidden_no_signal",
+      "method": "myopic",
+      "net_utility": 0.31154859358767606,
+      "regret": 15.305609406202745,
+      "outcome_lower_tail_mean": -33.105120004660755,
+      "severe_loss_probability": 0.059333333333333335,
+      "worst_group_expected_score": -5.162899904198983,
+      "predicted_net_utility": 8.59332246851621,
+      "latent_brier": 0.8801672849370803,
+      "false_low_risk": 0.1,
+      "baseline": 0.0,
+      "cost": 1.840823256188607,
+      "steps": 1.3,
+      "planner_nodes": 1.925
+    },
+    {
+      "regime": "hidden_no_signal",
+      "method": "sequential",
+      "net_utility": 0.041724514118829166,
+      "regret": 15.575433485671594,
+      "outcome_lower_tail_mean": -33.72296853844209,
+      "severe_loss_probability": 0.05991666666666667,
+      "worst_group_expected_score": -5.2392511816817855,
+      "predicted_net_utility": 8.660853127338235,
+      "latent_brier": 0.8935800032269933,
+      "false_low_risk": 0.10833333333333334,
+      "baseline": 0.0,
+      "cost": 1.9278353872962382,
+      "steps": 1.3833333333333333,
+      "planner_nodes": 7.966666666666667
+    },
+    {
+      "regime": "reversed",
+      "method": "stop",
+      "net_utility": 5.225130523961633,
+      "regret": 10.39202747582879,
+      "outcome_lower_tail_mean": -23.455478360304138,
+      "severe_loss_probability": 0.026333333333333334,
+      "worst_group_expected_score": -3.081326036031528,
+      "predicted_net_utility": 5.211295558900079,
+      "latent_brier": 0.638387006518979,
+      "false_low_risk": 0.0,
+      "baseline": 0.0,
+      "cost": 0.0,
+      "steps": 0.0,
+      "planner_nodes": 0.0
+    },
+    {
+      "regime": "reversed",
+      "method": "fixed",
+      "net_utility": -6.980642690124506,
+      "regret": 22.597800689914926,
+      "outcome_lower_tail_mean": -47.730646208728665,
+      "severe_loss_probability": 0.089,
+      "worst_group_expected_score": -8.490701426710457,
+      "predicted_net_utility": 6.148333116072725,
+      "latent_brier": 1.2622761686872022,
+      "false_low_risk": 0.11666666666666667,
+      "baseline": 0.0,
+      "cost": 3.193311103309948,
+      "steps": 2.0,
+      "planner_nodes": 0.0
+    },
+    {
+      "regime": "reversed",
+      "method": "random",
+      "net_utility": -6.407187711777141,
+      "regret": 22.024345711567562,
+      "outcome_lower_tail_mean": -46.861009158985794,
+      "severe_loss_probability": 0.07241666666666666,
+      "worst_group_expected_score": -7.572151922074793,
+      "predicted_net_utility": 6.861780936124622,
+      "latent_brier": 1.2791776380868363,
+      "false_low_risk": 0.058333333333333334,
+      "baseline": 0.0,
+      "cost": 3.3414725100670766,
+      "steps": 2.0,
+      "planner_nodes": 0.0
+    },
+    {
+      "regime": "reversed",
+      "method": "entropy",
+      "net_utility": -6.689068222115068,
+      "regret": 22.30622622190549,
+      "outcome_lower_tail_mean": -47.842217013784186,
+      "severe_loss_probability": 0.08533333333333333,
+      "worst_group_expected_score": -8.376841571639462,
+      "predicted_net_utility": 7.471870612710406,
+      "latent_brier": 1.3736943189423925,
+      "false_low_risk": 0.14166666666666666,
+      "baseline": 0.0,
+      "cost": 2.906696728165065,
+      "steps": 2.0,
+      "planner_nodes": 0.0
+    },
+    {
+      "regime": "reversed",
+      "method": "myopic",
+      "net_utility": -5.30199786922128,
+      "regret": 20.919155869011703,
+      "outcome_lower_tail_mean": -47.32523905313711,
+      "severe_loss_probability": 0.08475,
+      "worst_group_expected_score": -8.298524851579929,
+      "predicted_net_utility": 8.974878708674689,
+      "latent_brier": 1.2574938365677046,
+      "false_low_risk": 0.13333333333333333,
+      "baseline": 0.0,
+      "cost": 1.739326235224461,
+      "steps": 1.225,
+      "planner_nodes": 1.925
+    },
+    {
+      "regime": "reversed",
+      "method": "sequential",
+      "net_utility": -5.36452621639012,
+      "regret": 20.981684216180543,
+      "outcome_lower_tail_mean": -47.31705820185066,
+      "severe_loss_probability": 0.08475,
+      "worst_group_expected_score": -8.288401048112949,
+      "predicted_net_utility": 8.972434196515898,
+      "latent_brier": 1.2657421298763116,
+      "false_low_risk": 0.14166666666666666,
+      "baseline": 0.0,
+      "cost": 1.8119783858602814,
+      "steps": 1.2833333333333334,
+      "planner_nodes": 7.966666666666667
+    },
+    {
+      "regime": "omitted",
+      "method": "stop",
+      "net_utility": -27.414999999999996,
+      "regret": 27.414999999999996,
+      "outcome_lower_tail_mean": -93.0,
+      "severe_loss_probability": 0.35,
+      "worst_group_expected_score": -35.5,
+      "predicted_net_utility": 5.211295558900079,
+      "latent_brier": 1.3723180044759675,
+      "false_low_risk": 1.0,
+      "baseline": 0.0,
+      "cost": 0.0,
+      "steps": 0.0,
+      "planner_nodes": 0.0
+    },
+    {
+      "regime": "omitted",
+      "method": "fixed",
+      "net_utility": -30.60831110330994,
+      "regret": 30.60831110330994,
+      "outcome_lower_tail_mean": -93.0,
+      "severe_loss_probability": 0.35,
+      "worst_group_expected_score": -35.5,
+      "predicted_net_utility": 6.670864283770769,
+      "latent_brier": 1.586719878378804,
+      "false_low_risk": 0.9166666666666666,
+      "baseline": 0.0,
+      "cost": 3.193311103309948,
+      "steps": 2.0,
+      "planner_nodes": 0.0
+    },
+    {
+      "regime": "omitted",
+      "method": "random",
+      "net_utility": -30.75647251006707,
+      "regret": 30.75647251006707,
+      "outcome_lower_tail_mean": -93.0,
+      "severe_loss_probability": 0.35,
+      "worst_group_expected_score": -35.5,
+      "predicted_net_utility": 6.9291470470452206,
+      "latent_brier": 1.6078633245140446,
+      "false_low_risk": 0.8666666666666667,
+      "baseline": 0.0,
+      "cost": 3.3414725100670766,
+      "steps": 2.0,
+      "planner_nodes": 0.0
+    },
+    {
+      "regime": "omitted",
+      "method": "entropy",
+      "net_utility": -30.32783499617206,
+      "regret": 30.32783499617206,
+      "outcome_lower_tail_mean": -93.0,
+      "severe_loss_probability": 0.35,
+      "worst_group_expected_score": -35.5,
+      "predicted_net_utility": 7.525008212428613,
+      "latent_brier": 1.629733963352263,
+      "false_low_risk": 0.9,
+      "baseline": 0.0,
+      "cost": 2.9128349961720654,
+      "steps": 2.0,
+      "planner_nodes": 0.0
+    },
+    {
+      "regime": "omitted",
+      "method": "myopic",
+      "net_utility": -29.255823256188602,
+      "regret": 29.255823256188602,
+      "outcome_lower_tail_mean": -93.0,
+      "severe_loss_probability": 0.35,
+      "worst_group_expected_score": -35.5,
+      "predicted_net_utility": 8.59332246851621,
+      "latent_brier": 1.606518838129618,
+      "false_low_risk": 0.9083333333333333,
+      "baseline": 0.0,
+      "cost": 1.840823256188607,
+      "steps": 1.3,
+      "planner_nodes": 1.925
+    },
+    {
+      "regime": "omitted",
+      "method": "sequential",
+      "net_utility": -29.342835387296233,
+      "regret": 29.342835387296233,
+      "outcome_lower_tail_mean": -93.0,
+      "severe_loss_probability": 0.35,
+      "worst_group_expected_score": -35.5,
+      "predicted_net_utility": 8.660853127338235,
+      "latent_brier": 1.612732893574683,
+      "false_low_risk": 0.9166666666666666,
+      "baseline": 0.0,
+      "cost": 1.9278353872962382,
+      "steps": 1.3833333333333333,
+      "planner_nodes": 7.966666666666667
+    }
+  ],
+  "contrasts": [
+    {
+      "regime": "matched",
+      "comparator": "stop",
+      "mean_net_difference": 3.04206759486024,
+      "descriptive_bootstrap_95": [
+        0.9572817178577896,
+        4.987832482841045
+      ]
+    },
+    {
+      "regime": "matched",
+      "comparator": "fixed",
+      "mean_net_difference": 2.148600316480325,
+      "descriptive_bootstrap_95": [
+        0.5203284683187438,
+        3.7285231290725793
+      ]
+    },
+    {
+      "regime": "matched",
+      "comparator": "random",
+      "mean_net_difference": 1.9889120739655328,
+      "descriptive_bootstrap_95": [
+        0.12483040597419644,
+        3.9024605857227073
+      ]
+    },
+    {
+      "regime": "matched",
+      "comparator": "entropy",
+      "mean_net_difference": 0.7590625935213766,
+      "descriptive_bootstrap_95": [
+        -0.2718836020539559,
+        1.9459266687299641
+      ]
+    },
+    {
+      "regime": "matched",
+      "comparator": "myopic",
+      "mean_net_difference": 0.24435531166071606,
+      "descriptive_bootstrap_95": [
+        -0.46920142000347753,
+        1.1573741089542808
+      ]
+    },
+    {
+      "regime": "disclosed_no_signal",
+      "comparator": "stop",
+      "mean_net_difference": 0.0,
+      "descriptive_bootstrap_95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "regime": "disclosed_no_signal",
+      "comparator": "fixed",
+      "mean_net_difference": 3.193311103309948,
+      "descriptive_bootstrap_95": [
+        2.9800401264647602,
+        3.3935913181288226
+      ]
+    },
+    {
+      "regime": "disclosed_no_signal",
+      "comparator": "random",
+      "mean_net_difference": 3.3414725100670766,
+      "descriptive_bootstrap_95": [
+        3.1216524286995635,
+        3.549645557751435
+      ]
+    },
+    {
+      "regime": "disclosed_no_signal",
+      "comparator": "entropy",
+      "mean_net_difference": 0.0,
+      "descriptive_bootstrap_95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "regime": "disclosed_no_signal",
+      "comparator": "myopic",
+      "mean_net_difference": 0.0,
+      "descriptive_bootstrap_95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "regime": "hidden_no_signal",
+      "comparator": "stop",
+      "mean_net_difference": -5.183406009842803,
+      "descriptive_bootstrap_95": [
+        -7.957824153566519,
+        -2.516708229172543
+      ]
+    },
+    {
+      "regime": "hidden_no_signal",
+      "comparator": "fixed",
+      "mean_net_difference": 1.2372256073201233,
+      "descriptive_bootstrap_95": [
+        -0.6370431812192177,
+        3.2118815972383126
+      ]
+    },
+    {
+      "regime": "hidden_no_signal",
+      "comparator": "random",
+      "mean_net_difference": 1.2136369489663077,
+      "descriptive_bootstrap_95": [
+        -0.9263942286036044,
+        3.035150409008513
+      ]
+    },
+    {
+      "regime": "hidden_no_signal",
+      "comparator": "entropy",
+      "mean_net_difference": 1.172580282568004,
+      "descriptive_bootstrap_95": [
+        -0.10214542594978761,
+        2.3199421507031937
+      ]
+    },
+    {
+      "regime": "hidden_no_signal",
+      "comparator": "myopic",
+      "mean_net_difference": -0.26982407946884684,
+      "descriptive_bootstrap_95": [
+        -0.6972887693255518,
+        -0.019048964038079493
+      ]
+    },
+    {
+      "regime": "reversed",
+      "comparator": "stop",
+      "mean_net_difference": -10.589656740351753,
+      "descriptive_bootstrap_95": [
+        -13.248361013907376,
+        -8.08776911816778
+      ]
+    },
+    {
+      "regime": "reversed",
+      "comparator": "fixed",
+      "mean_net_difference": 1.6161164737343845,
+      "descriptive_bootstrap_95": [
+        -0.08461458069278166,
+        3.178450153228309
+      ]
+    },
+    {
+      "regime": "reversed",
+      "comparator": "random",
+      "mean_net_difference": 1.04266149538702,
+      "descriptive_bootstrap_95": [
+        -0.31788765979200395,
+        2.3080996944717658
+      ]
+    },
+    {
+      "regime": "reversed",
+      "comparator": "entropy",
+      "mean_net_difference": 1.3245420057249477,
+      "descriptive_bootstrap_95": [
+        0.3748427432279416,
+        2.1660714818604756
+      ]
+    },
+    {
+      "regime": "reversed",
+      "comparator": "myopic",
+      "mean_net_difference": -0.06252834716884066,
+      "descriptive_bootstrap_95": [
+        -0.1526245682305714,
+        0.01576755279978109
+      ]
+    },
+    {
+      "regime": "omitted",
+      "comparator": "stop",
+      "mean_net_difference": -1.927835387296238,
+      "descriptive_bootstrap_95": [
+        -2.1801151194540305,
+        -1.6693276728636293
+      ]
+    },
+    {
+      "regime": "omitted",
+      "comparator": "fixed",
+      "mean_net_difference": 1.26547571601371,
+      "descriptive_bootstrap_95": [
+        1.0223281761385465,
+        1.5190053030435793
+      ]
+    },
+    {
+      "regime": "omitted",
+      "comparator": "random",
+      "mean_net_difference": 1.4136371227708386,
+      "descriptive_bootstrap_95": [
+        1.1746115202650016,
+        1.6687313024167205
+      ]
+    },
+    {
+      "regime": "omitted",
+      "comparator": "entropy",
+      "mean_net_difference": 0.9849996088758272,
+      "descriptive_bootstrap_95": [
+        0.774750481438551,
+        1.207215468670527
+      ]
+    },
+    {
+      "regime": "omitted",
+      "comparator": "myopic",
+      "mean_net_difference": -0.08701213110763094,
+      "descriptive_bootstrap_95": [
+        -0.20162373741079045,
+        0.013382498360892706
+      ]
+    }
+  ],
+  "boundary": "Known finite model and supplied likelihoods; exposed generator; no novelty or field validation",
+  "input_freeze_sha256": "33129bf3a465c6392430b7696e03c5f2a48a77873f4e0ac66c7c59ebf62eef5e"
+}

@@ -17,6 +17,8 @@ python -m syntruth verify experiments/001-dependence/results/MANIFEST.sha256
 python -m syntruth verify experiments/002-provenance/results/MANIFEST.sha256
 python -m syntruth verify experiments/003a-decision-stress/FROZEN.sha256
 python -m syntruth verify experiments/003a-decision-stress/results/MANIFEST.sha256
+python -m syntruth investigation-validate examples/fault-investigation.json
+python scripts/check_repository.py
 ```
 
 Experiment 003A has separate frozen-input and result manifests. Verify both before changing its implementation, artifacts, or claims.

@@ -1,0 +1,2154 @@
+[
+  {
+    "regime": "matched",
+    "method": "stop",
+    "trace": {
+      "protocol_version": "investigation-0.1",
+      "method": "stop",
+      "action_id": "mechanism_repair",
+      "posterior": {
+        "ordinary": 0.1302721437790243,
+        "source_fault": 0.443591733075737,
+        "mechanism_fault": 0.42613612314523874
+      },
+      "history": [],
+      "cost": 0.0,
+      "units": 0,
+      "planner_nodes": 0,
+      "predicted_outcomes": {
+        "expected_utility": 4.74689363109968,
+        "outcome_lower_tail_mean": -70.9830090267695,
+        "severe_loss_probability": 0.041051421315301595,
+        "stakeholder_expected_scores": {
+          "public": 8.679209338766581,
+          "staff": -4.42850968678975
+        },
+        "worst_group_expected_score": -4.42850968678975
+      },
+      "predicted_net_utility": 4.74689363109968,
+      "stop_reason": {
+        "test_id": null,
+        "stop_expected_utility": 4.74689363109968,
+        "candidate_values": {},
+        "planner_nodes": 0,
+        "candidate_value_kind": "fixed_rule",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      },
+      "authorization": false,
+      "scope": "finite declared model; no guarantee for absent mechanisms"
+    }
+  },
+  {
+    "regime": "matched",
+    "method": "fixed",
+    "trace": {
+      "protocol_version": "investigation-0.1",
+      "method": "fixed",
+      "action_id": "mechanism_repair",
+      "posterior": {
+        "ordinary": 0.36328026368980615,
+        "source_fault": 0.08332331797347163,
+        "mechanism_fault": 0.5533964183367223
+      },
+      "history": [
+        {
+          "test_id": "measurement",
+          "family": "measurement",
+          "positive": true,
+          "prior": {
+            "ordinary": 0.1302721437790243,
+            "source_fault": 0.443591733075737,
+            "mechanism_fault": 0.42613612314523874
+          },
+          "posterior": {
+            "ordinary": 0.24336446480092996,
+            "source_fault": 0.38591067994994327,
+            "mechanism_fault": 0.37072485524912674
+          },
+          "cost": 2.775414193609187,
+          "choice": {
+            "test_id": "measurement",
+            "stop_expected_utility": 4.74689363109968,
+            "candidate_values": {},
+            "planner_nodes": 0,
+            "candidate_value_kind": "fixed_rule",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        },
+        {
+          "test_id": "source_audit",
+          "family": "source_audit",
+          "positive": false,
+          "prior": {
+            "ordinary": 0.24336446480092996,
+            "source_fault": 0.38591067994994327,
+            "mechanism_fault": 0.37072485524912674
+          },
+          "posterior": {
+            "ordinary": 0.36328026368980615,
+            "source_fault": 0.08332331797347163,
+            "mechanism_fault": 0.5533964183367223
+          },
+          "cost": 2.5840839450464834,
+          "choice": {
+            "test_id": "source_audit",
+            "stop_expected_utility": 4.105140449641458,
+            "candidate_values": {},
+            "planner_nodes": 0,
+            "candidate_value_kind": "fixed_rule",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        }
+      ],
+      "cost": 5.35949813865567,
+      "units": 2,
+      "planner_nodes": 0,
+      "predicted_outcomes": {
+        "expected_utility": 9.889391601343057,
+        "outcome_lower_tail_mean": -27.86479754440464,
+        "severe_loss_probability": 0.015832632258143017,
+        "stakeholder_expected_scores": {
+          "public": 15.151240446630558,
+          "staff": -2.38825570432777
+        },
+        "worst_group_expected_score": -2.38825570432777
+      },
+      "predicted_net_utility": 4.529893462687387,
+      "stop_reason": {
+        "test_id": null,
+        "stop_expected_utility": 9.889391601343057,
+        "candidate_values": {},
+        "planner_nodes": 0,
+        "candidate_value_kind": "fixed_rule",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      },
+      "authorization": false,
+      "scope": "finite declared model; no guarantee for absent mechanisms"
+    }
+  },
+  {
+    "regime": "matched",
+    "method": "random",
+    "trace": {
+      "protocol_version": "investigation-0.1",
+      "method": "random",
+      "action_id": "source_repair",
+      "posterior": {
+        "ordinary": 0.3716685674565624,
+        "source_fault": 0.5893665276913315,
+        "mechanism_fault": 0.03896490485210617
+      },
+      "history": [
+        {
+          "test_id": "measurement",
+          "family": "measurement",
+          "positive": true,
+          "prior": {
+            "ordinary": 0.1302721437790243,
+            "source_fault": 0.443591733075737,
+            "mechanism_fault": 0.42613612314523874
+          },
+          "posterior": {
+            "ordinary": 0.24336446480092996,
+            "source_fault": 0.38591067994994327,
+            "mechanism_fault": 0.37072485524912674
+          },
+          "cost": 2.775414193609187,
+          "choice": {
+            "test_id": "measurement",
+            "stop_expected_utility": 4.74689363109968,
+            "candidate_values": {},
+            "planner_nodes": 0,
+            "candidate_value_kind": "fixed_rule",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        },
+        {
+          "test_id": "mechanism_test",
+          "family": "mechanism_test",
+          "positive": false,
+          "prior": {
+            "ordinary": 0.24336446480092996,
+            "source_fault": 0.38591067994994327,
+            "mechanism_fault": 0.37072485524912674
+          },
+          "posterior": {
+            "ordinary": 0.3716685674565624,
+            "source_fault": 0.5893665276913315,
+            "mechanism_fault": 0.03896490485210617
+          },
+          "cost": 0.5842949186789783,
+          "choice": {
+            "test_id": "mechanism_test",
+            "stop_expected_utility": 4.105140449641458,
+            "candidate_values": {},
+            "planner_nodes": 0,
+            "candidate_value_kind": "fixed_rule",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        }
+      ],
+      "cost": 3.359709112288165,
+      "units": 2,
+      "planner_nodes": 0,
+      "predicted_outcomes": {
+        "expected_utility": 10.563404163733825,
+        "outcome_lower_tail_mean": -23.29537826462174,
+        "severe_loss_probability": 0.012727543339647433,
+        "stakeholder_expected_scores": {
+          "public": 15.502300143945373,
+          "staff": -0.9606864567597896
+        },
+        "worst_group_expected_score": -0.9606864567597896
+      },
+      "predicted_net_utility": 7.20369505144566,
+      "stop_reason": {
+        "test_id": null,
+        "stop_expected_utility": 10.563404163733825,
+        "candidate_values": {},
+        "planner_nodes": 0,
+        "candidate_value_kind": "fixed_rule",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      },
+      "authorization": false,
+      "scope": "finite declared model; no guarantee for absent mechanisms"
+    }
+  },
+  {
+    "regime": "matched",
+    "method": "entropy",
+    "trace": {
+      "protocol_version": "investigation-0.1",
+      "method": "entropy",
+      "action_id": "source_repair",
+      "posterior": {
+        "ordinary": 0.582191923226717,
+        "source_fault": 0.2867432333266969,
+        "mechanism_fault": 0.13106484344658625
+      },
+      "history": [
+        {
+          "test_id": "mechanism_test",
+          "family": "mechanism_test",
+          "positive": false,
+          "prior": {
+            "ordinary": 0.1302721437790243,
+            "source_fault": 0.443591733075737,
+            "mechanism_fault": 0.42613612314523874
+          },
+          "posterior": {
+            "ordinary": 0.21597157890957874,
+            "source_fault": 0.735408232370158,
+            "mechanism_fault": 0.04862018872026324
+          },
+          "cost": 0.5842949186789783,
+          "choice": {
+            "test_id": "mechanism_test",
+            "stop_expected_utility": 4.74689363109968,
+            "candidate_values": {
+              "measurement": 0.011247497116251063,
+              "source_audit": 0.12003182512430241,
+              "mechanism_test": 0.7632486833949532
+            },
+            "planner_nodes": 0,
+            "candidate_value_kind": "entropy_gain_per_cost",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        },
+        {
+          "test_id": "source_audit",
+          "family": "source_audit",
+          "positive": false,
+          "prior": {
+            "ordinary": 0.21597157890957874,
+            "source_fault": 0.735408232370158,
+            "mechanism_fault": 0.04862018872026324
+          },
+          "posterior": {
+            "ordinary": 0.582191923226717,
+            "source_fault": 0.2867432333266969,
+            "mechanism_fault": 0.13106484344658625
+          },
+          "cost": 2.5840839450464834,
+          "choice": {
+            "test_id": "source_audit",
+            "stop_expected_utility": 12.949147257115282,
+            "candidate_values": {
+              "measurement": 0.016719978362100908,
+              "source_audit": 0.09693736345511227
+            },
+            "planner_nodes": 0,
+            "candidate_value_kind": "entropy_gain_per_cost",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        }
+      ],
+      "cost": 3.1683788637254615,
+      "units": 2,
+      "planner_nodes": 0,
+      "predicted_outcomes": {
+        "expected_utility": 4.541967221255351,
+        "outcome_lower_tail_mean": -34.27859830268993,
+        "severe_loss_probability": 0.01917453904126104,
+        "stakeholder_expected_scores": {
+          "public": 7.989973205694358,
+          "staff": -3.503380075769004
+        },
+        "worst_group_expected_score": -3.503380075769004
+      },
+      "predicted_net_utility": 1.373588357529889,
+      "stop_reason": {
+        "test_id": null,
+        "stop_expected_utility": 4.541967221255351,
+        "candidate_values": {},
+        "planner_nodes": 0,
+        "candidate_value_kind": "entropy_gain_per_cost",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      },
+      "authorization": false,
+      "scope": "finite declared model; no guarantee for absent mechanisms"
+    }
+  },
+  {
+    "regime": "matched",
+    "method": "myopic",
+    "trace": {
+      "protocol_version": "investigation-0.1",
+      "method": "myopic",
+      "action_id": "source_repair",
+      "posterior": {
+        "ordinary": 0.21597157890957874,
+        "source_fault": 0.735408232370158,
+        "mechanism_fault": 0.04862018872026324
+      },
+      "history": [
+        {
+          "test_id": "mechanism_test",
+          "family": "mechanism_test",
+          "positive": false,
+          "prior": {
+            "ordinary": 0.1302721437790243,
+            "source_fault": 0.443591733075737,
+            "mechanism_fault": 0.42613612314523874
+          },
+          "posterior": {
+            "ordinary": 0.21597157890957874,
+            "source_fault": 0.735408232370158,
+            "mechanism_fault": 0.04862018872026324
+          },
+          "cost": 0.5842949186789783,
+          "choice": {
+            "test_id": "mechanism_test",
+            "stop_expected_utility": 4.74689363109968,
+            "candidate_values": {
+              "measurement": 1.9714794374904931,
+              "source_audit": 10.581207835027719,
+              "mechanism_test": 14.136402996554214
+            },
+            "planner_nodes": 1,
+            "candidate_value_kind": "net_expected_utility",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        }
+      ],
+      "cost": 0.5842949186789783,
+      "units": 1,
+      "planner_nodes": 2,
+      "predicted_outcomes": {
+        "expected_utility": 12.949147257115282,
+        "outcome_lower_tail_mean": -24.542366830710527,
+        "severe_loss_probability": 0.013403413210418427,
+        "stakeholder_expected_scores": {
+          "public": 18.510971053383546,
+          "staff": -0.028441600844008652
+        },
+        "worst_group_expected_score": -0.028441600844008652
+      },
+      "predicted_net_utility": 12.364852338436304,
+      "stop_reason": {
+        "test_id": null,
+        "stop_expected_utility": 12.949147257115282,
+        "candidate_values": {
+          "measurement": 10.173733063506097,
+          "source_audit": 10.365063312068797
+        },
+        "planner_nodes": 1,
+        "candidate_value_kind": "net_expected_utility",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      },
+      "authorization": false,
+      "scope": "finite declared model; no guarantee for absent mechanisms"
+    }
+  },
+  {
+    "regime": "matched",
+    "method": "sequential",
+    "trace": {
+      "protocol_version": "investigation-0.1",
+      "method": "sequential",
+      "action_id": "source_repair",
+      "posterior": {
+        "ordinary": 0.21597157890957874,
+        "source_fault": 0.735408232370158,
+        "mechanism_fault": 0.04862018872026324
+      },
+      "history": [
+        {
+          "test_id": "mechanism_test",
+          "family": "mechanism_test",
+          "positive": false,
+          "prior": {
+            "ordinary": 0.1302721437790243,
+            "source_fault": 0.443591733075737,
+            "mechanism_fault": 0.42613612314523874
+          },
+          "posterior": {
+            "ordinary": 0.21597157890957874,
+            "source_fault": 0.735408232370158,
+            "mechanism_fault": 0.04862018872026324
+          },
+          "cost": 0.5842949186789783,
+          "choice": {
+            "test_id": "mechanism_test",
+            "stop_expected_utility": 4.74689363109968,
+            "candidate_values": {
+              "measurement": 11.36098880294503,
+              "source_audit": 11.55231905150773,
+              "mechanism_test": 14.136402996554214
+            },
+            "planner_nodes": 7,
+            "candidate_value_kind": "net_expected_utility",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        }
+      ],
+      "cost": 0.5842949186789783,
+      "units": 1,
+      "planner_nodes": 8,
+      "predicted_outcomes": {
+        "expected_utility": 12.949147257115282,
+        "outcome_lower_tail_mean": -24.542366830710527,
+        "severe_loss_probability": 0.013403413210418427,
+        "stakeholder_expected_scores": {
+          "public": 18.510971053383546,
+          "staff": -0.028441600844008652
+        },
+        "worst_group_expected_score": -0.028441600844008652
+      },
+      "predicted_net_utility": 12.364852338436304,
+      "stop_reason": {
+        "test_id": null,
+        "stop_expected_utility": 12.949147257115282,
+        "candidate_values": {
+          "measurement": 10.173733063506097,
+          "source_audit": 10.365063312068797
+        },
+        "planner_nodes": 1,
+        "candidate_value_kind": "net_expected_utility",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      },
+      "authorization": false,
+      "scope": "finite declared model; no guarantee for absent mechanisms"
+    }
+  },
+  {
+    "regime": "disclosed_no_signal",
+    "method": "stop",
+    "trace": {
+      "protocol_version": "investigation-0.1",
+      "method": "stop",
+      "action_id": "mechanism_repair",
+      "posterior": {
+        "ordinary": 0.1302721437790243,
+        "source_fault": 0.443591733075737,
+        "mechanism_fault": 0.42613612314523874
+      },
+      "history": [],
+      "cost": 0.0,
+      "units": 0,
+      "planner_nodes": 0,
+      "predicted_outcomes": {
+        "expected_utility": 4.74689363109968,
+        "outcome_lower_tail_mean": -70.9830090267695,
+        "severe_loss_probability": 0.041051421315301595,
+        "stakeholder_expected_scores": {
+          "public": 8.679209338766581,
+          "staff": -4.42850968678975
+        },
+        "worst_group_expected_score": -4.42850968678975
+      },
+      "predicted_net_utility": 4.74689363109968,
+      "stop_reason": {
+        "test_id": null,
+        "stop_expected_utility": 4.74689363109968,
+        "candidate_values": {},
+        "planner_nodes": 0,
+        "candidate_value_kind": "fixed_rule",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      },
+      "authorization": false,
+      "scope": "finite declared model; no guarantee for absent mechanisms"
+    }
+  },
+  {
+    "regime": "disclosed_no_signal",
+    "method": "fixed",
+    "trace": {
+      "protocol_version": "investigation-0.1",
+      "method": "fixed",
+      "action_id": "mechanism_repair",
+      "posterior": {
+        "ordinary": 0.1302721437790243,
+        "source_fault": 0.443591733075737,
+        "mechanism_fault": 0.42613612314523874
+      },
+      "history": [
+        {
+          "test_id": "measurement",
+          "family": "measurement",
+          "positive": true,
+          "prior": {
+            "ordinary": 0.1302721437790243,
+            "source_fault": 0.443591733075737,
+            "mechanism_fault": 0.42613612314523874
+          },
+          "posterior": {
+            "ordinary": 0.1302721437790243,
+            "source_fault": 0.443591733075737,
+            "mechanism_fault": 0.42613612314523874
+          },
+          "cost": 2.775414193609187,
+          "choice": {
+            "test_id": "measurement",
+            "stop_expected_utility": 4.74689363109968,
+            "candidate_values": {},
+            "planner_nodes": 0,
+            "candidate_value_kind": "fixed_rule",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        },
+        {
+          "test_id": "source_audit",
+          "family": "source_audit",
+          "positive": true,
+          "prior": {
+            "ordinary": 0.1302721437790243,
+            "source_fault": 0.443591733075737,
+            "mechanism_fault": 0.42613612314523874
+          },
+          "posterior": {
+            "ordinary": 0.1302721437790243,
+            "source_fault": 0.443591733075737,
+            "mechanism_fault": 0.42613612314523874
+          },
+          "cost": 2.5840839450464834,
+          "choice": {
+            "test_id": "source_audit",
+            "stop_expected_utility": 4.74689363109968,
+            "candidate_values": {},
+            "planner_nodes": 0,
+            "candidate_value_kind": "fixed_rule",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        }
+      ],
+      "cost": 5.35949813865567,
+      "units": 2,
+      "planner_nodes": 0,
+      "predicted_outcomes": {
+        "expected_utility": 4.74689363109968,
+        "outcome_lower_tail_mean": -70.9830090267695,
+        "severe_loss_probability": 0.041051421315301595,
+        "stakeholder_expected_scores": {
+          "public": 8.679209338766581,
+          "staff": -4.42850968678975
+        },
+        "worst_group_expected_score": -4.42850968678975
+      },
+      "predicted_net_utility": -0.6126045075559903,
+      "stop_reason": {
+        "test_id": null,
+        "stop_expected_utility": 4.74689363109968,
+        "candidate_values": {},
+        "planner_nodes": 0,
+        "candidate_value_kind": "fixed_rule",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      },
+      "authorization": false,
+      "scope": "finite declared model; no guarantee for absent mechanisms"
+    }
+  },
+  {
+    "regime": "disclosed_no_signal",
+    "method": "random",
+    "trace": {
+      "protocol_version": "investigation-0.1",
+      "method": "random",
+      "action_id": "mechanism_repair",
+      "posterior": {
+        "ordinary": 0.1302721437790243,
+        "source_fault": 0.443591733075737,
+        "mechanism_fault": 0.42613612314523874
+      },
+      "history": [
+        {
+          "test_id": "measurement",
+          "family": "measurement",
+          "positive": true,
+          "prior": {
+            "ordinary": 0.1302721437790243,
+            "source_fault": 0.443591733075737,
+            "mechanism_fault": 0.42613612314523874
+          },
+          "posterior": {
+            "ordinary": 0.1302721437790243,
+            "source_fault": 0.443591733075737,
+            "mechanism_fault": 0.42613612314523874
+          },
+          "cost": 2.775414193609187,
+          "choice": {
+            "test_id": "measurement",
+            "stop_expected_utility": 4.74689363109968,
+            "candidate_values": {},
+            "planner_nodes": 0,
+            "candidate_value_kind": "fixed_rule",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        },
+        {
+          "test_id": "mechanism_test",
+          "family": "mechanism_test",
+          "positive": true,
+          "prior": {
+            "ordinary": 0.1302721437790243,
+            "source_fault": 0.443591733075737,
+            "mechanism_fault": 0.42613612314523874
+          },
+          "posterior": {
+            "ordinary": 0.1302721437790243,
+            "source_fault": 0.443591733075737,
+            "mechanism_fault": 0.42613612314523874
+          },
+          "cost": 0.5842949186789783,
+          "choice": {
+            "test_id": "mechanism_test",
+            "stop_expected_utility": 4.74689363109968,
+            "candidate_values": {},
+            "planner_nodes": 0,
+            "candidate_value_kind": "fixed_rule",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        }
+      ],
+      "cost": 3.359709112288165,
+      "units": 2,
+      "planner_nodes": 0,
+      "predicted_outcomes": {
+        "expected_utility": 4.74689363109968,
+        "outcome_lower_tail_mean": -70.9830090267695,
+        "severe_loss_probability": 0.041051421315301595,
+        "stakeholder_expected_scores": {
+          "public": 8.679209338766581,
+          "staff": -4.42850968678975
+        },
+        "worst_group_expected_score": -4.42850968678975
+      },
+      "predicted_net_utility": 1.387184518811515,
+      "stop_reason": {
+        "test_id": null,
+        "stop_expected_utility": 4.74689363109968,
+        "candidate_values": {},
+        "planner_nodes": 0,
+        "candidate_value_kind": "fixed_rule",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      },
+      "authorization": false,
+      "scope": "finite declared model; no guarantee for absent mechanisms"
+    }
+  },
+  {
+    "regime": "disclosed_no_signal",
+    "method": "entropy",
+    "trace": {
+      "protocol_version": "investigation-0.1",
+      "method": "entropy",
+      "action_id": "mechanism_repair",
+      "posterior": {
+        "ordinary": 0.1302721437790243,
+        "source_fault": 0.443591733075737,
+        "mechanism_fault": 0.42613612314523874
+      },
+      "history": [],
+      "cost": 0.0,
+      "units": 0,
+      "planner_nodes": 0,
+      "predicted_outcomes": {
+        "expected_utility": 4.74689363109968,
+        "outcome_lower_tail_mean": -70.9830090267695,
+        "severe_loss_probability": 0.041051421315301595,
+        "stakeholder_expected_scores": {
+          "public": 8.679209338766581,
+          "staff": -4.42850968678975
+        },
+        "worst_group_expected_score": -4.42850968678975
+      },
+      "predicted_net_utility": 4.74689363109968,
+      "stop_reason": {
+        "test_id": null,
+        "stop_expected_utility": 4.74689363109968,
+        "candidate_values": {
+          "measurement": 0.0,
+          "source_audit": 0.0,
+          "mechanism_test": 0.0
+        },
+        "planner_nodes": 0,
+        "candidate_value_kind": "entropy_gain_per_cost",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      },
+      "authorization": false,
+      "scope": "finite declared model; no guarantee for absent mechanisms"
+    }
+  },
+  {
+    "regime": "disclosed_no_signal",
+    "method": "myopic",
+    "trace": {
+      "protocol_version": "investigation-0.1",
+      "method": "myopic",
+      "action_id": "mechanism_repair",
+      "posterior": {
+        "ordinary": 0.1302721437790243,
+        "source_fault": 0.443591733075737,
+        "mechanism_fault": 0.42613612314523874
+      },
+      "history": [],
+      "cost": 0.0,
+      "units": 0,
+      "planner_nodes": 1,
+      "predicted_outcomes": {
+        "expected_utility": 4.74689363109968,
+        "outcome_lower_tail_mean": -70.9830090267695,
+        "severe_loss_probability": 0.041051421315301595,
+        "stakeholder_expected_scores": {
+          "public": 8.679209338766581,
+          "staff": -4.42850968678975
+        },
+        "worst_group_expected_score": -4.42850968678975
+      },
+      "predicted_net_utility": 4.74689363109968,
+      "stop_reason": {
+        "test_id": null,
+        "stop_expected_utility": 4.74689363109968,
+        "candidate_values": {
+          "measurement": 1.9714794374904931,
+          "source_audit": 2.1628096860531967,
+          "mechanism_test": 4.162598712420702
+        },
+        "planner_nodes": 1,
+        "candidate_value_kind": "net_expected_utility",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      },
+      "authorization": false,
+      "scope": "finite declared model; no guarantee for absent mechanisms"
+    }
+  },
+  {
+    "regime": "disclosed_no_signal",
+    "method": "sequential",
+    "trace": {
+      "protocol_version": "investigation-0.1",
+      "method": "sequential",
+      "action_id": "mechanism_repair",
+      "posterior": {
+        "ordinary": 0.1302721437790243,
+        "source_fault": 0.443591733075737,
+        "mechanism_fault": 0.42613612314523874
+      },
+      "history": [],
+      "cost": 0.0,
+      "units": 0,
+      "planner_nodes": 7,
+      "predicted_outcomes": {
+        "expected_utility": 4.74689363109968,
+        "outcome_lower_tail_mean": -70.9830090267695,
+        "severe_loss_probability": 0.041051421315301595,
+        "stakeholder_expected_scores": {
+          "public": 8.679209338766581,
+          "staff": -4.42850968678975
+        },
+        "worst_group_expected_score": -4.42850968678975
+      },
+      "predicted_net_utility": 4.74689363109968,
+      "stop_reason": {
+        "test_id": null,
+        "stop_expected_utility": 4.74689363109968,
+        "candidate_values": {
+          "measurement": 1.9714794374904931,
+          "source_audit": 2.1628096860531967,
+          "mechanism_test": 4.162598712420702
+        },
+        "planner_nodes": 7,
+        "candidate_value_kind": "net_expected_utility",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      },
+      "authorization": false,
+      "scope": "finite declared model; no guarantee for absent mechanisms"
+    }
+  },
+  {
+    "regime": "hidden_no_signal",
+    "method": "stop",
+    "trace": {
+      "protocol_version": "investigation-0.1",
+      "method": "stop",
+      "action_id": "mechanism_repair",
+      "posterior": {
+        "ordinary": 0.1302721437790243,
+        "source_fault": 0.443591733075737,
+        "mechanism_fault": 0.42613612314523874
+      },
+      "history": [],
+      "cost": 0.0,
+      "units": 0,
+      "planner_nodes": 0,
+      "predicted_outcomes": {
+        "expected_utility": 4.74689363109968,
+        "outcome_lower_tail_mean": -70.9830090267695,
+        "severe_loss_probability": 0.041051421315301595,
+        "stakeholder_expected_scores": {
+          "public": 8.679209338766581,
+          "staff": -4.42850968678975
+        },
+        "worst_group_expected_score": -4.42850968678975
+      },
+      "predicted_net_utility": 4.74689363109968,
+      "stop_reason": {
+        "test_id": null,
+        "stop_expected_utility": 4.74689363109968,
+        "candidate_values": {},
+        "planner_nodes": 0,
+        "candidate_value_kind": "fixed_rule",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      },
+      "authorization": false,
+      "scope": "finite declared model; no guarantee for absent mechanisms"
+    }
+  },
+  {
+    "regime": "hidden_no_signal",
+    "method": "fixed",
+    "trace": {
+      "protocol_version": "investigation-0.1",
+      "method": "fixed",
+      "action_id": "source_repair",
+      "posterior": {
+        "ordinary": 0.074148438469134,
+        "source_fault": 0.8128988790556164,
+        "mechanism_fault": 0.11295268247524952
+      },
+      "history": [
+        {
+          "test_id": "measurement",
+          "family": "measurement",
+          "positive": true,
+          "prior": {
+            "ordinary": 0.1302721437790243,
+            "source_fault": 0.443591733075737,
+            "mechanism_fault": 0.42613612314523874
+          },
+          "posterior": {
+            "ordinary": 0.24336446480092996,
+            "source_fault": 0.38591067994994327,
+            "mechanism_fault": 0.37072485524912674
+          },
+          "cost": 2.775414193609187,
+          "choice": {
+            "test_id": "measurement",
+            "stop_expected_utility": 4.74689363109968,
+            "candidate_values": {},
+            "planner_nodes": 0,
+            "candidate_value_kind": "fixed_rule",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        },
+        {
+          "test_id": "source_audit",
+          "family": "source_audit",
+          "positive": true,
+          "prior": {
+            "ordinary": 0.24336446480092996,
+            "source_fault": 0.38591067994994327,
+            "mechanism_fault": 0.37072485524912674
+          },
+          "posterior": {
+            "ordinary": 0.074148438469134,
+            "source_fault": 0.8128988790556164,
+            "mechanism_fault": 0.11295268247524952
+          },
+          "cost": 2.5840839450464834,
+          "choice": {
+            "test_id": "source_audit",
+            "stop_expected_utility": 4.105140449641458,
+            "candidate_values": {},
+            "planner_nodes": 0,
+            "candidate_value_kind": "fixed_rule",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        }
+      ],
+      "cost": 5.35949813865567,
+      "units": 2,
+      "planner_nodes": 0,
+      "predicted_outcomes": {
+        "expected_utility": 13.645814328557057,
+        "outcome_lower_tail_mean": -32.13965803712554,
+        "severe_loss_probability": 0.01790668777326747,
+        "stakeholder_expected_scores": {
+          "public": 19.432496910854464,
+          "staff": 0.14355496986311087
+        },
+        "worst_group_expected_score": 0.14355496986311087
+      },
+      "predicted_net_utility": 8.286316189901386,
+      "stop_reason": {
+        "test_id": null,
+        "stop_expected_utility": 13.645814328557057,
+        "candidate_values": {},
+        "planner_nodes": 0,
+        "candidate_value_kind": "fixed_rule",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      },
+      "authorization": false,
+      "scope": "finite declared model; no guarantee for absent mechanisms"
+    }
+  },
+  {
+    "regime": "hidden_no_signal",
+    "method": "random",
+    "trace": {
+      "protocol_version": "investigation-0.1",
+      "method": "random",
+      "action_id": "mechanism_repair",
+      "posterior": {
+        "ordinary": 0.040452564165909186,
+        "source_fault": 0.06414690228400621,
+        "mechanism_fault": 0.8954005335500846
+      },
+      "history": [
+        {
+          "test_id": "measurement",
+          "family": "measurement",
+          "positive": true,
+          "prior": {
+            "ordinary": 0.1302721437790243,
+            "source_fault": 0.443591733075737,
+            "mechanism_fault": 0.42613612314523874
+          },
+          "posterior": {
+            "ordinary": 0.24336446480092996,
+            "source_fault": 0.38591067994994327,
+            "mechanism_fault": 0.37072485524912674
+          },
+          "cost": 2.775414193609187,
+          "choice": {
+            "test_id": "measurement",
+            "stop_expected_utility": 4.74689363109968,
+            "candidate_values": {},
+            "planner_nodes": 0,
+            "candidate_value_kind": "fixed_rule",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        },
+        {
+          "test_id": "mechanism_test",
+          "family": "mechanism_test",
+          "positive": true,
+          "prior": {
+            "ordinary": 0.24336446480092996,
+            "source_fault": 0.38591067994994327,
+            "mechanism_fault": 0.37072485524912674
+          },
+          "posterior": {
+            "ordinary": 0.040452564165909186,
+            "source_fault": 0.06414690228400621,
+            "mechanism_fault": 0.8954005335500846
+          },
+          "cost": 0.5842949186789783,
+          "choice": {
+            "test_id": "mechanism_test",
+            "stop_expected_utility": 4.105140449641458,
+            "candidate_values": {},
+            "planner_nodes": 0,
+            "candidate_value_kind": "fixed_rule",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        }
+      ],
+      "cost": 3.359709112288165,
+      "units": 2,
+      "planner_nodes": 0,
+      "predicted_outcomes": {
+        "expected_utility": 16.64376509710647,
+        "outcome_lower_tail_mean": -25.569695580116715,
+        "severe_loss_probability": 0.014490283159880437,
+        "stakeholder_expected_scores": {
+          "public": 23.78493541955883,
+          "staff": -0.01896565528237082
+        },
+        "worst_group_expected_score": -0.01896565528237082
+      },
+      "predicted_net_utility": 13.284055984818306,
+      "stop_reason": {
+        "test_id": null,
+        "stop_expected_utility": 16.64376509710647,
+        "candidate_values": {},
+        "planner_nodes": 0,
+        "candidate_value_kind": "fixed_rule",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      },
+      "authorization": false,
+      "scope": "finite declared model; no guarantee for absent mechanisms"
+    }
+  },
+  {
+    "regime": "hidden_no_signal",
+    "method": "entropy",
+    "trace": {
+      "protocol_version": "investigation-0.1",
+      "method": "entropy",
+      "action_id": "mechanism_repair",
+      "posterior": {
+        "ordinary": 0.013874961920031905,
+        "source_fault": 0.3266393974107325,
+        "mechanism_fault": 0.6594856406692355
+      },
+      "history": [
+        {
+          "test_id": "mechanism_test",
+          "family": "mechanism_test",
+          "positive": true,
+          "prior": {
+            "ordinary": 0.1302721437790243,
+            "source_fault": 0.443591733075737,
+            "mechanism_fault": 0.42613612314523874
+          },
+          "posterior": {
+            "ordinary": 0.019254562368487056,
+            "source_fault": 0.06556401424651531,
+            "mechanism_fault": 0.9151814233849976
+          },
+          "cost": 0.5842949186789783,
+          "choice": {
+            "test_id": "mechanism_test",
+            "stop_expected_utility": 4.74689363109968,
+            "candidate_values": {
+              "measurement": 0.011247497116251063,
+              "source_audit": 0.12003182512430241,
+              "mechanism_test": 0.7632486833949532
+            },
+            "planner_nodes": 0,
+            "candidate_value_kind": "entropy_gain_per_cost",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        },
+        {
+          "test_id": "source_audit",
+          "family": "source_audit",
+          "positive": true,
+          "prior": {
+            "ordinary": 0.019254562368487056,
+            "source_fault": 0.06556401424651531,
+            "mechanism_fault": 0.9151814233849976
+          },
+          "posterior": {
+            "ordinary": 0.013874961920031905,
+            "source_fault": 0.3266393974107325,
+            "mechanism_fault": 0.6594856406692355
+          },
+          "cost": 2.5840839450464834,
+          "choice": {
+            "test_id": "source_audit",
+            "stop_expected_utility": 17.01561700204962,
+            "candidate_values": {
+              "measurement": 0.001891991741481362,
+              "source_audit": 0.032841464552800785
+            },
+            "planner_nodes": 0,
+            "candidate_value_kind": "entropy_gain_per_cost",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        }
+      ],
+      "cost": 3.1683788637254615,
+      "units": 2,
+      "planner_nodes": 0,
+      "predicted_outcomes": {
+        "expected_utility": 10.128736530057525,
+        "outcome_lower_tail_mean": -56.98573551854716,
+        "severe_loss_probability": 0.032864757818751276,
+        "stakeholder_expected_scores": {
+          "public": 15.52868708150685,
+          "staff": -2.471148089990899
+        },
+        "worst_group_expected_score": -2.471148089990899
+      },
+      "predicted_net_utility": 6.960357666332063,
+      "stop_reason": {
+        "test_id": null,
+        "stop_expected_utility": 10.128736530057525,
+        "candidate_values": {},
+        "planner_nodes": 0,
+        "candidate_value_kind": "entropy_gain_per_cost",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      },
+      "authorization": false,
+      "scope": "finite declared model; no guarantee for absent mechanisms"
+    }
+  },
+  {
+    "regime": "hidden_no_signal",
+    "method": "myopic",
+    "trace": {
+      "protocol_version": "investigation-0.1",
+      "method": "myopic",
+      "action_id": "mechanism_repair",
+      "posterior": {
+        "ordinary": 0.019254562368487056,
+        "source_fault": 0.06556401424651531,
+        "mechanism_fault": 0.9151814233849976
+      },
+      "history": [
+        {
+          "test_id": "mechanism_test",
+          "family": "mechanism_test",
+          "positive": true,
+          "prior": {
+            "ordinary": 0.1302721437790243,
+            "source_fault": 0.443591733075737,
+            "mechanism_fault": 0.42613612314523874
+          },
+          "posterior": {
+            "ordinary": 0.019254562368487056,
+            "source_fault": 0.06556401424651531,
+            "mechanism_fault": 0.9151814233849976
+          },
+          "cost": 0.5842949186789783,
+          "choice": {
+            "test_id": "mechanism_test",
+            "stop_expected_utility": 4.74689363109968,
+            "candidate_values": {
+              "measurement": 1.9714794374904931,
+              "source_audit": 10.581207835027719,
+              "mechanism_test": 14.136402996554214
+            },
+            "planner_nodes": 1,
+            "candidate_value_kind": "net_expected_utility",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        }
+      ],
+      "cost": 0.5842949186789783,
+      "units": 1,
+      "planner_nodes": 2,
+      "predicted_outcomes": {
+        "expected_utility": 17.01561700204962,
+        "outcome_lower_tail_mean": -25.739300604404818,
+        "severe_loss_probability": 0.014589480997256073,
+        "stakeholder_expected_scores": {
+          "public": 24.26097525706826,
+          "staff": 0.10978107367280407
+        },
+        "worst_group_expected_score": 0.10978107367280407
+      },
+      "predicted_net_utility": 16.43132208337064,
+      "stop_reason": {
+        "test_id": null,
+        "stop_expected_utility": 17.01561700204962,
+        "candidate_values": {
+          "measurement": 14.240202808440433,
+          "source_audit": 14.431533057003136
+        },
+        "planner_nodes": 1,
+        "candidate_value_kind": "net_expected_utility",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      },
+      "authorization": false,
+      "scope": "finite declared model; no guarantee for absent mechanisms"
+    }
+  },
+  {
+    "regime": "hidden_no_signal",
+    "method": "sequential",
+    "trace": {
+      "protocol_version": "investigation-0.1",
+      "method": "sequential",
+      "action_id": "mechanism_repair",
+      "posterior": {
+        "ordinary": 0.019254562368487056,
+        "source_fault": 0.06556401424651531,
+        "mechanism_fault": 0.9151814233849976
+      },
+      "history": [
+        {
+          "test_id": "mechanism_test",
+          "family": "mechanism_test",
+          "positive": true,
+          "prior": {
+            "ordinary": 0.1302721437790243,
+            "source_fault": 0.443591733075737,
+            "mechanism_fault": 0.42613612314523874
+          },
+          "posterior": {
+            "ordinary": 0.019254562368487056,
+            "source_fault": 0.06556401424651531,
+            "mechanism_fault": 0.9151814233849976
+          },
+          "cost": 0.5842949186789783,
+          "choice": {
+            "test_id": "mechanism_test",
+            "stop_expected_utility": 4.74689363109968,
+            "candidate_values": {
+              "measurement": 11.36098880294503,
+              "source_audit": 11.55231905150773,
+              "mechanism_test": 14.136402996554214
+            },
+            "planner_nodes": 7,
+            "candidate_value_kind": "net_expected_utility",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        }
+      ],
+      "cost": 0.5842949186789783,
+      "units": 1,
+      "planner_nodes": 8,
+      "predicted_outcomes": {
+        "expected_utility": 17.01561700204962,
+        "outcome_lower_tail_mean": -25.739300604404818,
+        "severe_loss_probability": 0.014589480997256073,
+        "stakeholder_expected_scores": {
+          "public": 24.26097525706826,
+          "staff": 0.10978107367280407
+        },
+        "worst_group_expected_score": 0.10978107367280407
+      },
+      "predicted_net_utility": 16.43132208337064,
+      "stop_reason": {
+        "test_id": null,
+        "stop_expected_utility": 17.01561700204962,
+        "candidate_values": {
+          "measurement": 14.240202808440433,
+          "source_audit": 14.431533057003136
+        },
+        "planner_nodes": 1,
+        "candidate_value_kind": "net_expected_utility",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      },
+      "authorization": false,
+      "scope": "finite declared model; no guarantee for absent mechanisms"
+    }
+  },
+  {
+    "regime": "reversed",
+    "method": "stop",
+    "trace": {
+      "protocol_version": "investigation-0.1",
+      "method": "stop",
+      "action_id": "mechanism_repair",
+      "posterior": {
+        "ordinary": 0.1302721437790243,
+        "source_fault": 0.443591733075737,
+        "mechanism_fault": 0.42613612314523874
+      },
+      "history": [],
+      "cost": 0.0,
+      "units": 0,
+      "planner_nodes": 0,
+      "predicted_outcomes": {
+        "expected_utility": 4.74689363109968,
+        "outcome_lower_tail_mean": -70.9830090267695,
+        "severe_loss_probability": 0.041051421315301595,
+        "stakeholder_expected_scores": {
+          "public": 8.679209338766581,
+          "staff": -4.42850968678975
+        },
+        "worst_group_expected_score": -4.42850968678975
+      },
+      "predicted_net_utility": 4.74689363109968,
+      "stop_reason": {
+        "test_id": null,
+        "stop_expected_utility": 4.74689363109968,
+        "candidate_values": {},
+        "planner_nodes": 0,
+        "candidate_value_kind": "fixed_rule",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      },
+      "authorization": false,
+      "scope": "finite declared model; no guarantee for absent mechanisms"
+    }
+  },
+  {
+    "regime": "reversed",
+    "method": "fixed",
+    "trace": {
+      "protocol_version": "investigation-0.1",
+      "method": "fixed",
+      "action_id": "source_repair",
+      "posterior": {
+        "ordinary": 0.074148438469134,
+        "source_fault": 0.8128988790556164,
+        "mechanism_fault": 0.11295268247524952
+      },
+      "history": [
+        {
+          "test_id": "measurement",
+          "family": "measurement",
+          "positive": true,
+          "prior": {
+            "ordinary": 0.1302721437790243,
+            "source_fault": 0.443591733075737,
+            "mechanism_fault": 0.42613612314523874
+          },
+          "posterior": {
+            "ordinary": 0.24336446480092996,
+            "source_fault": 0.38591067994994327,
+            "mechanism_fault": 0.37072485524912674
+          },
+          "cost": 2.775414193609187,
+          "choice": {
+            "test_id": "measurement",
+            "stop_expected_utility": 4.74689363109968,
+            "candidate_values": {},
+            "planner_nodes": 0,
+            "candidate_value_kind": "fixed_rule",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        },
+        {
+          "test_id": "source_audit",
+          "family": "source_audit",
+          "positive": true,
+          "prior": {
+            "ordinary": 0.24336446480092996,
+            "source_fault": 0.38591067994994327,
+            "mechanism_fault": 0.37072485524912674
+          },
+          "posterior": {
+            "ordinary": 0.074148438469134,
+            "source_fault": 0.8128988790556164,
+            "mechanism_fault": 0.11295268247524952
+          },
+          "cost": 2.5840839450464834,
+          "choice": {
+            "test_id": "source_audit",
+            "stop_expected_utility": 4.105140449641458,
+            "candidate_values": {},
+            "planner_nodes": 0,
+            "candidate_value_kind": "fixed_rule",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        }
+      ],
+      "cost": 5.35949813865567,
+      "units": 2,
+      "planner_nodes": 0,
+      "predicted_outcomes": {
+        "expected_utility": 13.645814328557057,
+        "outcome_lower_tail_mean": -32.13965803712554,
+        "severe_loss_probability": 0.01790668777326747,
+        "stakeholder_expected_scores": {
+          "public": 19.432496910854464,
+          "staff": 0.14355496986311087
+        },
+        "worst_group_expected_score": 0.14355496986311087
+      },
+      "predicted_net_utility": 8.286316189901386,
+      "stop_reason": {
+        "test_id": null,
+        "stop_expected_utility": 13.645814328557057,
+        "candidate_values": {},
+        "planner_nodes": 0,
+        "candidate_value_kind": "fixed_rule",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      },
+      "authorization": false,
+      "scope": "finite declared model; no guarantee for absent mechanisms"
+    }
+  },
+  {
+    "regime": "reversed",
+    "method": "random",
+    "trace": {
+      "protocol_version": "investigation-0.1",
+      "method": "random",
+      "action_id": "mechanism_repair",
+      "posterior": {
+        "ordinary": 0.040452564165909186,
+        "source_fault": 0.06414690228400621,
+        "mechanism_fault": 0.8954005335500846
+      },
+      "history": [
+        {
+          "test_id": "measurement",
+          "family": "measurement",
+          "positive": true,
+          "prior": {
+            "ordinary": 0.1302721437790243,
+            "source_fault": 0.443591733075737,
+            "mechanism_fault": 0.42613612314523874
+          },
+          "posterior": {
+            "ordinary": 0.24336446480092996,
+            "source_fault": 0.38591067994994327,
+            "mechanism_fault": 0.37072485524912674
+          },
+          "cost": 2.775414193609187,
+          "choice": {
+            "test_id": "measurement",
+            "stop_expected_utility": 4.74689363109968,
+            "candidate_values": {},
+            "planner_nodes": 0,
+            "candidate_value_kind": "fixed_rule",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        },
+        {
+          "test_id": "mechanism_test",
+          "family": "mechanism_test",
+          "positive": true,
+          "prior": {
+            "ordinary": 0.24336446480092996,
+            "source_fault": 0.38591067994994327,
+            "mechanism_fault": 0.37072485524912674
+          },
+          "posterior": {
+            "ordinary": 0.040452564165909186,
+            "source_fault": 0.06414690228400621,
+            "mechanism_fault": 0.8954005335500846
+          },
+          "cost": 0.5842949186789783,
+          "choice": {
+            "test_id": "mechanism_test",
+            "stop_expected_utility": 4.105140449641458,
+            "candidate_values": {},
+            "planner_nodes": 0,
+            "candidate_value_kind": "fixed_rule",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        }
+      ],
+      "cost": 3.359709112288165,
+      "units": 2,
+      "planner_nodes": 0,
+      "predicted_outcomes": {
+        "expected_utility": 16.64376509710647,
+        "outcome_lower_tail_mean": -25.569695580116715,
+        "severe_loss_probability": 0.014490283159880437,
+        "stakeholder_expected_scores": {
+          "public": 23.78493541955883,
+          "staff": -0.01896565528237082
+        },
+        "worst_group_expected_score": -0.01896565528237082
+      },
+      "predicted_net_utility": 13.284055984818306,
+      "stop_reason": {
+        "test_id": null,
+        "stop_expected_utility": 16.64376509710647,
+        "candidate_values": {},
+        "planner_nodes": 0,
+        "candidate_value_kind": "fixed_rule",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      },
+      "authorization": false,
+      "scope": "finite declared model; no guarantee for absent mechanisms"
+    }
+  },
+  {
+    "regime": "reversed",
+    "method": "entropy",
+    "trace": {
+      "protocol_version": "investigation-0.1",
+      "method": "entropy",
+      "action_id": "mechanism_repair",
+      "posterior": {
+        "ordinary": 0.013874961920031905,
+        "source_fault": 0.3266393974107325,
+        "mechanism_fault": 0.6594856406692355
+      },
+      "history": [
+        {
+          "test_id": "mechanism_test",
+          "family": "mechanism_test",
+          "positive": true,
+          "prior": {
+            "ordinary": 0.1302721437790243,
+            "source_fault": 0.443591733075737,
+            "mechanism_fault": 0.42613612314523874
+          },
+          "posterior": {
+            "ordinary": 0.019254562368487056,
+            "source_fault": 0.06556401424651531,
+            "mechanism_fault": 0.9151814233849976
+          },
+          "cost": 0.5842949186789783,
+          "choice": {
+            "test_id": "mechanism_test",
+            "stop_expected_utility": 4.74689363109968,
+            "candidate_values": {
+              "measurement": 0.011247497116251063,
+              "source_audit": 0.12003182512430241,
+              "mechanism_test": 0.7632486833949532
+            },
+            "planner_nodes": 0,
+            "candidate_value_kind": "entropy_gain_per_cost",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        },
+        {
+          "test_id": "source_audit",
+          "family": "source_audit",
+          "positive": true,
+          "prior": {
+            "ordinary": 0.019254562368487056,
+            "source_fault": 0.06556401424651531,
+            "mechanism_fault": 0.9151814233849976
+          },
+          "posterior": {
+            "ordinary": 0.013874961920031905,
+            "source_fault": 0.3266393974107325,
+            "mechanism_fault": 0.6594856406692355
+          },
+          "cost": 2.5840839450464834,
+          "choice": {
+            "test_id": "source_audit",
+            "stop_expected_utility": 17.01561700204962,
+            "candidate_values": {
+              "measurement": 0.001891991741481362,
+              "source_audit": 0.032841464552800785
+            },
+            "planner_nodes": 0,
+            "candidate_value_kind": "entropy_gain_per_cost",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        }
+      ],
+      "cost": 3.1683788637254615,
+      "units": 2,
+      "planner_nodes": 0,
+      "predicted_outcomes": {
+        "expected_utility": 10.128736530057525,
+        "outcome_lower_tail_mean": -56.98573551854716,
+        "severe_loss_probability": 0.032864757818751276,
+        "stakeholder_expected_scores": {
+          "public": 15.52868708150685,
+          "staff": -2.471148089990899
+        },
+        "worst_group_expected_score": -2.471148089990899
+      },
+      "predicted_net_utility": 6.960357666332063,
+      "stop_reason": {
+        "test_id": null,
+        "stop_expected_utility": 10.128736530057525,
+        "candidate_values": {},
+        "planner_nodes": 0,
+        "candidate_value_kind": "entropy_gain_per_cost",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      },
+      "authorization": false,
+      "scope": "finite declared model; no guarantee for absent mechanisms"
+    }
+  },
+  {
+    "regime": "reversed",
+    "method": "myopic",
+    "trace": {
+      "protocol_version": "investigation-0.1",
+      "method": "myopic",
+      "action_id": "mechanism_repair",
+      "posterior": {
+        "ordinary": 0.019254562368487056,
+        "source_fault": 0.06556401424651531,
+        "mechanism_fault": 0.9151814233849976
+      },
+      "history": [
+        {
+          "test_id": "mechanism_test",
+          "family": "mechanism_test",
+          "positive": true,
+          "prior": {
+            "ordinary": 0.1302721437790243,
+            "source_fault": 0.443591733075737,
+            "mechanism_fault": 0.42613612314523874
+          },
+          "posterior": {
+            "ordinary": 0.019254562368487056,
+            "source_fault": 0.06556401424651531,
+            "mechanism_fault": 0.9151814233849976
+          },
+          "cost": 0.5842949186789783,
+          "choice": {
+            "test_id": "mechanism_test",
+            "stop_expected_utility": 4.74689363109968,
+            "candidate_values": {
+              "measurement": 1.9714794374904931,
+              "source_audit": 10.581207835027719,
+              "mechanism_test": 14.136402996554214
+            },
+            "planner_nodes": 1,
+            "candidate_value_kind": "net_expected_utility",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        }
+      ],
+      "cost": 0.5842949186789783,
+      "units": 1,
+      "planner_nodes": 2,
+      "predicted_outcomes": {
+        "expected_utility": 17.01561700204962,
+        "outcome_lower_tail_mean": -25.739300604404818,
+        "severe_loss_probability": 0.014589480997256073,
+        "stakeholder_expected_scores": {
+          "public": 24.26097525706826,
+          "staff": 0.10978107367280407
+        },
+        "worst_group_expected_score": 0.10978107367280407
+      },
+      "predicted_net_utility": 16.43132208337064,
+      "stop_reason": {
+        "test_id": null,
+        "stop_expected_utility": 17.01561700204962,
+        "candidate_values": {
+          "measurement": 14.240202808440433,
+          "source_audit": 14.431533057003136
+        },
+        "planner_nodes": 1,
+        "candidate_value_kind": "net_expected_utility",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      },
+      "authorization": false,
+      "scope": "finite declared model; no guarantee for absent mechanisms"
+    }
+  },
+  {
+    "regime": "reversed",
+    "method": "sequential",
+    "trace": {
+      "protocol_version": "investigation-0.1",
+      "method": "sequential",
+      "action_id": "mechanism_repair",
+      "posterior": {
+        "ordinary": 0.019254562368487056,
+        "source_fault": 0.06556401424651531,
+        "mechanism_fault": 0.9151814233849976
+      },
+      "history": [
+        {
+          "test_id": "mechanism_test",
+          "family": "mechanism_test",
+          "positive": true,
+          "prior": {
+            "ordinary": 0.1302721437790243,
+            "source_fault": 0.443591733075737,
+            "mechanism_fault": 0.42613612314523874
+          },
+          "posterior": {
+            "ordinary": 0.019254562368487056,
+            "source_fault": 0.06556401424651531,
+            "mechanism_fault": 0.9151814233849976
+          },
+          "cost": 0.5842949186789783,
+          "choice": {
+            "test_id": "mechanism_test",
+            "stop_expected_utility": 4.74689363109968,
+            "candidate_values": {
+              "measurement": 11.36098880294503,
+              "source_audit": 11.55231905150773,
+              "mechanism_test": 14.136402996554214
+            },
+            "planner_nodes": 7,
+            "candidate_value_kind": "net_expected_utility",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        }
+      ],
+      "cost": 0.5842949186789783,
+      "units": 1,
+      "planner_nodes": 8,
+      "predicted_outcomes": {
+        "expected_utility": 17.01561700204962,
+        "outcome_lower_tail_mean": -25.739300604404818,
+        "severe_loss_probability": 0.014589480997256073,
+        "stakeholder_expected_scores": {
+          "public": 24.26097525706826,
+          "staff": 0.10978107367280407
+        },
+        "worst_group_expected_score": 0.10978107367280407
+      },
+      "predicted_net_utility": 16.43132208337064,
+      "stop_reason": {
+        "test_id": null,
+        "stop_expected_utility": 17.01561700204962,
+        "candidate_values": {
+          "measurement": 14.240202808440433,
+          "source_audit": 14.431533057003136
+        },
+        "planner_nodes": 1,
+        "candidate_value_kind": "net_expected_utility",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      },
+      "authorization": false,
+      "scope": "finite declared model; no guarantee for absent mechanisms"
+    }
+  },
+  {
+    "regime": "omitted",
+    "method": "stop",
+    "trace": {
+      "protocol_version": "investigation-0.1",
+      "method": "stop",
+      "action_id": "mechanism_repair",
+      "posterior": {
+        "ordinary": 0.1302721437790243,
+        "source_fault": 0.443591733075737,
+        "mechanism_fault": 0.42613612314523874
+      },
+      "history": [],
+      "cost": 0.0,
+      "units": 0,
+      "planner_nodes": 0,
+      "predicted_outcomes": {
+        "expected_utility": 4.74689363109968,
+        "outcome_lower_tail_mean": -70.9830090267695,
+        "severe_loss_probability": 0.041051421315301595,
+        "stakeholder_expected_scores": {
+          "public": 8.679209338766581,
+          "staff": -4.42850968678975
+        },
+        "worst_group_expected_score": -4.42850968678975
+      },
+      "predicted_net_utility": 4.74689363109968,
+      "stop_reason": {
+        "test_id": null,
+        "stop_expected_utility": 4.74689363109968,
+        "candidate_values": {},
+        "planner_nodes": 0,
+        "candidate_value_kind": "fixed_rule",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      },
+      "authorization": false,
+      "scope": "finite declared model; no guarantee for absent mechanisms"
+    }
+  },
+  {
+    "regime": "omitted",
+    "method": "fixed",
+    "trace": {
+      "protocol_version": "investigation-0.1",
+      "method": "fixed",
+      "action_id": "source_repair",
+      "posterior": {
+        "ordinary": 0.074148438469134,
+        "source_fault": 0.8128988790556164,
+        "mechanism_fault": 0.11295268247524952
+      },
+      "history": [
+        {
+          "test_id": "measurement",
+          "family": "measurement",
+          "positive": true,
+          "prior": {
+            "ordinary": 0.1302721437790243,
+            "source_fault": 0.443591733075737,
+            "mechanism_fault": 0.42613612314523874
+          },
+          "posterior": {
+            "ordinary": 0.24336446480092996,
+            "source_fault": 0.38591067994994327,
+            "mechanism_fault": 0.37072485524912674
+          },
+          "cost": 2.775414193609187,
+          "choice": {
+            "test_id": "measurement",
+            "stop_expected_utility": 4.74689363109968,
+            "candidate_values": {},
+            "planner_nodes": 0,
+            "candidate_value_kind": "fixed_rule",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        },
+        {
+          "test_id": "source_audit",
+          "family": "source_audit",
+          "positive": true,
+          "prior": {
+            "ordinary": 0.24336446480092996,
+            "source_fault": 0.38591067994994327,
+            "mechanism_fault": 0.37072485524912674
+          },
+          "posterior": {
+            "ordinary": 0.074148438469134,
+            "source_fault": 0.8128988790556164,
+            "mechanism_fault": 0.11295268247524952
+          },
+          "cost": 2.5840839450464834,
+          "choice": {
+            "test_id": "source_audit",
+            "stop_expected_utility": 4.105140449641458,
+            "candidate_values": {},
+            "planner_nodes": 0,
+            "candidate_value_kind": "fixed_rule",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        }
+      ],
+      "cost": 5.35949813865567,
+      "units": 2,
+      "planner_nodes": 0,
+      "predicted_outcomes": {
+        "expected_utility": 13.645814328557057,
+        "outcome_lower_tail_mean": -32.13965803712554,
+        "severe_loss_probability": 0.01790668777326747,
+        "stakeholder_expected_scores": {
+          "public": 19.432496910854464,
+          "staff": 0.14355496986311087
+        },
+        "worst_group_expected_score": 0.14355496986311087
+      },
+      "predicted_net_utility": 8.286316189901386,
+      "stop_reason": {
+        "test_id": null,
+        "stop_expected_utility": 13.645814328557057,
+        "candidate_values": {},
+        "planner_nodes": 0,
+        "candidate_value_kind": "fixed_rule",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      },
+      "authorization": false,
+      "scope": "finite declared model; no guarantee for absent mechanisms"
+    }
+  },
+  {
+    "regime": "omitted",
+    "method": "random",
+    "trace": {
+      "protocol_version": "investigation-0.1",
+      "method": "random",
+      "action_id": "mechanism_repair",
+      "posterior": {
+        "ordinary": 0.040452564165909186,
+        "source_fault": 0.06414690228400621,
+        "mechanism_fault": 0.8954005335500846
+      },
+      "history": [
+        {
+          "test_id": "measurement",
+          "family": "measurement",
+          "positive": true,
+          "prior": {
+            "ordinary": 0.1302721437790243,
+            "source_fault": 0.443591733075737,
+            "mechanism_fault": 0.42613612314523874
+          },
+          "posterior": {
+            "ordinary": 0.24336446480092996,
+            "source_fault": 0.38591067994994327,
+            "mechanism_fault": 0.37072485524912674
+          },
+          "cost": 2.775414193609187,
+          "choice": {
+            "test_id": "measurement",
+            "stop_expected_utility": 4.74689363109968,
+            "candidate_values": {},
+            "planner_nodes": 0,
+            "candidate_value_kind": "fixed_rule",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        },
+        {
+          "test_id": "mechanism_test",
+          "family": "mechanism_test",
+          "positive": true,
+          "prior": {
+            "ordinary": 0.24336446480092996,
+            "source_fault": 0.38591067994994327,
+            "mechanism_fault": 0.37072485524912674
+          },
+          "posterior": {
+            "ordinary": 0.040452564165909186,
+            "source_fault": 0.06414690228400621,
+            "mechanism_fault": 0.8954005335500846
+          },
+          "cost": 0.5842949186789783,
+          "choice": {
+            "test_id": "mechanism_test",
+            "stop_expected_utility": 4.105140449641458,
+            "candidate_values": {},
+            "planner_nodes": 0,
+            "candidate_value_kind": "fixed_rule",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        }
+      ],
+      "cost": 3.359709112288165,
+      "units": 2,
+      "planner_nodes": 0,
+      "predicted_outcomes": {
+        "expected_utility": 16.64376509710647,
+        "outcome_lower_tail_mean": -25.569695580116715,
+        "severe_loss_probability": 0.014490283159880437,
+        "stakeholder_expected_scores": {
+          "public": 23.78493541955883,
+          "staff": -0.01896565528237082
+        },
+        "worst_group_expected_score": -0.01896565528237082
+      },
+      "predicted_net_utility": 13.284055984818306,
+      "stop_reason": {
+        "test_id": null,
+        "stop_expected_utility": 16.64376509710647,
+        "candidate_values": {},
+        "planner_nodes": 0,
+        "candidate_value_kind": "fixed_rule",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      },
+      "authorization": false,
+      "scope": "finite declared model; no guarantee for absent mechanisms"
+    }
+  },
+  {
+    "regime": "omitted",
+    "method": "entropy",
+    "trace": {
+      "protocol_version": "investigation-0.1",
+      "method": "entropy",
+      "action_id": "mechanism_repair",
+      "posterior": {
+        "ordinary": 0.013874961920031905,
+        "source_fault": 0.3266393974107325,
+        "mechanism_fault": 0.6594856406692355
+      },
+      "history": [
+        {
+          "test_id": "mechanism_test",
+          "family": "mechanism_test",
+          "positive": true,
+          "prior": {
+            "ordinary": 0.1302721437790243,
+            "source_fault": 0.443591733075737,
+            "mechanism_fault": 0.42613612314523874
+          },
+          "posterior": {
+            "ordinary": 0.019254562368487056,
+            "source_fault": 0.06556401424651531,
+            "mechanism_fault": 0.9151814233849976
+          },
+          "cost": 0.5842949186789783,
+          "choice": {
+            "test_id": "mechanism_test",
+            "stop_expected_utility": 4.74689363109968,
+            "candidate_values": {
+              "measurement": 0.011247497116251063,
+              "source_audit": 0.12003182512430241,
+              "mechanism_test": 0.7632486833949532
+            },
+            "planner_nodes": 0,
+            "candidate_value_kind": "entropy_gain_per_cost",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        },
+        {
+          "test_id": "source_audit",
+          "family": "source_audit",
+          "positive": true,
+          "prior": {
+            "ordinary": 0.019254562368487056,
+            "source_fault": 0.06556401424651531,
+            "mechanism_fault": 0.9151814233849976
+          },
+          "posterior": {
+            "ordinary": 0.013874961920031905,
+            "source_fault": 0.3266393974107325,
+            "mechanism_fault": 0.6594856406692355
+          },
+          "cost": 2.5840839450464834,
+          "choice": {
+            "test_id": "source_audit",
+            "stop_expected_utility": 17.01561700204962,
+            "candidate_values": {
+              "measurement": 0.001891991741481362,
+              "source_audit": 0.032841464552800785
+            },
+            "planner_nodes": 0,
+            "candidate_value_kind": "entropy_gain_per_cost",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        }
+      ],
+      "cost": 3.1683788637254615,
+      "units": 2,
+      "planner_nodes": 0,
+      "predicted_outcomes": {
+        "expected_utility": 10.128736530057525,
+        "outcome_lower_tail_mean": -56.98573551854716,
+        "severe_loss_probability": 0.032864757818751276,
+        "stakeholder_expected_scores": {
+          "public": 15.52868708150685,
+          "staff": -2.471148089990899
+        },
+        "worst_group_expected_score": -2.471148089990899
+      },
+      "predicted_net_utility": 6.960357666332063,
+      "stop_reason": {
+        "test_id": null,
+        "stop_expected_utility": 10.128736530057525,
+        "candidate_values": {},
+        "planner_nodes": 0,
+        "candidate_value_kind": "entropy_gain_per_cost",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      },
+      "authorization": false,
+      "scope": "finite declared model; no guarantee for absent mechanisms"
+    }
+  },
+  {
+    "regime": "omitted",
+    "method": "myopic",
+    "trace": {
+      "protocol_version": "investigation-0.1",
+      "method": "myopic",
+      "action_id": "mechanism_repair",
+      "posterior": {
+        "ordinary": 0.019254562368487056,
+        "source_fault": 0.06556401424651531,
+        "mechanism_fault": 0.9151814233849976
+      },
+      "history": [
+        {
+          "test_id": "mechanism_test",
+          "family": "mechanism_test",
+          "positive": true,
+          "prior": {
+            "ordinary": 0.1302721437790243,
+            "source_fault": 0.443591733075737,
+            "mechanism_fault": 0.42613612314523874
+          },
+          "posterior": {
+            "ordinary": 0.019254562368487056,
+            "source_fault": 0.06556401424651531,
+            "mechanism_fault": 0.9151814233849976
+          },
+          "cost": 0.5842949186789783,
+          "choice": {
+            "test_id": "mechanism_test",
+            "stop_expected_utility": 4.74689363109968,
+            "candidate_values": {
+              "measurement": 1.9714794374904931,
+              "source_audit": 10.581207835027719,
+              "mechanism_test": 14.136402996554214
+            },
+            "planner_nodes": 1,
+            "candidate_value_kind": "net_expected_utility",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        }
+      ],
+      "cost": 0.5842949186789783,
+      "units": 1,
+      "planner_nodes": 2,
+      "predicted_outcomes": {
+        "expected_utility": 17.01561700204962,
+        "outcome_lower_tail_mean": -25.739300604404818,
+        "severe_loss_probability": 0.014589480997256073,
+        "stakeholder_expected_scores": {
+          "public": 24.26097525706826,
+          "staff": 0.10978107367280407
+        },
+        "worst_group_expected_score": 0.10978107367280407
+      },
+      "predicted_net_utility": 16.43132208337064,
+      "stop_reason": {
+        "test_id": null,
+        "stop_expected_utility": 17.01561700204962,
+        "candidate_values": {
+          "measurement": 14.240202808440433,
+          "source_audit": 14.431533057003136
+        },
+        "planner_nodes": 1,
+        "candidate_value_kind": "net_expected_utility",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      },
+      "authorization": false,
+      "scope": "finite declared model; no guarantee for absent mechanisms"
+    }
+  },
+  {
+    "regime": "omitted",
+    "method": "sequential",
+    "trace": {
+      "protocol_version": "investigation-0.1",
+      "method": "sequential",
+      "action_id": "mechanism_repair",
+      "posterior": {
+        "ordinary": 0.019254562368487056,
+        "source_fault": 0.06556401424651531,
+        "mechanism_fault": 0.9151814233849976
+      },
+      "history": [
+        {
+          "test_id": "mechanism_test",
+          "family": "mechanism_test",
+          "positive": true,
+          "prior": {
+            "ordinary": 0.1302721437790243,
+            "source_fault": 0.443591733075737,
+            "mechanism_fault": 0.42613612314523874
+          },
+          "posterior": {
+            "ordinary": 0.019254562368487056,
+            "source_fault": 0.06556401424651531,
+            "mechanism_fault": 0.9151814233849976
+          },
+          "cost": 0.5842949186789783,
+          "choice": {
+            "test_id": "mechanism_test",
+            "stop_expected_utility": 4.74689363109968,
+            "candidate_values": {
+              "measurement": 11.36098880294503,
+              "source_audit": 11.55231905150773,
+              "mechanism_test": 14.136402996554214
+            },
+            "planner_nodes": 7,
+            "candidate_value_kind": "net_expected_utility",
+            "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+          }
+        }
+      ],
+      "cost": 0.5842949186789783,
+      "units": 1,
+      "planner_nodes": 8,
+      "predicted_outcomes": {
+        "expected_utility": 17.01561700204962,
+        "outcome_lower_tail_mean": -25.739300604404818,
+        "severe_loss_probability": 0.014589480997256073,
+        "stakeholder_expected_scores": {
+          "public": 24.26097525706826,
+          "staff": 0.10978107367280407
+        },
+        "worst_group_expected_score": 0.10978107367280407
+      },
+      "predicted_net_utility": 16.43132208337064,
+      "stop_reason": {
+        "test_id": null,
+        "stop_expected_utility": 17.01561700204962,
+        "candidate_values": {
+          "measurement": 14.240202808440433,
+          "source_audit": 14.431533057003136
+        },
+        "planner_nodes": 1,
+        "candidate_value_kind": "net_expected_utility",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      },
+      "authorization": false,
+      "scope": "finite declared model; no guarantee for absent mechanisms"
+    }
+  }
+]

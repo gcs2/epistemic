@@ -22,6 +22,8 @@ from .decision_benchmark import (
     write_decision_benchmark_outputs,
 )
 from .integrity import verify_manifest
+from .investigation import METHODS, choose as choose_investigation, load as load_investigation, replay
+from .investigation_benchmark import run_frozen
 from .provenance import load_provenance_config, run_provenance_benchmark, write_provenance_outputs
 
 
@@ -72,6 +74,18 @@ def _parser() -> argparse.ArgumentParser:
     )
     decision_benchmark_parser.add_argument("config", type=Path)
     decision_benchmark_parser.add_argument("--output-dir", "-o", required=True, type=Path)
+    inquiry_validate = subparsers.add_parser("investigation-validate", help="Validate a finite investigation packet")
+    inquiry_validate.add_argument("packet", type=Path)
+    inquiry_run = subparsers.add_parser("investigate", help="Choose an investigation or replay supplied observations")
+    inquiry_run.add_argument("packet", type=Path)
+    inquiry_run.add_argument("--method", choices=METHODS, default="myopic")
+    inquiry_run.add_argument("--observations", type=Path, help="JSON map of test ids to boolean observations")
+    inquiry_run.add_argument("--seed", type=int, default=0)
+    inquiry_run.add_argument("--output", type=Path)
+    development = subparsers.add_parser("investigation-benchmark", help="Run frozen public development evaluation")
+    development.add_argument("config", type=Path)
+    development.add_argument("--frozen", required=True, type=Path)
+    development.add_argument("--output-dir", required=True, type=Path)
     return parser
 
 
@@ -91,6 +105,34 @@ def _load_action_packet(path: Path) -> dict[str, object]:
 def main(argv: Sequence[str] | None = None) -> int:
     args = _parser().parse_args(argv)
     try:
+        if args.command == "investigation-benchmark":
+            print(f"Wrote development report to {run_frozen(args.config, args.output_dir, args.frozen)}")
+            return 0
+        if args.command in {"investigation-validate", "investigate"}:
+            packet = load_investigation(args.packet)
+            if args.command == "investigation-validate":
+                print(f"Valid finite investigation packet: {packet['title']}")
+                return 0
+            if args.observations:
+                observations = json.loads(args.observations.read_text(encoding="utf-8"))
+                if not isinstance(observations, dict):
+                    raise ProtocolError("Observations must be a JSON object")
+                def observe(test_id):
+                    if test_id not in observations:
+                        raise ProtocolError(f"Missing observation for selected test: {test_id}")
+                    return observations[test_id]
+                result = replay(packet, args.method, observe, args.seed)
+            else:
+                import random
+                result = choose_investigation(packet, packet["prior"], method=args.method,
+                                              rng=random.Random(args.seed))
+            rendered = json.dumps(result, indent=2) + "\n"
+            if args.output:
+                args.output.parent.mkdir(parents=True, exist_ok=True)
+                args.output.write_text(rendered, encoding="utf-8", newline="\n")
+            else:
+                print(rendered, end="")
+            return 0
         if args.command == "verify":
             records = verify_manifest(args.manifest)
             for record in records:

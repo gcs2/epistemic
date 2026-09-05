@@ -1,0 +1,93 @@
+{
+  "protocol_version": "investigation-0.1",
+  "method": "sequential",
+  "action_id": "source_repair",
+  "posterior": {
+    "ordinary": 0.05751437162747777,
+    "source_fault": 0.765807659274265,
+    "mechanism_fault": 0.17667796909825717
+  },
+  "history": [
+    {
+      "test_id": "mechanism_test",
+      "family": "mechanism_test",
+      "positive": false,
+      "prior": {
+        "ordinary": 0.21263090325110542,
+        "source_fault": 0.24498823047666926,
+        "mechanism_fault": 0.5423808662722254
+      },
+      "posterior": {
+        "ordinary": 0.4135662494054588,
+        "source_fault": 0.47650112038072,
+        "mechanism_fault": 0.10993263021382121
+      },
+      "cost": 0.6470547108215157,
+      "choice": {
+        "test_id": "mechanism_test",
+        "stop_expected_utility": 5.706381961347066,
+        "candidate_values": {
+          "measurement": 9.146058475633879,
+          "source_audit": 8.463875786586552,
+          "mechanism_test": 9.310022911748328
+        },
+        "planner_nodes": 31,
+        "candidate_value_kind": "net_expected_utility",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      }
+    },
+    {
+      "test_id": "measurement",
+      "family": "measurement",
+      "positive": false,
+      "prior": {
+        "ordinary": 0.4135662494054588,
+        "source_fault": 0.47650112038072,
+        "mechanism_fault": 0.10993263021382121
+      },
+      "posterior": {
+        "ordinary": 0.05751437162747777,
+        "source_fault": 0.765807659274265,
+        "mechanism_fault": 0.17667796909825717
+      },
+      "cost": 0.30683026508650274,
+      "choice": {
+        "test_id": "measurement",
+        "stop_expected_utility": 5.36480868083967,
+        "candidate_values": {
+          "measurement": 8.04417290088672,
+          "source_audit": 7.159199668972935
+        },
+        "planner_nodes": 5,
+        "candidate_value_kind": "net_expected_utility",
+        "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+      }
+    }
+  ],
+  "cost": 0.9538849759080184,
+  "units": 2,
+  "planner_nodes": 37,
+  "predicted_outcomes": {
+    "expected_utility": 8.239508145109243,
+    "outcome_lower_tail_mean": -26.714330863266692,
+    "severe_loss_probability": 0.022367457836878,
+    "stakeholder_expected_scores": {
+      "public": 11.92118899437505,
+      "staff": -0.3510805031776342
+    },
+    "worst_group_expected_score": -0.3510805031776342
+  },
+  "predicted_net_utility": 7.285623169201225,
+  "stop_reason": {
+    "test_id": null,
+    "stop_expected_utility": 8.239508145109243,
+    "candidate_values": {
+      "source_audit": 7.266885495186241
+    },
+    "planner_nodes": 1,
+    "candidate_value_kind": "net_expected_utility",
+    "scope": "conditional on supplied hypotheses, likelihoods, outcomes and constraints"
+  },
+  "authorization": false,
+  "scope": "finite declared model; no guarantee for absent mechanisms"
+}

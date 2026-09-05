@@ -1,6 +1,6 @@
 # Cross-Model Handoff
 
-**Checkpoint:** SES 0.6.0 bounded-decision-assurance foundation  
+**Checkpoint:** SES 0.7.0 finite investigation development
 **Canonical project index:** [`docs/INDEX.md`](docs/INDEX.md)  
 **Current status:** [`STATUS.md`](STATUS.md)  
 **Findings boundary:** [`FINDINGS.md`](FINDINGS.md)
@@ -22,7 +22,7 @@ Develop Syncretic Epistemic Synthesis into a falsifiable, dependence-aware, mult
 ## What exists
 
 - A deterministic evidence-synthesis harness (`syntruth/core.py`).
-- Two completed, hash-manifested synthetic experiments.
+- Three completed, hash-manifested synthetic experiments and two exposed 003B development runs.
 - A generated-provenance result showing that an intuitively favored hybrid can fail through false transitive merges.
 - A real-corpus provenance protocol awaiting data and adjudicators.
 - A legacy Action 0.1 engine (`syntruth/decision.py`) retained for Experiment 003A reproduction; do not use it for new live decisions.
@@ -45,10 +45,18 @@ The project has not shown that it reconstructs real evidence ancestry, elicits a
 
 ## Immediate continuation sequence
 
+Start with the [implementation audit](experiments/003b-bounded-decision-assurance/IMPLEMENTATION_AUDIT.md),
+[investigation protocol](docs/INVESTIGATION_PROTOCOL.md) and
+[003B interpretation](experiments/003b-bounded-decision-assurance/DEVELOPMENT_INTERPRETATION.md).
+Investigation 0.1 is executable; extra lookahead has no established advantage over
+one-step planning. Both fail under misleading likelihoods and omitted mechanisms.
+The next design target is validation of observation models and then real model
+expansion. Do not describe the finite-hypothesis loop as open-world discovery.
+
 1. Run the full validation commands below and repair any failure without weakening tests.
 2. Verify Experiment 003A's frozen inputs and result manifest, then read its deviation record and truth gems before changing any claim derived from that study.
-3. Review Action 0.2 against its protocol, schema, tests, ADR, and DR-001. Repair semantic or implementation defects without converting qualitative evidence labels into arithmetic.
-4. Turn the Experiment 003B design draft into a preregistration and implement its public development generator. Preserve strong baselines, information parity, matched deferral/process cost, component ablations, and protected confirmatory evaluation.
+3. Preserve the Action 0.2 audit correction: its tail statistics describe expected-score sensitivity. Outcome risk and executable observations live in investigation-0.1.
+4. Use the completed 003B development results to design the next falsifiable comparison. Preserve stronger baselines and genuinely independent confirmation for the broader study.
 5. Keep Experiment 002B alive as the key external-validity gate for dependence recovery.
 6. Prepare—but do not fabricate—a real low-risk pilot packet. A genuine organization, decision owner, affected-party process, baseline, and prospective outcomes are required before calling it a field study.
 
@@ -67,14 +75,22 @@ python -m syntruth verify experiments/002-provenance/results/MANIFEST.sha256
 python -m syntruth verify experiments/003a-decision-stress/FROZEN.sha256
 python -m syntruth verify experiments/003a-decision-stress/results/MANIFEST.sha256
 python -m unittest discover -s tests -v
+python -m syntruth investigation-validate examples/fault-investigation.json
+python scripts/check_repository.py
 ```
 
 If ordinary `python` is unavailable in the current Codex workspace, use the bundled interpreter path recorded by the host dependency loader.
 
 ## Prompt for the next model
 
-> You are continuing Syncretic Epistemic Synthesis at checkpoint 0.6.0. Begin with `AGENTS.md`, `MAINTAINING.md`, and `docs/INDEX.md`, then read `STATUS.md`, `FINDINGS.md`, `HANDOFF.md`, `docs/BOUNDED_DECISION_ASSURANCE.md`, ADR-0002, DR-001, and the Experiment 003B design draft. Run all listed validations before changing claims. Action 0.2 is executable but unvalidated. Your next objective is to critically review its semantics, freeze a falsifiable Experiment 003B preregistration, and implement the public development generator without exposing the protected confirmation evaluator. Keep evidence quality outside consequence arithmetic, preserve Action 0.1 reproduction, and count deferral, elicitation, review, and stakeholder costs. Preserve negative results and never describe simulations, examples, or literature-derived designs as real-world validation. Update tests, status, changelog, findings, and this handoff at the next coherent checkpoint.
+> Continue SES 0.7.0. Read AGENTS, MAINTAINING, INDEX, STATUS, FINDINGS and this handoff, then the 003B audit and interpretation, investigation protocol, ADR-0003 and DR-001. Verify tests and all manifests. The finite investigation loop is implemented and evaluated on exposed development cases; two-test follow-up reused cases after inspecting the first run. Myopic remains default. Test-model reliability and truly omitted mechanisms are unresolved. The next research design should test whether independent calibration evidence can improve investigation-or-stop decisions, then how new hypotheses enter the model. Preserve the simpler baselines and cost accounting, and avoid presenting finite model discrimination as open-world discovery. Protected confirmation and a real application still require separate work.
 
 ## Repository state
 
-The project is an independent Git repository on branch `main`. Remote `origin` points to `https://github.com/gcs2/epistemic.git`. At checkpoint 0.6.0 it has no commits yet and all files are untracked. Repository-local author identity is not configured. Before the initial commit, obtain the intended author name/email, run all validations, inspect `git diff` and `git status`, and describe the research baseline plus 0.2 foundation accurately.
+Canonical repository: `C:/Users/zephy/Documents/epistemic`, remote
+`https://github.com/gcs2/epistemic.git`. The initial published commit is
+`38f8fe4`. Author identity is already configured. The 0.7 milestone was prepared
+in an isolated writable copy because this conversation retained its previous
+workspace permissions after the move. Its Git patch must be applied in the
+canonical repository before continuing there; check actual Git history rather
+than assuming delivery. All work and verification directories remain ignored.

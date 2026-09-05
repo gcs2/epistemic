@@ -39,6 +39,7 @@ Do not create a second status page, roadmap, findings list, or handoff note. Upd
 - `examples/`: illustrative inputs and generated outputs. They are never evidence of efficacy.
 - `templates/`: blank operational forms.
 - `tests/`: behavioral and invariance tests mirroring implementation modules.
+- `scripts/`: portable repository maintenance checks; invoked by CI.
 - `work/`: disposable intermediate material. Nothing in it may be cited as a result.
 
 ## Change classes
@@ -89,6 +90,12 @@ Use a short conventional prefix:
 The commit body should name changed semantics, validation performed, and any unresolved boundary. Never rewrite published experimental history to make the project look cleaner.
 
 ## Release checklist
+
+Validate the exported Git tree as well as the working copy. Exact-byte artifact
+manifests can fail after Git line-ending normalization. Nine historical generated
+files have explicit `-text` attributes to preserve their original manifested bytes.
+New generated artifacts must use explicit LF. Do not regenerate canonical results
+as a quick-start action; use a fresh directory under `work/`.
 
 - [ ] Version agrees in `pyproject.toml`, `syntruth/__init__.py`, `STATUS.md`, and the changelog.
 - [ ] All examples validate under their declared protocol.

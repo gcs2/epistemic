@@ -27,7 +27,16 @@ This ledger separates findings from aspirations. “Established” always means 
 | ACTION-CANDIDATE-002 | Requiring a baseline, stop rules, appeal, and affected-party review may improve correction and legitimacy. | Human-subject usability and field evaluation |
 | SES-GEM-015 | A dormant harm threshold cannot establish distributional safety. | Redesigned synthetic generator with stakeholder conflict |
 
-## Explicit unknowns
+## Development observations (not confirmatory findings)
+
+The [003B interpretation](experiments/003b-bounded-decision-assurance/DEVELOPMENT_INTERPRETATION.md)
+records DEV-003B-001 through DEV-003B-003: cost-aware stopping helps under correct
+no-information models; extra lookahead has no established advantage over one-step
+planning; misleading likelihoods and absent hypotheses overwhelm selection gains.
+These observations come from exposed development generators, including a
+post-inspection budget change. They are not promoted to the established ledger.
+
+## Remaining unknowns
 
 - Whether real source ancestry can be recovered precisely enough to improve forecasts.
 - Whether SES likelihood judgments are calibrated when elicited from natural evidence.

@@ -22,7 +22,7 @@ No stage inherits validity automatically from the prior stage.
 - Stage 2A / generated provenance recovery: complete and deterministically reproduced. Six of eight preregistered hypotheses were supported; the two failed hypotheses exposed false-merger risk in unconditional hybrid clustering.
 - Stage 2B / adjudicated real corpus: protocol drafted; corpus acquisition and independent adjudicators remain outstanding.
 - Stage 3A / generated decision stress test: complete and awaiting final deterministic artifact verification. Four of seven hypotheses were supported; the action-0.1 confidence rule, registered gate criterion, minimax rule, and distributional test all exposed limitations.
-- Stage 3B: a comparative Bounded Decision Assurance challenge is drafted but not preregistered or executed. The Action 0.2 reference engine now provides an implementation target; its existence is not evidence that the method works.
+- Stage 3B: the broad BDA challenge remains a draft. A finite investigation slice has two completed public development runs; see [interpretation](003b-bounded-decision-assurance/DEVELOPMENT_INTERPRETATION.md). The extra lookahead has no established advantage over one-step planning; test-model validation and genuine model expansion remain next research targets.
 - Stages 3–5 beyond that draft: designed but not executed.
 
 ### Experiment 003A finding boundary

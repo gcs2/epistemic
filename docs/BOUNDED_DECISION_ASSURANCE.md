@@ -2,6 +2,14 @@
 
 ## Status and purpose
 
+Audit clarification (0.7 checkpoint): the existing lower-tail, percentile and
+constraint calculations operate on expected scores after averaging scenarios.
+They are sensitivity summaries of expected value, not tails or violation rates
+of realized outcomes. Learning and challenge records are declarations, not
+executed investigations. For executable investigations and explicit discrete
+outcome-risk calculations, see [investigation-0.1](INVESTIGATION_PROTOCOL.md).
+The audit is in [IMPLEMENTATION_AUDIT.md](../experiments/003b-bounded-decision-assurance/IMPLEMENTATION_AUDIT.md).
+
 Action Protocol 0.2 is an executable research prototype. It replaces Action Protocol 0.1's signed confidence multiplication with typed uncertainty and a bounded assurance case. It has unit and invariance tests but has not passed Experiment 003B, independent replication, or a field trial.
 
 Its output answers:

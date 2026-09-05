@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.7.0 — executable investigation development
+
+- Added the Action 0.2 implementation audit and clarified expected-score sensitivity versus outcome risk.
+- Added investigation-0.1 schema, reference engine, observation replay, CLI, example and analytic/behavioral tests.
+- Compared six policies in two frozen public development runs; retained the first run's full-menu design limitation and the exploratory budget-two extension.
+- Kept one-step value-of-information as default: extra lookahead has no established advantage and does not repair misleading likelihoods or absent hypotheses.
+- Added outcome-level stakeholder constraints, exact discrete tails, source-family reuse restrictions and complete decision/update traces.
+- Preserved nine historical manifested result files as exact Git bytes after discovering line-ending normalization broke clean-checkout integrity.
+- Updated canonical research status, interpretation, maintenance instructions and handoff.
+
+These are exposed development results, not independent confirmation or a new general discovery algorithm.
+
 ## 0.6.0 — bounded decision assurance foundation
 
 - Added an eight-wave deep-research report, query plan, search log, and claim-to-source ledger.

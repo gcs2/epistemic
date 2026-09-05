@@ -1,0 +1,186 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ses:investigation:0.1",
+  "title": "Finite investigation packet 0.1",
+  "type": "object",
+  "required": [
+    "protocol_version",
+    "title",
+    "hypotheses",
+    "prior",
+    "stakeholder_weights",
+    "baseline_action_id",
+    "budget",
+    "constraints",
+    "actions",
+    "tests"
+  ],
+  "properties": {
+    "protocol_version": {
+      "const": "investigation-0.1"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "hypotheses": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "$ref": "#/$defs/id"
+          }
+        }
+      }
+    },
+    "prior": {
+      "$ref": "#/$defs/probabilities"
+    },
+    "stakeholder_weights": {
+      "$ref": "#/$defs/probabilities"
+    },
+    "baseline_action_id": {
+      "$ref": "#/$defs/id"
+    },
+    "budget": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 8
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "stakeholder_id",
+          "floor",
+          "max_probability"
+        ],
+        "properties": {
+          "stakeholder_id": {
+            "$ref": "#/$defs/id"
+          },
+          "floor": {
+            "type": "number",
+            "minimum": -1000000,
+            "maximum": 1000000
+          },
+          "max_probability": {
+            "$ref": "#/$defs/probability"
+          }
+        }
+      }
+    },
+    "actions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "outcomes"
+        ],
+        "properties": {
+          "id": {
+            "$ref": "#/$defs/id"
+          },
+          "outcomes": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "required": [
+                  "p",
+                  "scores"
+                ],
+                "properties": {
+                  "p": {
+                    "$ref": "#/$defs/probability"
+                  },
+                  "scores": {
+                    "type": "object",
+                    "minProperties": 1,
+                    "additionalProperties": {
+                      "type": "number",
+                      "minimum": -1000000,
+                      "maximum": 1000000
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "tests": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "family",
+          "source",
+          "units",
+          "cost",
+          "positive_probability"
+        ],
+        "properties": {
+          "id": {
+            "$ref": "#/$defs/id"
+          },
+          "family": {
+            "$ref": "#/$defs/id"
+          },
+          "source": {
+            "$ref": "#/$defs/id"
+          },
+          "units": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "cost": {
+            "type": "number",
+            "minimum": 0
+          },
+          "positive_probability": {
+            "type": "object",
+            "minProperties": 1,
+            "additionalProperties": {
+              "$ref": "#/$defs/probability"
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "probability": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "probabilities": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "$ref": "#/$defs/probability"
+      }
+    }
+  },
+  "$comment": "Reference validator additionally enforces unique ids, reference coverage, normalized probability vectors and baseline feasibility. Finite outcomes are conditional on represented hypotheses."
+}
