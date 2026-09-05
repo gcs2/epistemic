@@ -12,6 +12,15 @@ This is the canonical navigation page for Syncretic Epistemic Synthesis (SES). S
 | Cross-model continuation | [`../HANDOFF.md`](../HANDOFF.md) |
 | Releases and structural changes | [`../CHANGELOG.md`](../CHANGELOG.md) |
 
+## Major initiatives
+
+- [BIZ-001: self-sustaining business](business/README.md): compendium for customer
+  value, revenue, plain-language positioning, acquisition, delivery, operations,
+  and engine funding. [Business execution ledger](business/TRACKER.md) is the
+  canonical home for its tasks and commercial decisions; currently planning.
+- [Research program](../experiments/PROGRAM_ROADMAP.md): independent validation
+  and field transfer remain separate from commercialization.
+
 ## Methods
 
 | Layer | Human specification | Machine contract | Implementation |
@@ -69,6 +78,8 @@ This is the canonical navigation page for Syncretic Epistemic Synthesis (SES). S
 
 - Root documents answer project-level questions only.
 - `docs/` contains stable method descriptions and navigation.
+- `docs/business/` contains the business compendium and its scoped execution ledger;
+  `templates/business/` contains blank forms. Live customer records stay outside this public repository.
 - `schema/` contains interoperable machine contracts.
 - `syntruth/` contains dependency-free deterministic reference code.
 - `tests/` mirrors implementation modules.

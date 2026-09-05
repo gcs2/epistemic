@@ -6,6 +6,15 @@ This repository contains the founding document, versioned epistemic and action p
 
 Current checkpoint: **0.7.0**. A finite investigation loop and two public development runs now exist. The runs support keeping one-step planning as the default and expose failure with misleading observations and absent hypotheses. Superiority, field utility and novelty remain unestablished.
 
+## Self-sustaining business initiative
+
+[BIZ-001: business compendium](docs/business/README.md) tracks a service-first
+commercialization proposal: customer discovery, plain-language positioning,
+sales and marketing, delivery economics, operations, and funding engine research.
+Start with its [task ledger](docs/business/TRACKER.md). The initiative is in
+planning; no paying market or field advantage is established. SES remains the
+internal method name; the public brand and first offer are not yet selected.
+
 ## Quick start
 
 Requires Python 3.11 or newer and has no runtime dependencies.

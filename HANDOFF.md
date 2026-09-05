@@ -1,6 +1,6 @@
 # Cross-Model Handoff
 
-**Checkpoint:** SES 0.7.0 finite investigation development
+**Checkpoint:** SES 0.7.0 plus BIZ-001 business-initiative documentation
 **Canonical project index:** [`docs/INDEX.md`](docs/INDEX.md)  
 **Current status:** [`STATUS.md`](STATUS.md)  
 **Findings boundary:** [`FINDINGS.md`](FINDINGS.md)
@@ -43,7 +43,23 @@ Read [`FINDINGS.md`](FINDINGS.md). In compact form: dependence matters; naive re
 
 The project has not shown that it reconstructs real evidence ancestry, elicits accurate probabilities or consequence ranges, finds omitted causal explanations, outperforms expert or simpler workflows, or improves decisions in the field. Both library examples are illustrative inputs, not evidence. Action 0.2's unit tests establish implementation properties—not decision efficacy, calibration, completeness, or legitimacy.
 
-## Immediate continuation sequence
+## Commercial initiative continuation
+
+The founder requested a major self-sustaining-business initiative. Read the
+[compendium](docs/business/README.md) and [business tracker](docs/business/TRACKER.md).
+SES stays the internal method name; outcome-first public language, a service-first
+model, and a reporting-workflow offer are proposals, not validated positioning.
+The public brand, customer segment, price, operating owners, and budget are unset.
+
+Next commercial action: establish founder access, skills, and time constraints,
+then choose a bounded discovery test and private record system. Drafts exist;
+no outreach, spending, launch, or research use of customer data is authorized by
+the documents. Do not invent leads or mark planned activities complete.
+Track commercial outcomes separately from scientific efficacy. Revenue can fund
+research only after actual costs, obligations, and an agreed reserve are covered.
+Use the business ledger for these tasks, not a duplicate global roadmap.
+
+## Immediate research continuation sequence
 
 Start with the [implementation audit](experiments/003b-bounded-decision-assurance/IMPLEMENTATION_AUDIT.md),
 [investigation protocol](docs/INVESTIGATION_PROTOCOL.md) and
@@ -88,9 +104,10 @@ If ordinary `python` is unavailable in the current Codex workspace, use the bund
 ## Repository state
 
 Canonical repository: `C:/Users/zephy/Documents/epistemic`, remote
-`https://github.com/gcs2/epistemic.git`. The initial published commit is
-`38f8fe4`. Author identity is already configured. The 0.7 milestone was prepared
-in an isolated writable copy because this conversation retained its previous
-workspace permissions after the move. Its Git patch must be applied in the
-canonical repository before continuing there; check actual Git history rather
-than assuming delivery. All work and verification directories remain ignored.
+`https://github.com/gcs2/epistemic.git`. On 2026-09-05 its clean local history was
+verified to include the 0.7 milestone `f051327`; the previous delivery was applied.
+Author identity is configured. This conversation still writes only to its older
+workspace, so the business documentation is prepared in an isolated copy and
+delivered for import. Verify canonical Git history and remote synchronization
+before assuming any new delivery has been applied or pushed. Temporary delivery
+and verification directories are not project evidence.

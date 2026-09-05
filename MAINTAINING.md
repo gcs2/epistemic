@@ -26,8 +26,19 @@ Each question has one authoritative home:
 | What changed by release? | `CHANGELOG.md` |
 | Why was an architecture chosen? | `docs/decisions/` |
 | What is the scientific boundary? | `FOUNDING.md` and the relevant protocol |
+| How is the self-sustaining business initiative organized? | `docs/business/README.md` |
+| What are the business tasks, gates, and commercial decisions? | `docs/business/TRACKER.md` |
 
 Do not create a second status page, roadmap, findings list, or handoff note. Update the canonical file and link to it.
+
+The business ledger is scoped to BIZ-001, not a replacement global status or
+research roadmap. Root status summarizes it by link. Update business tasks and
+decisions there; add scientific findings only through the existing evidence rules.
+Blank commercial forms belong in `templates/business/`. Customer contacts,
+contracts, invoices, transcripts, credentials, and raw client data belong in an
+approved private system outside this public repository. An ignored directory
+does not provide access control. Review public summaries for re-identification
+and publication permission before committing.
 
 ## Placement rules
 

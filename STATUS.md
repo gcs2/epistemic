@@ -1,7 +1,18 @@
 # SES Research Status
 
 **Version:** 0.7.0
-**As of:** 2026-09-04
+**As of:** 2026-09-05
+
+## Major initiative: self-sustaining business
+
+[BIZ-001](docs/business/README.md) is established as a planning initiative with
+customer/offer selection, external language, sales and marketing, delivery,
+economics, privacy/operations, engine feedback, and reusable pilot forms.
+Its [tracker](docs/business/TRACKER.md) owns commercial tasks and decisions.
+No customer demand, revenue, margin, or engine field advantage is established
+by this documentation. Next commercial step: record founder access and capacity,
+then choose a bounded discovery test. No outreach or spending has been performed.
+This is a documentation checkpoint; engine version remains 0.7.0.
 
 ## What is established within synthetic scope
 

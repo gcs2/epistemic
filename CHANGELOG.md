@@ -1,5 +1,20 @@
 # Changelog
 
+## Unreleased — 2026-09-05 business initiative
+
+- Established BIZ-001 as a major self-sustaining-business initiative with a linked
+  compendium and one canonical commercial task/decision ledger.
+- Added customer discovery and offer hypotheses, internal-to-external language,
+  sales/outreach drafts, marketing evidence rules, delivery/operations, full-cost
+  economics, and surplus-to-research gates.
+- Added blank opportunity and paid-pilot forms, with private customer records
+  explicitly excluded from the public repository.
+- Separated customer outcomes, business viability, and engine efficacy; wired
+  navigation, status, maintenance rules, and cross-model handoff.
+
+Documentation only: no launch, outreach, purchase, engine change, or empirical
+finding. Engine/package version remains 0.7.0.
+
 ## 0.7.0 — executable investigation development
 
 - Added the Action 0.2 implementation audit and clarified expected-score sensitivity versus outcome risk.
